@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Notes]
+(
+    NoteId INT IDENTITY(1,1) 
+		CONSTRAINT Notes_NoteId_PK PRIMARY KEY,
+    ActorId INT NOT NULL 
+		CONSTRAINT Notes_ActorId_FK FOREIGN KEY REFERENCES dbo.Actors(ActorId),
+    NoteText VARCHAR(MAX) NOT NULL 
+		CONSTRAINT Notes_NoteText_DF DEFAULT('')
+);
