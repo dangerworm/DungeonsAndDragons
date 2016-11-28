@@ -1,6 +1,7 @@
-﻿CREATE TABLE [dbo].[PowerTypes]
+﻿CREATE TABLE [dbo].[PowerUsages]
 (
-    PowerTypeId INT IDENTITY(1,1) 
-		CONSTRAINT PowerTypes_PowerTypeId_PK PRIMARY KEY,
-    Name VARCHAR(50) NOT NULL
+    PowerUsageId INT IDENTITY(1,1) 
+		CONSTRAINT PowerUsages_PowerUsageId_PK PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL,
+	FlavourText VARCHAR(MAX)
 );
