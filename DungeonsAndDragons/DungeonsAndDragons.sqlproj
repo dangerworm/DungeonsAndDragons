@@ -70,13 +70,11 @@
     <Build Include="Tables\Features.sql" />
     <Build Include="Tables\PlayerCharacters.sql" />
     <Build Include="Tables\Enums\Abilities.sql" />
-    <Build Include="Tables\Enums\Alignments.sql" />
     <Build Include="Tables\Bridge Tables\ClassArmourProficienciesBridge.sql" />
     <Build Include="Tables\Bridge Tables\ClassFeaturesBridge.sql" />
     <Build Include="Tables\Bridge Tables\ClassImplementProficienciesBridge.sql" />
     <Build Include="Tables\Bridge Tables\ClassTrainedSkillsBridge.sql" />
     <Build Include="Tables\Bridge Tables\ClassWeaponProficienciesBridge.sql" />
-    <Build Include="Tables\Enums\Deities.sql" />
     <Build Include="Tables\Enums\EpicDestinies.sql" />
     <Build Include="Tables\Enums\Genders.sql" />
     <Build Include="Tables\Enums\ImplementTypes.sql" />
@@ -115,6 +113,12 @@
     <Build Include="Tables\Enums\DamageTypes.sql" />
     <Build Include="Tables\Enums\DurationUnits.sql" />
     <Build Include="Tables\Powers.sql" />
+    <Build Include="Tables\Alignments.sql" />
+    <Build Include="Tables\Enums\AuthorityLevels.sql" />
+    <Build Include="Tables\Enums\CompassionLevels.sql" />
+    <Build Include="Tables\Deities.sql" />
+    <Build Include="Tables\Enums\EffectTypes.sql" />
+    <Build Include="Tables\Enums\PowerSources.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Races.sql" />
