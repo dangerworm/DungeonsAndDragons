@@ -101,6 +101,8 @@
     <Build Include="Tables\Enums\ParagonPaths.sql" />
     <Build Include="Tables\Enums\PowerKeywords.sql" />
     <Build Include="Scripts\PostDeployment\Tables.sql" />
+    <Build Include="Tables\Enums\EffectTypes.sql" />
+    <Build Include="Tables\Enums\PowerSources.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Actors.sql" />
