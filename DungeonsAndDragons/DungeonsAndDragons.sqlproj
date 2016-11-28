@@ -8,7 +8,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{e66dac46-33c3-442c-b2fb-42b19bb7f5cd}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
@@ -58,69 +58,78 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Tables" />
-    <Folder Include="Tables\Enums" />
     <Folder Include="Tables\Bridge Tables" />
+    <Folder Include="Tables\Enums" />
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\PostDeployment" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\AbilityValues.sql" />
-    <Build Include="Tables\ArmourClasses.sql" />
-    <Build Include="Tables\Classes.sql" />
-    <Build Include="Tables\DefenseModifiers.sql" />
-    <Build Include="Tables\Prerequisites.sql" />
-    <Build Include="Tables\Features.sql" />
-    <Build Include="Tables\PlayerCharacters.sql" />
-    <Build Include="Tables\Enums\Abilities.sql" />
-    <Build Include="Tables\Enums\Alignments.sql" />
+    <Build Include="Tables\Bridge Tables\PlayerCharacterFeaturesBridge.sql" />
     <Build Include="Tables\Bridge Tables\ClassArmourProficienciesBridge.sql" />
     <Build Include="Tables\Bridge Tables\ClassFeaturesBridge.sql" />
     <Build Include="Tables\Bridge Tables\ClassImplementProficienciesBridge.sql" />
+    <Build Include="Tables\Bridge Tables\ClassPowersBridge.sql" />
     <Build Include="Tables\Bridge Tables\ClassTrainedSkillsBridge.sql" />
     <Build Include="Tables\Bridge Tables\ClassWeaponProficienciesBridge.sql" />
-    <Build Include="Tables\Enums\Deities.sql" />
-    <Build Include="Tables\Enums\EpicDestinies.sql" />
+    <Build Include="Tables\Bridge Tables\LanguageRacesBridge.sql" />
+    <Build Include="Tables\Bridge Tables\PlayerCharacterLanguagesBridge.sql" />
+    <Build Include="Tables\Bridge Tables\PowerEffectsBridge.sql" />
+    <Build Include="Tables\Bridge Tables\PowerKeywordsBridge.sql" />
+    <Build Include="Tables\Bridge Tables\RaceFeaturesBridge.sql" />
+    <Build Include="Tables\Bridge Tables\WeaponPropertiesBridge.sql" />
+    <Build Include="Tables\Enums\Abilities.sql" />
+    <Build Include="Tables\Enums\ActionTypes.sql" />
+    <Build Include="Tables\Enums\ActorTypes.sql" />
+    <Build Include="Tables\Enums\ArmourWeightClasses.sql" />
+    <Build Include="Tables\Enums\AttackTypes.sql" />
+    <Build Include="Tables\Enums\DamageTypes.sql" />
+    <Build Include="Tables\Enums\Defenses.sql" />
+    <Build Include="Tables\Enums\DurationUnits.sql" />
     <Build Include="Tables\Enums\Genders.sql" />
     <Build Include="Tables\Enums\ImplementTypes.sql" />
-    <Build Include="Tables\Enums\ParagonPaths.sql" />
     <Build Include="Tables\Enums\PowerTypes.sql" />
-    <Build Include="Tables\Bridge Tables\RaceFeaturesBridge.sql" />
     <Build Include="Tables\Enums\Skills.sql" />
     <Build Include="Tables\Enums\WeaponCategories.sql" />
     <Build Include="Tables\Enums\WeaponGroups.sql" />
     <Build Include="Tables\Enums\WeaponProperties.sql" />
-    <Build Include="Tables\Bridge Tables\WeaponPropertiesBridge.sql" />
-    <Build Include="Tables\Enums\AttackTypes.sql" />
-    <Build Include="Tables\Enums\ActorTypes.sql" />
-    <Build Include="Tables\Actors.sql" />
-    <Build Include="Tables\ArmourItems.sql" />
-    <Build Include="Tables\Enums\ArmourWeightClasses.sql" />
-    <Build Include="Tables\GearItems.sql" />
-    <Build Include="Tables\ConsumableItems.sql" />
-    <Build Include="Tables\TransportItems.sql" />
-    <Build Include="Tables\Bridge Tables\PlayerCharacterLanguagesBridge.sql" />
-    <Build Include="Tables\Languages.sql" />
-    <Build Include="Tables\Bridge Tables\LanguageRacesBridge.sql" />
-    <Build Include="Tables\Scripts.sql" />
-    <Build Include="Tables\Enums\ActionTypes.sql" />
-    <Build Include="Tables\Enums\Defenses.sql" />
-    <Build Include="Tables\Bridge Tables\PlayerCharacterFeaturesBridge.sql" />
-    <Build Include="Tables\Purses.sql" />
-    <Build Include="Tables\Bridge Tables\ClassPowersBridge.sql" />
+    <Build Include="Tables\Alignments.sql" />
+    <Build Include="Tables\Enums\AuthorityLevels.sql" />
+    <Build Include="Tables\Enums\CompassionLevels.sql" />
+    <Build Include="Tables\Deities.sql" />
+    <Build Include="Tables\Enums\EpicDestinies.sql" />
+    <Build Include="Tables\Enums\ParagonPaths.sql" />
     <Build Include="Tables\Enums\PowerKeywords.sql" />
-    <Build Include="Tables\Bridge Tables\PowerKeywordsBridge.sql" />
-    <Build Include="Tables\Bridge Tables\PowerEffectsBridge.sql" />
-    <Build Include="Tables\PowerEffects.sql" />
-    <Build Include="Tables\Notes.sql" />
-    <Build Include="Tables\AttackClasses.sql" />
-    <Build Include="Tables\TargetTypes.sql" />
-    <Build Include="Tables\Enums\DamageTypes.sql" />
-    <Build Include="Tables\Enums\DurationUnits.sql" />
-    <Build Include="Tables\Powers.sql" />
+    <Build Include="Scripts\PostDeployment\Tables.sql" />
   </ItemGroup>
   <ItemGroup>
+    <Build Include="Tables\Actors.sql" />
+    <Build Include="Tables\ArmourClasses.sql" />
+    <Build Include="Tables\ArmourItems.sql" />
+    <Build Include="Tables\AttackClasses.sql" />
+    <Build Include="Tables\Classes.sql" />
+    <Build Include="Tables\ConsumableItems.sql" />
+    <Build Include="Tables\DefenseModifiers.sql" />
+    <Build Include="Tables\Features.sql" />
+    <Build Include="Tables\GearItems.sql" />
+    <Build Include="Tables\Languages.sql" />
+    <Build Include="Tables\Notes.sql" />
+    <Build Include="Tables\PlayerCharacters.sql" />
+    <Build Include="Tables\PowerEffects.sql" />
+    <Build Include="Tables\Powers.sql" />
+    <Build Include="Tables\Prerequisites.sql" />
+    <Build Include="Tables\Purses.sql" />
     <Build Include="Tables\Races.sql" />
+    <Build Include="Tables\Scripts.sql" />
     <Build Include="Tables\Sizes.sql" />
     <Build Include="Tables\SkillModifiers.sql" />
+    <Build Include="Tables\TargetTypes.sql" />
+    <Build Include="Tables\TransportItems.sql" />
     <Build Include="Tables\VisionLevels.sql" />
     <Build Include="Tables\Weapons.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
+    <None Include="Scripts\PostDeployment\Enums.sql" />
   </ItemGroup>
 </Project>

@@ -4,8 +4,8 @@
 		CONSTRAINT Powers_PowerId_PK PRIMARY KEY,
     Name VARCHAR(50) NOT NULL,
     TextDescription VARCHAR(255) NOT NULL,
-    PowerTypeId INT NOT NULL 
-		CONSTRAINT Powers_PowerTypeId_FK FOREIGN KEY REFERENCES dbo.PowerTypes(PowerTypeId),
+    PowerUsageId INT NOT NULL 
+		CONSTRAINT Powers_PowerUsageId_FK FOREIGN KEY REFERENCES dbo.PowerUsages(PowerUsageId),
     ActionTypeId INT NOT NULL 
 		CONSTRAINT Powers_ActionTypeId_FK FOREIGN KEY REFERENCES dbo.ActionTypes(ActionTypeId),
     AttackTypeId INT NOT NULL 
