@@ -5,5 +5,5 @@
     PowerId INT NOT NULL 
 		CONSTRAINT PowerEffectsBridge_PowerId_FK FOREIGN KEY REFERENCES dbo.Powers(PowerId),
     EffectId INT NOT NULL 
-		CONSTRAINT PowerEffectsBridge_EffectId_FK FOREIGN KEY REFERENCES dbo.PowerEffects(PowerEffectId)
+		CONSTRAINT PowerEffectsBridge_EffectId_FK FOREIGN KEY REFERENCES dbo.EffectTypes(EffectTypeId)
 );

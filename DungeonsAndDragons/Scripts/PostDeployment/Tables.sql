@@ -66,7 +66,7 @@ VALUES
 GO
 
 INSERT INTO 
-	dbo.LightSources(Name, Radius, Brightness, Duration, FlavourText)
+	dbo.LightSources(Name, Radius, Brightness, Duration)
 VALUES
 	('Candle',2,'Dim',1),
 	('Torch',5,'Bright',1),
@@ -76,7 +76,7 @@ VALUES
 GO
 
 INSERT INTO 
-	dbo.Sizes(Name, MinSpace, Reach)
+	dbo.Sizes(Name, MinSpace, MinReach, MaxReach)
 VALUES
 	('Tiny',0.5,0,0),
 	('Small',1,1,1),

@@ -98,7 +98,7 @@
     <Build Include="Tables\Enums\CompassionLevels.sql" />
     <Build Include="Tables\Deities.sql" />
     <Build Include="Tables\Enums\EpicDestinies.sql" />
-    <Compile Include="Scripts\PostDeployment\Tables.sql" />
+    <None Include="Scripts\PostDeployment\Tables.sql" />
     <Build Include="Tables\Enums\EffectTypes.sql" />
     <Build Include="Tables\Enums\PowerSources.sql" />
     <Build Include="Tables\Enums\Roles.sql" />
@@ -133,6 +133,6 @@
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
-    <Compile Include="Scripts\PostDeployment\Enums.sql" />
+    <None Include="Scripts\PostDeployment\Enums.sql" />
   </ItemGroup>
 </Project>
