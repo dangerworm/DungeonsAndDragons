@@ -1,0 +1,100 @@
+﻿@model IEnumerable<DungeonsAndDragons_Data.Weapon>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Handedness)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProficiencyBonus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DamageNumDice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DamageDieSides)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NormalRange)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LongRange)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WeightPounds)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Actor.ActorId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AttackClass.AttackClassId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WeaponCategory.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WeaponGroup.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Handedness)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProficiencyBonus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DamageNumDice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DamageDieSides)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NormalRange)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LongRange)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WeightPounds)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Actor.ActorId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AttackClass.AttackClassId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WeaponCategory.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WeaponGroup.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.WeaponId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.WeaponId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.WeaponId })
+        </td>
+    </tr>
+}
+
+</table>

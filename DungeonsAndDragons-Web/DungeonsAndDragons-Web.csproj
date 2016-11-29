@@ -206,11 +206,16 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Auto-Created\Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ArmourItemsController.cs" />
+    <Compile Include="Controllers\ClassesController.cs" />
     <Compile Include="Controllers\GamesController.cs" />
+    <Compile Include="Controllers\GearItemsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Auto-Created\Controllers\ManageController.cs" />
     <Compile Include="Controllers\PlayerCharactersController.cs" />
+    <Compile Include="Controllers\PowersController.cs" />
     <Compile Include="Controllers\RacesController.cs" />
+    <Compile Include="Controllers\WeaponsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -295,6 +300,31 @@
     <Content Include="Views\Races\Details.cshtml" />
     <Content Include="Views\Races\Edit.cshtml" />
     <Content Include="Views\Races\Index.cshtml" />
+    <Content Include="Views\ArmourItems\Create.cshtml" />
+    <Content Include="Views\ArmourItems\Delete.cshtml" />
+    <Content Include="Views\ArmourItems\Details.cshtml" />
+    <Content Include="Views\ArmourItems\Edit.cshtml" />
+    <Content Include="Views\ArmourItems\Index.cshtml" />
+    <Content Include="Views\Classes\Create.cshtml" />
+    <Content Include="Views\Classes\Delete.cshtml" />
+    <Content Include="Views\Classes\Details.cshtml" />
+    <Content Include="Views\Classes\Edit.cshtml" />
+    <Content Include="Views\Classes\Index.cshtml" />
+    <Content Include="Views\GearItems\Create.cshtml" />
+    <Content Include="Views\GearItems\Delete.cshtml" />
+    <Content Include="Views\GearItems\Details.cshtml" />
+    <Content Include="Views\GearItems\Edit.cshtml" />
+    <Content Include="Views\GearItems\Index.cshtml" />
+    <Content Include="Views\Powers\Create.cshtml" />
+    <Content Include="Views\Powers\Delete.cshtml" />
+    <Content Include="Views\Powers\Details.cshtml" />
+    <Content Include="Views\Powers\Edit.cshtml" />
+    <Content Include="Views\Powers\Index.cshtml" />
+    <Content Include="Views\Weapons\Create.cshtml" />
+    <Content Include="Views\Weapons\Delete.cshtml" />
+    <Content Include="Views\Weapons\Details.cshtml" />
+    <Content Include="Views\Weapons\Edit.cshtml" />
+    <Content Include="Views\Weapons\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

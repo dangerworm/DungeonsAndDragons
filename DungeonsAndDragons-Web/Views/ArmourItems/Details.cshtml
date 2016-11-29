@@ -1,0 +1,51 @@
+﻿@model DungeonsAndDragons_Data.ArmourItem
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ArmourItem</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsMagic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsMagic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Actor.ActorId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actor.ActorId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArmourType.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArmourType.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ArmourItemId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

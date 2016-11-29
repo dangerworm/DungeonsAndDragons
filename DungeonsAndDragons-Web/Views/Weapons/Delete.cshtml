@@ -1,0 +1,121 @@
+﻿@model DungeonsAndDragons_Data.Weapon
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Weapon</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Handedness)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Handedness)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProficiencyBonus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProficiencyBonus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DamageNumDice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DamageNumDice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DamageDieSides)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DamageDieSides)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NormalRange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NormalRange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LongRange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LongRange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeightPounds)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeightPounds)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Actor.ActorId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actor.ActorId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AttackClass.AttackClassId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AttackClass.AttackClassId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeaponCategory.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeaponCategory.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeaponGroup.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeaponGroup.Name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

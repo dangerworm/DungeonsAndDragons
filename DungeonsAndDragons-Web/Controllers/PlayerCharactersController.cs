@@ -57,6 +57,11 @@ namespace DungeonsAndDragons_Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "PlayerCharacterId,ActorId,ActorTypeId,Name,CombatLevel,ClassId,ParagonPathId,EpicDestinyId,ExperiencePoints,RaceId,Age,GenderId,Height,WeightPounds,AlignmentId,DeityId,Initiative,PassiveInsight,PassivePerception,HitPoints,BaseActionPoints,AdditionalActionPoints,Picture")] PlayerCharacter playerCharacter)
         {
+            var actor = new Actor();
+            db.Actors.Add(actor);
+            db.SaveChanges();
+
+            playerCharacter.ActorId = actor.ActorId;
             if (ModelState.IsValid)
             {
                 db.PlayerCharacters.Add(playerCharacter);

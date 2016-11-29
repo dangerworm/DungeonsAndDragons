@@ -1,0 +1,82 @@
+﻿@model IEnumerable<DungeonsAndDragons_Data.Class>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BaseHitPoints)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HitPointsPerLevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HealingSurges)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FlavourText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ability.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ability1.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PowerSource.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Role.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BaseHitPoints)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HitPointsPerLevel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HealingSurges)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FlavourText)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ability.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ability1.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PowerSource.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Role.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ClassId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ClassId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ClassId })
+        </td>
+    </tr>
+}
+
+</table>

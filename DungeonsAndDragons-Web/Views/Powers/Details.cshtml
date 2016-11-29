@@ -1,0 +1,195 @@
+﻿@model DungeonsAndDragons_Data.Power
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Power</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TextDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TextDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TargetType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TargetType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinNumTargets)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinNumTargets)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxNumTargets)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxNumTargets)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AttackAbilityComplement)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AttackAbilityComplement)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AttackDefenseComplement)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AttackDefenseComplement)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HitAbilityComplement)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HitAbilityComplement)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HasSecondaryAttack)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HasSecondaryAttack)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsConjuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsConjuration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsZone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsZone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ability.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ability.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ability1.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ability1.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActionType.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActionType.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AttackType.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AttackType.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DamageType.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DamageType.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Defens.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Defens.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DurationUnit.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DurationUnit.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EffectType.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EffectType.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PowerUsage.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PowerUsage.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prerequisite.PrerequisiteId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prerequisite.PrerequisiteId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PowerId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

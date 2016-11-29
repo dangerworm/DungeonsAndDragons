@@ -10,107 +10,116 @@ using DungeonsAndDragons_Data;
 
 namespace DungeonsAndDragons_Web.Controllers
 {
-    public class GamesController : Controller
+    public class ArmourItemsController : Controller
     {
         private DungeonsAndDragonsEntities db = new DungeonsAndDragonsEntities();
 
-        // GET: Games
+        // GET: ArmourItems
         public ActionResult Index()
         {
-            return View(db.Games.ToList());
+            var armourItems = db.ArmourItems.Include(a => a.Actor).Include(a => a.ArmourType);
+            return View(armourItems.ToList());
         }
 
-        // GET: Games/Details/5
+        // GET: ArmourItems/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Game game = db.Games.Find(id);
-            if (game == null)
+            ArmourItem armourItem = db.ArmourItems.Find(id);
+            if (armourItem == null)
             {
                 return HttpNotFound();
             }
-            return View(game);
+            return View(armourItem);
         }
 
-        // GET: Games/Create
+        // GET: ArmourItems/Create
         public ActionResult Create()
         {
+            ViewBag.OwnerActorId = new SelectList(db.Actors, "ActorId", "ActorId");
+            ViewBag.ArmourTypeId = new SelectList(db.ArmourTypes, "ArmourTypeId", "Name");
             return View();
         }
 
-        // POST: Games/Create
+        // POST: ArmourItems/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Name,StartDate")] Game game)
+        public ActionResult Create([Bind(Include = "ArmourItemId,ArmourTypeId,OwnerActorId,Name,IsMagic")] ArmourItem armourItem)
         {
             if (ModelState.IsValid)
             {
-                db.Games.Add(game);
+                db.ArmourItems.Add(armourItem);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(game);
+            ViewBag.OwnerActorId = new SelectList(db.Actors, "ActorId", "ActorId", armourItem.OwnerActorId);
+            ViewBag.ArmourTypeId = new SelectList(db.ArmourTypes, "ArmourTypeId", "Name", armourItem.ArmourTypeId);
+            return View(armourItem);
         }
 
-        // GET: Games/Edit/5
+        // GET: ArmourItems/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Game game = db.Games.Find(id);
-            if (game == null)
+            ArmourItem armourItem = db.ArmourItems.Find(id);
+            if (armourItem == null)
             {
                 return HttpNotFound();
             }
-            return View(game);
+            ViewBag.OwnerActorId = new SelectList(db.Actors, "ActorId", "ActorId", armourItem.OwnerActorId);
+            ViewBag.ArmourTypeId = new SelectList(db.ArmourTypes, "ArmourTypeId", "Name", armourItem.ArmourTypeId);
+            return View(armourItem);
         }
 
-        // POST: Games/Edit/5
+        // POST: ArmourItems/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "GameId,Name,StartDate")] Game game)
+        public ActionResult Edit([Bind(Include = "ArmourItemId,ArmourTypeId,OwnerActorId,Name,IsMagic")] ArmourItem armourItem)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(game).State = EntityState.Modified;
+                db.Entry(armourItem).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(game);
+            ViewBag.OwnerActorId = new SelectList(db.Actors, "ActorId", "ActorId", armourItem.OwnerActorId);
+            ViewBag.ArmourTypeId = new SelectList(db.ArmourTypes, "ArmourTypeId", "Name", armourItem.ArmourTypeId);
+            return View(armourItem);
         }
 
-        // GET: Games/Delete/5
+        // GET: ArmourItems/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Game game = db.Games.Find(id);
-            if (game == null)
+            ArmourItem armourItem = db.ArmourItems.Find(id);
+            if (armourItem == null)
             {
                 return HttpNotFound();
             }
-            return View(game);
+            return View(armourItem);
         }
 
-        // POST: Games/Delete/5
+        // POST: ArmourItems/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Game game = db.Games.Find(id);
-            db.Games.Remove(game);
+            ArmourItem armourItem = db.ArmourItems.Find(id);
+            db.ArmourItems.Remove(armourItem);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
