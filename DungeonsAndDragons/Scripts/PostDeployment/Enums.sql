@@ -148,6 +148,14 @@ VALUES
 
 GO
 
+INSERT INTO dbo.Roles(Name)
+VALUES
+	('Controller'),
+	('Defender'),
+	('Leader'),
+	('Striker')
+GO
+
 INSERT INTO dbo.Skills(Name)
 VALUES
 	('Acrobatics'),

@@ -88,7 +88,7 @@
     <Build Include="Tables\Enums\DurationUnits.sql" />
     <Build Include="Tables\Enums\Genders.sql" />
     <Build Include="Tables\Enums\ImplementTypes.sql" />
-    <Build Include="Tables\Enums\PowerTypes.sql" />
+    <Build Include="Tables\Enums\PowerUsages.sql" />
     <Build Include="Tables\Enums\Skills.sql" />
     <Build Include="Tables\Enums\WeaponCategories.sql" />
     <Build Include="Tables\Enums\WeaponGroups.sql" />
@@ -98,11 +98,13 @@
     <Build Include="Tables\Enums\CompassionLevels.sql" />
     <Build Include="Tables\Deities.sql" />
     <Build Include="Tables\Enums\EpicDestinies.sql" />
-    <Build Include="Scripts\PostDeployment\Tables.sql" />
+    <Compile Include="Scripts\PostDeployment\Tables.sql" />
     <Build Include="Tables\Enums\EffectTypes.sql" />
     <Build Include="Tables\Enums\PowerSources.sql" />
     <Build Include="Tables\Enums\Roles.sql" />
     <Build Include="Tables\ParagonPaths.sql" />
+    <Build Include="Tables\ArmourTypes.sql" />
+    <Build Include="Tables\LightSources.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Actors.sql" />
@@ -131,6 +133,6 @@
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
-    <None Include="Scripts\PostDeployment\Enums.sql" />
+    <Compile Include="Scripts\PostDeployment\Enums.sql" />
   </ItemGroup>
 </Project>

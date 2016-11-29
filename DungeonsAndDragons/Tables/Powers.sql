@@ -6,6 +6,8 @@
     TextDescription VARCHAR(255) NOT NULL,
     PowerUsageId INT NOT NULL 
 		CONSTRAINT Powers_PowerUsageId_FK FOREIGN KEY REFERENCES dbo.PowerUsages(PowerUsageId),
+	EffectTypeId INT NOT NULL 
+		CONSTRAINT Powers_EffectTypeId_FK FOREIGN KEY REFERENCES dbo.EffectTypes(EffectTypeId),
     ActionTypeId INT NOT NULL 
 		CONSTRAINT Powers_ActionTypeId_FK FOREIGN KEY REFERENCES dbo.ActionTypes(ActionTypeId),
     AttackTypeId INT NOT NULL 

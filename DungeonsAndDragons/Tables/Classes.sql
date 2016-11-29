@@ -8,7 +8,11 @@
     PowerSourceId INT NOT NULL 
 		CONSTRAINT Classes_PowerSourceId_FK FOREIGN KEY REFERENCES dbo.PowerSources(PowerSourceId),
     BaseHitPoints INT NOT NULL,
+    BaseHitPointsAbilityId INT
+		CONSTRAINT Classes_BaseHitPointsAbilityId_FK FOREIGN KEY REFERENCES dbo.Abilities(AbilityId),
     HitPointsPerLevel INT NOT NULL,
     HealingSurges INT NOT NULL,
+    HealingSurgesAbilityId INT
+		CONSTRAINT Classes_HealingSurgesAbilityId_FK FOREIGN KEY REFERENCES dbo.Abilities(AbilityId),
 	FlavourText VARCHAR(MAX)
 );
