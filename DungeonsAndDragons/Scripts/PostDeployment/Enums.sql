@@ -132,11 +132,6 @@ VALUES
 	('Wand')
 GO
 
-INSERT INTO dbo.ParagonPaths(Name)
-VALUES
-	('', '')
-GO
-
 INSERT INTO dbo.PowerSources(Name)
 VALUES
 	('Arcane'),

@@ -4,6 +4,8 @@
 		CONSTRAINT DefenseModifiers_DefenseModifierId_PK PRIMARY KEY,
     ActorId INT 
 		CONSTRAINT DefenseModifiers_ActorId_FK FOREIGN KEY REFERENCES dbo.Actors(ActorId),
+	ClassId INT 
+		CONSTRAINT DefenseModifiers_ClassId_FK FOREIGN KEY REFERENCES dbo.Classes(ClassId),
     FeatureId INT 
 		CONSTRAINT DefenseModifiers_FeatureId_FK FOREIGN KEY REFERENCES dbo.Features(FeatureId),
     RaceId INT 

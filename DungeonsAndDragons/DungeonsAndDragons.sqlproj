@@ -98,11 +98,11 @@
     <Build Include="Tables\Enums\CompassionLevels.sql" />
     <Build Include="Tables\Deities.sql" />
     <Build Include="Tables\Enums\EpicDestinies.sql" />
-    <Build Include="Tables\Enums\ParagonPaths.sql" />
-    <Build Include="Tables\Enums\PowerKeywords.sql" />
     <Build Include="Scripts\PostDeployment\Tables.sql" />
     <Build Include="Tables\Enums\EffectTypes.sql" />
     <Build Include="Tables\Enums\PowerSources.sql" />
+    <Build Include="Tables\Enums\Roles.sql" />
+    <Build Include="Tables\ParagonPaths.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Actors.sql" />
@@ -117,7 +117,6 @@
     <Build Include="Tables\Languages.sql" />
     <Build Include="Tables\Notes.sql" />
     <Build Include="Tables\PlayerCharacters.sql" />
-    <Build Include="Tables\PowerEffects.sql" />
     <Build Include="Tables\Powers.sql" />
     <Build Include="Tables\Prerequisites.sql" />
     <Build Include="Tables\Purses.sql" />
