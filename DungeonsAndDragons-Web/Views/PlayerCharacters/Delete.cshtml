@@ -1,0 +1,201 @@
+﻿@model DungeonsAndDragons_Data.PlayerCharacter
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PlayerCharacter</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ActorTypeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActorTypeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CombatLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CombatLevel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExperiencePoints)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExperiencePoints)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Height)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Height)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeightPounds)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeightPounds)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Initiative)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Initiative)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PassiveInsight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PassiveInsight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PassivePerception)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PassivePerception)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HitPoints)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HitPoints)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseActionPoints)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaseActionPoints)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdditionalActionPoints)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdditionalActionPoints)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Picture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Picture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Actor.ActorId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actor.ActorId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Alignment.AlignmentId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alignment.AlignmentId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Class.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Class.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Deity.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Deity.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EpicDestiny.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EpicDestiny.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParagonPath.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParagonPath.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Race.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Race.Name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

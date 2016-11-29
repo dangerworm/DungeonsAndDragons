@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Games]
+(
+    GameId INT IDENTITY(1,1) 
+		CONSTRAINT Games_GameId_PK PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL,
+	StartDate DATETIME2(3) 
+);

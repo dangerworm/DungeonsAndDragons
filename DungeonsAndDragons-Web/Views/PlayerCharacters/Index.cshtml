@@ -1,0 +1,160 @@
+﻿@model IEnumerable<DungeonsAndDragons_Data.PlayerCharacter>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ActorTypeId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CombatLevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExperiencePoints)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Height)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WeightPounds)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Initiative)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PassiveInsight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PassivePerception)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HitPoints)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BaseActionPoints)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdditionalActionPoints)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Picture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Actor.ActorId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Alignment.AlignmentId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Class.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Deity.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EpicDestiny.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ParagonPath.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Race.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActorTypeId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CombatLevel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExperiencePoints)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Height)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WeightPounds)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Initiative)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PassiveInsight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PassivePerception)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HitPoints)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BaseActionPoints)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdditionalActionPoints)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Picture)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Actor.ActorId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Alignment.AlignmentId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Class.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Deity.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EpicDestiny.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ParagonPath.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Race.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PlayerCharacterId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PlayerCharacterId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PlayerCharacterId })
+        </td>
+    </tr>
+}
+
+</table>

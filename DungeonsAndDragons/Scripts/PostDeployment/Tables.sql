@@ -109,3 +109,4 @@ VALUES
 	('Human',3,6,1,1),
 	('Tiefling',3,6,2,1)
 GO
+

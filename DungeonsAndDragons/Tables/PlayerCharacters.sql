@@ -29,14 +29,13 @@
     DeityId INT 
 		CONSTRAINT PlayerCharacters_DeityId_FK FOREIGN KEY REFERENCES dbo.Deities(DeityId),
     Initiative INT NOT NULL,
-    BaseSpeed INT NOT NULL,
     PassiveInsight INT NOT NULL 
 		CONSTRAINT PlayerCharacters_PassiveInsight_DF DEFAULT(0),
     PassivePerception INT NOT NULL 
 		CONSTRAINT PlayerCharacters_PassivePerception_DF DEFAULT(0),
-    BaseHitPoints INT NOT NULL,
-    AdditionalHitPoints INT,
-    BaseActionPoints INT NOT NULL,
+    HitPoints INT NOT NULL,
+	BaseActionPoints INT NOT NULL 
+		CONSTRAINT PlayerCharacters_BaseActionPoints_DF DEFAULT(0),
     AdditionalActionPoints INT,
 	Picture BINARY
 );
