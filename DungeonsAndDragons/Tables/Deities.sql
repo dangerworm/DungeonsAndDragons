@@ -2,10 +2,8 @@
 (
     DeityId INT IDENTITY(1,1) 
 		CONSTRAINT Deities_DeityId_PK PRIMARY KEY,
-    AuthorityLevelId INT 
-		CONSTRAINT Deities_AuthorityLevelId_FK FOREIGN KEY REFERENCES dbo.AuthorityLevels(AuthorityLevelId),
-    CompassionLevelId INT 
-		CONSTRAINT Deities_CompassionLevelId_FK FOREIGN KEY REFERENCES dbo.CompassionLevels(CompassionLevelId),
+    AlignmentId INT
+		CONSTRAINT Deities_AlignmentId_FK FOREIGN KEY REFERENCES dbo.Alignments(AlignmentId),
 	Name VARCHAR(50) NOT NULL,
     FlavourText VARCHAR(MAX)
 );

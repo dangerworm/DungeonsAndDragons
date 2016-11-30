@@ -72,8 +72,7 @@ namespace DungeonsAndDragons_Web.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ActorId = new SelectList(db.Actors, "ActorId", "ActorId", playerCharacter.ActorId);
-            ViewBag.AlignmentId = new SelectList(db.Alignments, "AlignmentId", "AlignmentId", playerCharacter.AlignmentId);
+            ViewBag.AlignmentId = new SelectList(db.Alignments, "AlignmentId", "TextDescription", playerCharacter.AlignmentId);
             ViewBag.ClassId = new SelectList(db.Classes, "ClassId", "Name", playerCharacter.ClassId);
             ViewBag.DeityId = new SelectList(db.Deities, "DeityId", "Name", playerCharacter.DeityId);
             ViewBag.EpicDestinyId = new SelectList(db.EpicDestinies, "EpicDestinyId", "Name", playerCharacter.EpicDestinyId);

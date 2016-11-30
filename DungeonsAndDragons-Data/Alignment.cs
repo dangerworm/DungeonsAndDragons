@@ -11,20 +11,22 @@ namespace DungeonsAndDragons_Data
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class Alignment
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage",
+             "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Alignment()
         {
             this.PlayerCharacters = new HashSet<PlayerCharacter>();
         }
-    
+
         public int AlignmentId { get; set; }
         public int AuthorityLevelId { get; set; }
         public int CompassionLevelId { get; set; }
-    
-        public virtual AuthorityLevel AuthorityLevel { get; set; }
+        public string TextDescription => AlignmentId != 5 ? $"{AuthorityLevel.Name} {CompassionLevel.Name}" : "True Neutral";
+
+    public virtual AuthorityLevel AuthorityLevel { get; set; }
         public virtual CompassionLevel CompassionLevel { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PlayerCharacter> PlayerCharacters { get; set; }
