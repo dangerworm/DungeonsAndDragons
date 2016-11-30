@@ -12,14 +12,6 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.ActorTypeId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ActorTypeId)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
 
@@ -36,6 +28,31 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.Class)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Class.Name)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParagonPath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParagonPath.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EpicDestiny)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EpicDestiny.Name)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.ExperiencePoints)
         </dt>
 
@@ -44,11 +61,27 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.Race)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Race.Name)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Age)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender.Name)
         </dd>
 
         <dt>
@@ -62,9 +95,26 @@
         <dt>
             @Html.DisplayNameFor(model => model.WeightPounds)
         </dt>
-
+        
         <dd>
             @Html.DisplayFor(model => model.WeightPounds)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Alignment.AlignmentId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alignment.AuthorityLevel.Name)
+            @Html.DisplayFor(model => model.Alignment.CompassionLevel.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Deity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Deity.Name)
         </dd>
 
         <dt>
@@ -121,70 +171,6 @@
 
         <dd>
             @Html.DisplayFor(model => model.Picture)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Actor.ActorId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Actor.ActorId)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Alignment.AlignmentId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Alignment.AlignmentId)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Class.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Class.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Deity.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Deity.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.EpicDestiny.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.EpicDestiny.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Gender.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Gender.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ParagonPath.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ParagonPath.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Race.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Race.Name)
         </dd>
 
     </dl>
