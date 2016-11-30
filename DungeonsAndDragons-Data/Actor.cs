@@ -33,7 +33,6 @@ namespace DungeonsAndDragons_Data
     
         public int ActorId { get; set; }
         public int ActorTypeId { get; set; }
-        public int EntityId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AbilityValue> AbilityValues { get; set; }

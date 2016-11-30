@@ -55,9 +55,12 @@ namespace DungeonsAndDragons_Web.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PlayerCharacterId,ActorId,ActorTypeId,Name,CombatLevel,ClassId,ParagonPathId,EpicDestinyId,ExperiencePoints,RaceId,Age,GenderId,Height,WeightPounds,AlignmentId,DeityId,Initiative,PassiveInsight,PassivePerception,HitPoints,BaseActionPoints,AdditionalActionPoints,Picture")] PlayerCharacter playerCharacter)
+        public ActionResult Create([Bind(Include = "Name,CombatLevel,ClassId,ParagonPathId,EpicDestinyId,ExperiencePoints,RaceId,Age,GenderId,Height,WeightPounds,AlignmentId,DeityId,Initiative,PassiveInsight,PassivePerception,HitPoints,BaseActionPoints,AdditionalActionPoints,Picture")] PlayerCharacter playerCharacter)
         {
-            var actor = new Actor();
+            var actor = new Actor
+            {
+                ActorTypeId = 1,
+            };
             db.Actors.Add(actor);
             db.SaveChanges();
 

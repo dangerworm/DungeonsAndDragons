@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3df98de6228e43f4b4adcd8eec9b9d77" Name="Diagram1">
+      <Diagram DiagramId="9cd02d6fcb3648edb121eb116fb2da6a" Name="Diagram1">
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.Ability" Width="1.5" PointX="0.75" PointY="18.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.AbilityValue" Width="1.5" PointX="3" PointY="18.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.ActionType" Width="1.5" PointX="14.25" PointY="11.25" IsExpanded="true" />
@@ -37,33 +37,33 @@
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.Feature" Width="1.5" PointX="0.75" PointY="22.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.GameActorsBridge" Width="1.5" PointX="12" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.Game" Width="1.5" PointX="9.75" PointY="43.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.GearItem" Width="1.5" PointX="11.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.GearItem" Width="1.5" PointX="11.25" PointY="6.375" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.Gender" Width="1.5" PointX="8.25" PointY="32.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.ImplementType" Width="1.5" PointX="9" PointY="11" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.LanguageRacesBridge" Width="1.5" PointX="16.75" PointY="33.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.Language" Width="1.5" PointX="10.5" PointY="39.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.LightSource" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.LightSource" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.Note" Width="1.5" PointX="3" PointY="28.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.ParagonPath" Width="1.5" PointX="8.25" PointY="36.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.PlayerCharacterFeaturesBridge" Width="1.5" PointX="12.75" PointY="27.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.PlayerCharacterLanguagesBridge" Width="1.5" PointX="12.75" PointY="24.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.PlayerCharacter" Width="1.5" PointX="10.5" PointY="25.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.PlayerCharacter" Width="1.5" PointX="10.5" PointY="25.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.PowerEffectsBridge" Width="1.5" PointX="18.75" PointY="15.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.Power" Width="1.5" PointX="16.5" PointY="15.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.PowerSource" Width="1.5" PointX="3.75" PointY="15.625" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.PowerUsage" Width="1.5" PointX="14.25" PointY="38.625" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.Prerequisite" Width="1.5" PointX="8.25" PointY="17" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.Purse" Width="1.5" PointX="3" PointY="39.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.RaceFeaturesBridge" Width="1.5" PointX="3" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.RaceFeaturesBridge" Width="1.5" PointX="3" PointY="25.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.Race" Width="1.5" PointX="0.75" PointY="27.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.Role" Width="1.5" PointX="3.75" PointY="22.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.Script" Width="1.5" PointX="8.25" PointY="40" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.Size" Width="1.5" PointX="1.5" PointY="32.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.SkillModifier" Width="1.5" PointX="15.25" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.Size" Width="1.5" PointX="1.5" PointY="32.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.SkillModifier" Width="1.5" PointX="15.25" PointY="25.375" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.Skill" Width="1.5" PointX="6" PointY="8.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.TargetType" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.TargetType" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.TransportItem" Width="1.5" PointX="3" PointY="42.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.VisionLevel" Width="1.5" PointX="1.5" PointY="35.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.VisionLevel" Width="1.5" PointX="1.5" PointY="35.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.WeaponCategory" Width="1.5" PointX="9" PointY="7.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.WeaponGroup" Width="1.5" PointX="6" PointY="11.375" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.WeaponProperty" Width="1.5" PointX="14.25" PointY="5.5" IsExpanded="true" />

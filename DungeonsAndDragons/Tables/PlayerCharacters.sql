@@ -4,8 +4,6 @@
 		CONSTRAINT PlayerCharacters_PlayerCharacterId_PK PRIMARY KEY,
     ActorId INT NOT NULL 
 		CONSTRAINT PlayerCharacters_ActorId_FK FOREIGN KEY REFERENCES dbo.Actors(ActorId),
-	ActorTypeId AS 1 PERSISTED,
-	FOREIGN KEY (PlayerCharacterId, ActorTypeId) REFERENCES dbo.Actors(EntityId, ActorTypeId),
     Name VARCHAR(50) NOT NULL,
     CombatLevel INT NOT NULL 
 		CONSTRAINT PlayerCharacters_CombatLevel_DF DEFAULT(1),

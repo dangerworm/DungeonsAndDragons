@@ -38,7 +38,6 @@
           </Key>
           <Property Name="ActorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ActorTypeId" Type="int" Nullable="false" />
-          <Property Name="EntityId" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="ActorTypes">
           <Key>
@@ -378,7 +377,6 @@
           </Key>
           <Property Name="PlayerCharacterId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ActorId" Type="int" Nullable="false" />
-          <Property Name="ActorTypeId" Type="int" StoreGeneratedPattern="Computed" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="CombatLevel" Type="int" Nullable="false" />
           <Property Name="ClassId" Type="int" Nullable="false" />
@@ -1057,9 +1055,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <!--Errors Found During Generation:
-warning 6035: The relationship 'FK__PlayerCharacters__6442E2C9' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
-        <Association Name="FK__PlayerCharacters__6442E2C9" />-->
         <Association Name="GameActorsBridge_ActorId_FK">
           <End Role="Actors" Type="Self.Actors" Multiplicity="1" />
           <End Role="GameActorsBridge" Type="Self.GameActorsBridge" Multiplicity="*" />
@@ -2263,7 +2258,6 @@ warning 6035: The relationship 'FK__PlayerCharacters__6442E2C9' has columns that
           </Key>
           <Property Name="ActorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ActorTypeId" Type="Int32" Nullable="false" />
-          <Property Name="EntityId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="AbilityValues" Relationship="Self.AbilityValues_ActorId_FK" FromRole="Actors" ToRole="AbilityValues" />
           <NavigationProperty Name="ActorType" Relationship="Self.Actors_ActorTypeId_FK" FromRole="Actors" ToRole="ActorTypes" />
           <NavigationProperty Name="ArmourItems" Relationship="Self.ArmourItems_OwnerActorId_FK" FromRole="Actors" ToRole="ArmourItems" />
@@ -2708,7 +2702,6 @@ warning 6035: The relationship 'FK__PlayerCharacters__6442E2C9' has columns that
           </Key>
           <Property Name="PlayerCharacterId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ActorId" Type="Int32" Nullable="false" />
-          <Property Name="ActorTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="CombatLevel" Type="Int32" Nullable="false" />
           <Property Name="ClassId" Type="Int32" Nullable="false" />
@@ -4656,7 +4649,6 @@ warning 6035: The relationship 'FK__PlayerCharacters__6442E2C9' has columns that
               <MappingFragment StoreEntitySet="Actors">
                 <ScalarProperty Name="ActorId" ColumnName="ActorId" />
                 <ScalarProperty Name="ActorTypeId" ColumnName="ActorTypeId" />
-                <ScalarProperty Name="EntityId" ColumnName="EntityId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -5035,7 +5027,6 @@ warning 6035: The relationship 'FK__PlayerCharacters__6442E2C9' has columns that
               <MappingFragment StoreEntitySet="PlayerCharacters">
                 <ScalarProperty Name="PlayerCharacterId" ColumnName="PlayerCharacterId" />
                 <ScalarProperty Name="ActorId" ColumnName="ActorId" />
-                <ScalarProperty Name="ActorTypeId" ColumnName="ActorTypeId" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="CombatLevel" ColumnName="CombatLevel" />
                 <ScalarProperty Name="ClassId" ColumnName="ClassId" />

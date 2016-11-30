@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel;
+
 namespace DungeonsAndDragons_Data
 {
     using System;
@@ -23,8 +25,8 @@ namespace DungeonsAndDragons_Data
     
         public int PlayerCharacterId { get; set; }
         public int ActorId { get; set; }
-        public int ActorTypeId { get; set; }
         public string Name { get; set; }
+        [DisplayName("Level")]
         public int CombatLevel { get; set; }
         public int ClassId { get; set; }
         public Nullable<int> ParagonPathId { get; set; }
