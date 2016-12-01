@@ -70,6 +70,11 @@ namespace DungeonsAndDragons_Web.Controllers
             {
                 return HttpNotFound();
             }
+
+            ViewBag.ActorId = new SelectList(db.PlayerCharacters, "ActorId", "Name");
+            int[] actors = game.GameActorsBridges.Select(x => x.ActorId).ToArray();
+            ViewBag.PlayerCharacters = db.PlayerCharacters.Where(x => actors.Contains(x.ActorId));
+
             return View(game);
         }
 
@@ -87,6 +92,20 @@ namespace DungeonsAndDragons_Web.Controllers
                 return RedirectToAction("Index");
             }
             return View(game);
+        }
+
+        // POST: Games/AddPlayerCharacter/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddPlayerCharacter([Bind(Include = "GameId,ActorId")] GameActorsBridge bridge)
+        {
+            if (ModelState.IsValid)
+            {
+                db.GameActorsBridges.Add(bridge);
+                db.SaveChanges();
+            }
+
+            return RedirectToAction("Edit", new { id = bridge.GameId });
         }
 
         // GET: Games/Delete/5

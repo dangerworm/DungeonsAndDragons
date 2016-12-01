@@ -17,7 +17,15 @@ namespace DungeonsAndDragons_Web.Controllers
         // GET: PlayerCharacters
         public ActionResult Index()
         {
-            var playerCharacters = db.PlayerCharacters.Include(p => p.Actor).Include(p => p.Alignment).Include(p => p.Class).Include(p => p.Deity).Include(p => p.EpicDestiny).Include(p => p.Gender).Include(p => p.ParagonPath).Include(p => p.Race);
+            var playerCharacters = db.PlayerCharacters
+                .Include(p => p.Actor)
+                .Include(p => p.Alignment)
+                .Include(p => p.Class)
+                .Include(p => p.Deity)
+                .Include(p => p.EpicDestiny)
+                .Include(p => p.Gender)
+                .Include(p => p.ParagonPath)
+                .Include(p => p.Race);
             return View(playerCharacters.ToList());
         }
 

@@ -232,8 +232,7 @@
             <PropertyRef Name="DeityId" />
           </Key>
           <Property Name="DeityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="AuthorityLevelId" Type="int" />
-          <Property Name="CompassionLevelId" Type="int" />
+          <Property Name="AlignmentId" Type="int" />
           <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="FlavourText" Type="varchar(max)" />
         </EntityType>
@@ -1031,27 +1030,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="Deities_AuthorityLevelId_FK">
-          <End Role="AuthorityLevels" Type="Self.AuthorityLevels" Multiplicity="0..1" />
+        <Association Name="Deities_AlignmentId_FK">
+          <End Role="Alignments" Type="Self.Alignments" Multiplicity="0..1" />
           <End Role="Deities" Type="Self.Deities" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="AuthorityLevels">
-              <PropertyRef Name="AuthorityLevelId" />
+            <Principal Role="Alignments">
+              <PropertyRef Name="AlignmentId" />
             </Principal>
             <Dependent Role="Deities">
-              <PropertyRef Name="AuthorityLevelId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="Deities_CompassionLevelId_FK">
-          <End Role="CompassionLevels" Type="Self.CompassionLevels" Multiplicity="0..1" />
-          <End Role="Deities" Type="Self.Deities" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CompassionLevels">
-              <PropertyRef Name="CompassionLevelId" />
-            </Principal>
-            <Dependent Role="Deities">
-              <PropertyRef Name="CompassionLevelId" />
+              <PropertyRef Name="AlignmentId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1964,12 +1951,8 @@
             <End Role="Races" EntitySet="Races" />
             <End Role="DefenseModifiers" EntitySet="DefenseModifiers" />
           </AssociationSet>
-          <AssociationSet Name="Deities_AuthorityLevelId_FK" Association="Self.Deities_AuthorityLevelId_FK">
-            <End Role="AuthorityLevels" EntitySet="AuthorityLevels" />
-            <End Role="Deities" EntitySet="Deities" />
-          </AssociationSet>
-          <AssociationSet Name="Deities_CompassionLevelId_FK" Association="Self.Deities_CompassionLevelId_FK">
-            <End Role="CompassionLevels" EntitySet="CompassionLevels" />
+          <AssociationSet Name="Deities_AlignmentId_FK" Association="Self.Deities_AlignmentId_FK">
+            <End Role="Alignments" EntitySet="Alignments" />
             <End Role="Deities" EntitySet="Deities" />
           </AssociationSet>
           <AssociationSet Name="GameActorsBridge_ActorId_FK" Association="Self.GameActorsBridge_ActorId_FK">
@@ -2289,6 +2272,7 @@
           <Property Name="CompassionLevelId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="AuthorityLevel" Relationship="Self.Alignments_AuthorityTypeId_FK" FromRole="Alignments" ToRole="AuthorityLevels" />
           <NavigationProperty Name="CompassionLevel" Relationship="Self.Alignments_CompassionLevelId_FK" FromRole="Alignments" ToRole="CompassionLevels" />
+          <NavigationProperty Name="Deities" Relationship="Self.Deities_AlignmentId_FK" FromRole="Alignments" ToRole="Deities" />
           <NavigationProperty Name="PlayerCharacters" Relationship="Self.PlayerCharacters_AlignmentId_FK" FromRole="Alignments" ToRole="PlayerCharacters" />
         </EntityType>
         <EntityType Name="ArmourClass">
@@ -2371,7 +2355,6 @@
           <Property Name="AuthorityLevelId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Alignments" Relationship="Self.Alignments_AuthorityTypeId_FK" FromRole="AuthorityLevels" ToRole="Alignments" />
-          <NavigationProperty Name="Deities" Relationship="Self.Deities_AuthorityLevelId_FK" FromRole="AuthorityLevels" ToRole="Deities" />
         </EntityType>
         <EntityType Name="ClassArmourProficienciesBridge">
           <Key>
@@ -2469,7 +2452,6 @@
           <Property Name="CompassionLevelId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Alignments" Relationship="Self.Alignments_CompassionLevelId_FK" FromRole="CompassionLevels" ToRole="Alignments" />
-          <NavigationProperty Name="Deities" Relationship="Self.Deities_CompassionLevelId_FK" FromRole="CompassionLevels" ToRole="Deities" />
         </EntityType>
         <EntityType Name="ConsumableItem">
           <Key>
@@ -2521,12 +2503,10 @@
             <PropertyRef Name="DeityId" />
           </Key>
           <Property Name="DeityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="AuthorityLevelId" Type="Int32" />
-          <Property Name="CompassionLevelId" Type="Int32" />
+          <Property Name="AlignmentId" Type="Int32" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="FlavourText" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="AuthorityLevel" Relationship="Self.Deities_AuthorityLevelId_FK" FromRole="Deities" ToRole="AuthorityLevels" />
-          <NavigationProperty Name="CompassionLevel" Relationship="Self.Deities_CompassionLevelId_FK" FromRole="Deities" ToRole="CompassionLevels" />
+          <NavigationProperty Name="Alignment" Relationship="Self.Deities_AlignmentId_FK" FromRole="Deities" ToRole="Alignments" />
           <NavigationProperty Name="PlayerCharacters" Relationship="Self.PlayerCharacters_DeityId_FK" FromRole="Deities" ToRole="PlayerCharacters" />
           <NavigationProperty Name="Prerequisites" Relationship="Self.Prerequisites_DeityId_FK" FromRole="Deities" ToRole="Prerequisites" />
         </EntityType>
@@ -3310,6 +3290,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="Deities_AlignmentId_FK">
+          <End Role="Alignments" Type="Self.Alignment" Multiplicity="0..1" />
+          <End Role="Deities" Type="Self.Deity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alignments">
+              <PropertyRef Name="AlignmentId" />
+            </Principal>
+            <Dependent Role="Deities">
+              <PropertyRef Name="AlignmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="PlayerCharacters_AlignmentId_FK">
           <End Role="Alignments" Type="Self.Alignment" Multiplicity="1" />
           <End Role="PlayerCharacters" Type="Self.PlayerCharacter" Multiplicity="*" />
@@ -3415,18 +3407,6 @@
             </Principal>
             <Dependent Role="Powers">
               <PropertyRef Name="AttackTypeId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="Deities_AuthorityLevelId_FK">
-          <End Role="AuthorityLevels" Type="Self.AuthorityLevel" Multiplicity="0..1" />
-          <End Role="Deities" Type="Self.Deity" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="AuthorityLevels">
-              <PropertyRef Name="AuthorityLevelId" />
-            </Principal>
-            <Dependent Role="Deities">
-              <PropertyRef Name="AuthorityLevelId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -3619,18 +3599,6 @@
             </Principal>
             <Dependent Role="ClassTrainedSkillsBridge">
               <PropertyRef Name="SkillId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="Deities_CompassionLevelId_FK">
-          <End Role="CompassionLevels" Type="Self.CompassionLevel" Multiplicity="0..1" />
-          <End Role="Deities" Type="Self.Deity" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CompassionLevels">
-              <PropertyRef Name="CompassionLevelId" />
-            </Principal>
-            <Dependent Role="Deities">
-              <PropertyRef Name="CompassionLevelId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -4323,6 +4291,10 @@
             <End Role="CompassionLevels" EntitySet="CompassionLevels" />
             <End Role="Alignments" EntitySet="Alignments" />
           </AssociationSet>
+          <AssociationSet Name="Deities_AlignmentId_FK" Association="Self.Deities_AlignmentId_FK">
+            <End Role="Alignments" EntitySet="Alignments" />
+            <End Role="Deities" EntitySet="Deities" />
+          </AssociationSet>
           <AssociationSet Name="PlayerCharacters_AlignmentId_FK" Association="Self.PlayerCharacters_AlignmentId_FK">
             <End Role="Alignments" EntitySet="Alignments" />
             <End Role="PlayerCharacters" EntitySet="PlayerCharacters" />
@@ -4358,10 +4330,6 @@
           <AssociationSet Name="Powers_AttackTypeId_FK" Association="Self.Powers_AttackTypeId_FK">
             <End Role="AttackTypes" EntitySet="AttackTypes" />
             <End Role="Powers" EntitySet="Powers" />
-          </AssociationSet>
-          <AssociationSet Name="Deities_AuthorityLevelId_FK" Association="Self.Deities_AuthorityLevelId_FK">
-            <End Role="AuthorityLevels" EntitySet="AuthorityLevels" />
-            <End Role="Deities" EntitySet="Deities" />
           </AssociationSet>
           <AssociationSet Name="ClassArmourProficienciesBridge_ClassId_FK" Association="Self.ClassArmourProficienciesBridge_ClassId_FK">
             <End Role="Classes" EntitySet="Classes" />
@@ -4426,10 +4394,6 @@
           <AssociationSet Name="ClassTrainedSkillsBridge_SkillId_FK" Association="Self.ClassTrainedSkillsBridge_SkillId_FK">
             <End Role="Skills" EntitySet="Skills" />
             <End Role="ClassTrainedSkillsBridge" EntitySet="ClassTrainedSkillsBridges" />
-          </AssociationSet>
-          <AssociationSet Name="Deities_CompassionLevelId_FK" Association="Self.Deities_CompassionLevelId_FK">
-            <End Role="CompassionLevels" EntitySet="CompassionLevels" />
-            <End Role="Deities" EntitySet="Deities" />
           </AssociationSet>
           <AssociationSet Name="Powers_DamageTypeId_FK" Association="Self.Powers_DamageTypeId_FK">
             <End Role="DamageTypes" EntitySet="DamageTypes" />
@@ -4865,8 +4829,7 @@
             <EntityTypeMapping TypeName="DungeonsAndDragonsModel.Deity">
               <MappingFragment StoreEntitySet="Deities">
                 <ScalarProperty Name="DeityId" ColumnName="DeityId" />
-                <ScalarProperty Name="AuthorityLevelId" ColumnName="AuthorityLevelId" />
-                <ScalarProperty Name="CompassionLevelId" ColumnName="CompassionLevelId" />
+                <ScalarProperty Name="AlignmentId" ColumnName="AlignmentId" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="FlavourText" ColumnName="FlavourText" />
               </MappingFragment>

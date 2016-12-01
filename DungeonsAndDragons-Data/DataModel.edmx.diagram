@@ -4,20 +4,20 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9cd02d6fcb3648edb121eb116fb2da6a" Name="Diagram1">
+      <Diagram DiagramId="69a7b0e1050b4f24bb0630ab35cfd9ee" Name="Diagram1">
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.Ability" Width="1.5" PointX="0.75" PointY="18.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.AbilityValue" Width="1.5" PointX="3" PointY="18.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.ActionType" Width="1.5" PointX="14.25" PointY="11.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.Actor" Width="1.5" PointX="0.75" PointY="12.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.ActorType" Width="1.5" PointX="1.5" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.Alignment" Width="1.5" PointX="8.25" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.Alignment" Width="1.5" PointX="3.75" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.ArmourClass" Width="1.5" PointX="9" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.ArmourItem" Width="1.5" PointX="9" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.ArmourType" Width="1.5" PointX="6.75" PointY="42.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.ArmourType" Width="1.5" PointX="6.75" PointY="31.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.ArmourWeightClass" Width="1.5" PointX="6.75" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.AttackClass" Width="1.5" PointX="6" PointY="24.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.AttackType" Width="1.5" PointX="14.25" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.AuthorityLevel" Width="1.5" PointX="3.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.AuthorityLevel" Width="1.5" PointX="1.5" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.ClassArmourProficienciesBridge" Width="1.5" PointX="11.25" PointY="18.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.Class" Width="1.5" PointX="6" PointY="17" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.ClassFeaturesBridge" Width="1.5" PointX="11.25" PointY="15.875" IsExpanded="true" />
@@ -25,24 +25,24 @@
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.ClassPowersBridge" Width="1.5" PointX="18.75" PointY="18.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.ClassTrainedSkillsBridge" Width="1.5" PointX="8.25" PointY="13.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.ClassWeaponProficienciesBridge" Width="1.5" PointX="8.25" PointY="23.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.CompassionLevel" Width="1.5" PointX="3.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.CompassionLevel" Width="1.5" PointX="1.5" PointY="5.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.ConsumableItem" Width="1.5" PointX="3" PointY="12.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.DamageType" Width="1.5" PointX="14.25" PointY="8.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.DefenseModifier" Width="1.5" PointX="14.25" PointY="18.125" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.Defens" Width="1.5" PointX="14.25" PointY="31" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.Deity" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.Deity" Width="1.5" PointX="6" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.DurationUnit" Width="1.5" PointX="14.25" PointY="33.625" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.EffectType" Width="1.5" PointX="14.25" PointY="35.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.EpicDestiny" Width="1.5" PointX="8.25" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.EpicDestiny" Width="1.5" PointX="8.25" PointY="26.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.Feature" Width="1.5" PointX="0.75" PointY="22.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.GameActorsBridge" Width="1.5" PointX="12" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.Game" Width="1.5" PointX="9.75" PointY="43.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.Game" Width="1.5" PointX="9.75" PointY="33.625" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.GearItem" Width="1.5" PointX="11.25" PointY="6.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.Gender" Width="1.5" PointX="8.25" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.Gender" Width="1.5" PointX="8.25" PointY="29.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.ImplementType" Width="1.5" PointX="9" PointY="11" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.LanguageRacesBridge" Width="1.5" PointX="16.75" PointY="33.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.Language" Width="1.5" PointX="10.5" PointY="39.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.LightSource" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.LightSource" Width="1.5" PointX="3.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.Note" Width="1.5" PointX="3" PointY="28.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.ParagonPath" Width="1.5" PointX="8.25" PointY="36.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.PlayerCharacterFeaturesBridge" Width="1.5" PointX="12.75" PointY="27.875" IsExpanded="true" />
@@ -59,16 +59,16 @@
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.Role" Width="1.5" PointX="3.75" PointY="22.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.Script" Width="1.5" PointX="8.25" PointY="40" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.Size" Width="1.5" PointX="1.5" PointY="32.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.SkillModifier" Width="1.5" PointX="15.25" PointY="25.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.Skill" Width="1.5" PointX="6" PointY="8.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.TargetType" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.SkillModifier" Width="1.5" PointX="15.25" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.Skill" Width="1.5" PointX="6" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.TargetType" Width="1.5" PointX="14.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.TransportItem" Width="1.5" PointX="3" PointY="42.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DungeonsAndDragonsModel.VisionLevel" Width="1.5" PointX="1.5" PointY="35.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.WeaponCategory" Width="1.5" PointX="9" PointY="7.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.WeaponGroup" Width="1.5" PointX="6" PointY="11.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.WeaponProperty" Width="1.5" PointX="14.25" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.WeaponPropertiesBridge" Width="1.5" PointX="16.5" PointY="11.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DungeonsAndDragonsModel.Weapon" Width="1.5" PointX="11.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.WeaponCategory" Width="1.5" PointX="9" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.WeaponGroup" Width="1.5" PointX="6" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.WeaponProperty" Width="1.5" PointX="14.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.WeaponPropertiesBridge" Width="1.5" PointX="16.5" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DungeonsAndDragonsModel.Weapon" Width="1.5" PointX="11.25" PointY="10" IsExpanded="true" />
         <AssociationConnector Association="DungeonsAndDragonsModel.AbilityValues_AbilityId_FK" ManuallyRouted="false" />
         <AssociationConnector Association="DungeonsAndDragonsModel.Classes_BaseHitPointsAbilityId_FK" ManuallyRouted="false" />
         <AssociationConnector Association="DungeonsAndDragonsModel.Classes_HealingSurgesAbilityId_FK" ManuallyRouted="false" />
@@ -93,6 +93,7 @@
         <AssociationConnector Association="DungeonsAndDragonsModel.Weapons_OwnerActorId_FK" ManuallyRouted="false" />
         <AssociationConnector Association="DungeonsAndDragonsModel.Alignments_AuthorityTypeId_FK" ManuallyRouted="false" />
         <AssociationConnector Association="DungeonsAndDragonsModel.Alignments_CompassionLevelId_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="DungeonsAndDragonsModel.Deities_AlignmentId_FK" ManuallyRouted="false" />
         <AssociationConnector Association="DungeonsAndDragonsModel.PlayerCharacters_AlignmentId_FK" ManuallyRouted="false" />
         <AssociationConnector Association="DungeonsAndDragonsModel.ArmourClasses_ArmourWeightClassId_FK" ManuallyRouted="false" />
         <AssociationConnector Association="DungeonsAndDragonsModel.ArmourTypes_ArmourClassId_FK" ManuallyRouted="false" />
@@ -102,7 +103,6 @@
         <AssociationConnector Association="DungeonsAndDragonsModel.ClassWeaponProficienciesBridge_WeaponClassId_FK" ManuallyRouted="false" />
         <AssociationConnector Association="DungeonsAndDragonsModel.Weapons_AttackClassId_FK" ManuallyRouted="false" />
         <AssociationConnector Association="DungeonsAndDragonsModel.Powers_AttackTypeId_FK" ManuallyRouted="false" />
-        <AssociationConnector Association="DungeonsAndDragonsModel.Deities_AuthorityLevelId_FK" ManuallyRouted="false" />
         <AssociationConnector Association="DungeonsAndDragonsModel.ClassArmourProficienciesBridge_ClassId_FK" ManuallyRouted="false" />
         <AssociationConnector Association="DungeonsAndDragonsModel.Classes_PowerSourceId_FK" ManuallyRouted="false" />
         <AssociationConnector Association="DungeonsAndDragonsModel.Classes_RoleId_FK" ManuallyRouted="false" />
@@ -119,7 +119,6 @@
         <AssociationConnector Association="DungeonsAndDragonsModel.ClassImplementProficienciesBridge_ImplementTypeId_FK" ManuallyRouted="false" />
         <AssociationConnector Association="DungeonsAndDragonsModel.ClassPowersBridge_PowerId_FK" ManuallyRouted="false" />
         <AssociationConnector Association="DungeonsAndDragonsModel.ClassTrainedSkillsBridge_SkillId_FK" ManuallyRouted="false" />
-        <AssociationConnector Association="DungeonsAndDragonsModel.Deities_CompassionLevelId_FK" ManuallyRouted="false" />
         <AssociationConnector Association="DungeonsAndDragonsModel.Powers_DamageTypeId_FK" ManuallyRouted="false" />
         <AssociationConnector Association="DungeonsAndDragonsModel.DefenseModifiers_DefenseId_FK" ManuallyRouted="false" />
         <AssociationConnector Association="DungeonsAndDragonsModel.DefenseModifiers_FeatureId_FK" ManuallyRouted="false" />

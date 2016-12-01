@@ -18,7 +18,6 @@ namespace DungeonsAndDragons_Data
         public AuthorityLevel()
         {
             this.Alignments = new HashSet<Alignment>();
-            this.Deities = new HashSet<Deity>();
         }
     
         public int AuthorityLevelId { get; set; }
@@ -26,7 +25,5 @@ namespace DungeonsAndDragons_Data
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Alignment> Alignments { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Deity> Deities { get; set; }
     }
 }

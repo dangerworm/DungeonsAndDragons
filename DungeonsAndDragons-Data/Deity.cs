@@ -22,13 +22,11 @@ namespace DungeonsAndDragons_Data
         }
     
         public int DeityId { get; set; }
-        public Nullable<int> AuthorityLevelId { get; set; }
-        public Nullable<int> CompassionLevelId { get; set; }
+        public Nullable<int> AlignmentId { get; set; }
         public string Name { get; set; }
         public string FlavourText { get; set; }
     
-        public virtual AuthorityLevel AuthorityLevel { get; set; }
-        public virtual CompassionLevel CompassionLevel { get; set; }
+        public virtual Alignment Alignment { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PlayerCharacter> PlayerCharacters { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -325,6 +325,7 @@
     <Content Include="Views\Weapons\Details.cshtml" />
     <Content Include="Views\Weapons\Edit.cshtml" />
     <Content Include="Views\Weapons\Index.cshtml" />
+    <Content Include="Views\Shared\_PlayerCharacterList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
