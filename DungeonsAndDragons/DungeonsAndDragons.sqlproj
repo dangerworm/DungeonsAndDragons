@@ -108,6 +108,7 @@
     <Build Include="Tables\LightSources.sql" />
     <Build Include="Tables\Games.sql" />
     <Build Include="Tables\Bridge Tables\GameActorsBridge.sql" />
+    <Build Include="Tables\NonPlayerCharacters.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Actors.sql" />

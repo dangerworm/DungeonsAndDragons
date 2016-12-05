@@ -5,8 +5,6 @@
     ActorId INT NOT NULL 
 		CONSTRAINT PlayerCharacters_ActorId_FK FOREIGN KEY REFERENCES dbo.Actors(ActorId),
     Name VARCHAR(50) NOT NULL,
-    CombatLevel INT NOT NULL 
-		CONSTRAINT PlayerCharacters_CombatLevel_DF DEFAULT(1),
     ClassId INT NOT NULL 
 		CONSTRAINT PlayerCharacters_ClassId_FK FOREIGN KEY REFERENCES dbo.Classes(ClassId),
     ParagonPathId INT 
@@ -26,14 +24,5 @@
 		CONSTRAINT PlayerCharacters_AlignmentId_FK FOREIGN KEY REFERENCES dbo.Alignments(AlignmentId),
     DeityId INT 
 		CONSTRAINT PlayerCharacters_DeityId_FK FOREIGN KEY REFERENCES dbo.Deities(DeityId),
-    Initiative INT NOT NULL,
-    PassiveInsight INT NOT NULL 
-		CONSTRAINT PlayerCharacters_PassiveInsight_DF DEFAULT(0),
-    PassivePerception INT NOT NULL 
-		CONSTRAINT PlayerCharacters_PassivePerception_DF DEFAULT(0),
-    HitPoints INT NOT NULL,
-	BaseActionPoints INT NOT NULL 
-		CONSTRAINT PlayerCharacters_BaseActionPoints_DF DEFAULT(0),
-    AdditionalActionPoints INT,
 	Picture BINARY
 );
