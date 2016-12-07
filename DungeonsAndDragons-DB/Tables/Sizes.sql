@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Sizes]
+(
+    SizeId INT IDENTITY(1,1) 
+		CONSTRAINT Sizes_SizeId_PK PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL,
+	MinSpace DECIMAL(18,2) NOT NULL,
+    MinReach INT NOT NULL,
+    MaxReach INT NOT NULL
+);
