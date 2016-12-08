@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DungeonsAndDragons", "Dunge
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DungeonsAndDragons-DB", "DungeonsAndDragons-DB\DungeonsAndDragons-DB.sqlproj", "{C33B303E-999B-4C51-B4EA-11929ABEC52C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DungeonsAndDragons-Data", "DungeonsAndDragons-Data\DungeonsAndDragons-Data.csproj", "{891EBE99-89FE-408B-B7CC-98D637B98BAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{C33B303E-999B-4C51-B4EA-11929ABEC52C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C33B303E-999B-4C51-B4EA-11929ABEC52C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C33B303E-999B-4C51-B4EA-11929ABEC52C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{891EBE99-89FE-408B-B7CC-98D637B98BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{891EBE99-89FE-408B-B7CC-98D637B98BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{891EBE99-89FE-408B-B7CC-98D637B98BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{891EBE99-89FE-408B-B7CC-98D637B98BAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
