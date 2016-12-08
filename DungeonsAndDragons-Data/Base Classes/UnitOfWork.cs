@@ -4,15 +4,14 @@ using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
+using System.Web;
 
 namespace DungeonsAndDragons_Data
 {
     public class UnitOfWork
     {
-        private readonly IDbConnectionFactory _connectionFactory;
+        private readonly DbConnectionFactory _connectionFactory;
         private readonly string _connectionString;
         private readonly string _id;
         private readonly object @lock;
@@ -23,19 +22,18 @@ namespace DungeonsAndDragons_Data
 
         public bool HasConnection => _connection != null;
 
-        public UnitOfWork(IDbConnectionFactory connectionFactory, string connectionString)
+        public UnitOfWork(string connectionString)
         {
-            Verify.NotNull(connectionFactory, nameof(connectionFactory));
-            Verify.ValidString(connectionString, nameof(connectionString));
+            Verify.NotNull(connectionString, nameof(connectionString));
 
-            _connectionFactory = connectionFactory;
+            _connectionFactory = new DbConnectionFactory();
             _connectionString = connectionString;
 
             _id = Guid.NewGuid().ToString();
             @lock = new object();
         }
 
-        public IUnitOfWork Begin(int? applicationUserId)
+        public UnitOfWork Begin(int? applicationUserId)
         {
             // provide a lock to stop multiple threads accessing this method
             if (HttpRuntime.AppDomainAppId == null)

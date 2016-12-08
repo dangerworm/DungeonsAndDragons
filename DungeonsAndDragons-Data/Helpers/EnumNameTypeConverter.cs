@@ -1,22 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DungeonsAndDragons_Data
 {
     public sealed class EnumNameTypeConverter : EnumConverter
     {
-        /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.ComponentModel.EnumConverter"/> class for the given type.
-        /// </summary>
-        /// <param name="type">
-        ///     A <see cref="T:System.Type"/> that represents the type of enumeration to associate with this
-        ///     enumeration converter.
-        /// </param>
         public EnumNameTypeConverter(Type type)
             : base(type)
         {

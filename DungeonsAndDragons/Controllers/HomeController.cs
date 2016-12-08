@@ -1,15 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Configuration;
 using System.Web.Mvc;
+
+using DungeonsAndDragons_Data;
 
 namespace DungeonsAndDragons.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly UnitOfWork _unitOfWork;
+
+        public HomeController() 
+        {
+            _unitOfWork = new UnitOfWork(ConfigurationManager.ConnectionStrings["DungeonsAndDragons"].ConnectionString);
+        }
+
         public ActionResult Index()
         {
+            var gameRepo = new SqlGameRepository(_unitOfWork);
+            gameRepo.Get(1);
+
             return View();
         }
 

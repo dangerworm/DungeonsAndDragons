@@ -38,6 +38,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,27 +47,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BuildTableValuedParameters.cs" />
-    <Compile Include="ContractAnnotationAttribute.cs" />
-    <Compile Include="DataResult.cs" />
-    <Compile Include="DataResultType.cs" />
-    <Compile Include="DataResultTyped.cs" />
-    <Compile Include="DbCommandExtensions.cs" />
-    <Compile Include="EnumNameTypeConverter.cs" />
-    <Compile Include="Game.cs" />
-    <Compile Include="GameHelper.cs" />
-    <Compile Include="IDataRecordExtensions.cs" />
-    <Compile Include="InvokerParameterNameAttribute.cs" />
-    <Compile Include="NotNullAttribute.cs" />
+    <Compile Include="Base Classes\DbConnectionFactory.cs" />
+    <Compile Include="Helpers\BuildTableValuedParameters.cs" />
+    <Compile Include="Attributes\ContractAnnotationAttribute.cs" />
+    <Compile Include="Base Classes\DataResult.cs" />
+    <Compile Include="Enums\DataResultType.cs" />
+    <Compile Include="Base Classes\DataResultTyped.cs" />
+    <Compile Include="Extensions\DbCommandExtensions.cs" />
+    <Compile Include="Helpers\EnumNameTypeConverter.cs" />
+    <Compile Include="Models\Game.cs" />
+    <Compile Include="Helpers\GameHelper.cs" />
+    <Compile Include="Extensions\IDataRecordExtensions.cs" />
+    <Compile Include="Attributes\InvokerParameterNameAttribute.cs" />
+    <Compile Include="Attributes\NotNullAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository.cs" />
-    <Compile Include="SqlGamesRepository.cs" />
-    <Compile Include="StringExtensions.cs" />
-    <Compile Include="StringHelper.cs" />
-    <Compile Include="TypeExtensions.cs" />
-    <Compile Include="UnitOfWork.cs" />
-    <Compile Include="ValidationCollection.cs" />
-    <Compile Include="Verify.cs" />
+    <Compile Include="Base Classes\Repository.cs" />
+    <Compile Include="Repositories\SqlGamesRepository.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Helpers\StringHelper.cs" />
+    <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Base Classes\UnitOfWork.cs" />
+    <Compile Include="Base Classes\ValidationCollection.cs" />
+    <Compile Include="Helpers\Verify.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

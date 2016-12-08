@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 
 namespace DungeonsAndDragons_Data
 {
@@ -19,12 +14,12 @@ namespace DungeonsAndDragons_Data
             return GameHelper.ParseReader(reader);
         }
 
-        public Game Get(int gamesId)
+        public Game Get(int gameId)
         {
             using (var command = UnitOfWork.CreateStoredProcedure("dbo.USP_Games_Get"))
             {
                 command
-                .AddWithValue("@GameId", gamesId, DbType.Int32);
+                .AddWithValue("@GameId", gameId, DbType.Int32);
 
                 return Get(command);
             }

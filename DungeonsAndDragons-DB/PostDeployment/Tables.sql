@@ -263,10 +263,25 @@ INSERT INTO
 	dbo.PlayerCharacters(ActorId, Name, ClassId, ExperiencePoints, RaceId, 
 		Age, GenderId, Height, WeightPounds, AlignmentId, DeityId)
 VALUES
-	(1,'Aeolius Legodir', 3,750, 4,79,1,'5''8"',162,   2,9),
-	(2,'Glod Djürsbeck',	14,750, 2,46,1,'4''7"',130,   2,12),
+	(1,'Aeolius Legodir',	 3,750, 4,79,1,'5''8"',162,   2,   9),
+	(2,'Glod Djürsbeck',	14,750, 2,46,1,'4''7"',130,   2,  12),
 	(3,'Leucis Zaeloch',	 6,750, 8,25,1,'6''3"',242,NULL,NULL),
-	(4,'Saskia Minyathr', 4,750, 4,52,2,'5''2"',145,NULL,7),
-	(5,'Squanto',		12,750,13,44,1,'5''9"',210,NULL,1),
-	(6,'Yuo',			 9,750, 7,61,1,'6''1"',122,NULL,6)
+	(4,'Saskia Minyathr',	 4,750, 4,52,2,'5''2"',145,NULL,   7),
+	(5,'Squanto',			12,750,13,44,1,'5''9"',210,NULL,   1),
+	(6,'Yuo',				 9,750, 7,61,1,'6''1"',122,NULL,   6)
 GO
+
+INSERT INTO	
+	dbo.Games(Name)
+VALUES
+	('The First Great Outing')
+
+INSERT INTO
+	dbo.GameActorsBridge(GameId, ActorId)
+VALUES
+	(1,1),
+	(1,2),
+	(1,3),
+	(1,4),
+	(1,5),
+	(1,6)
