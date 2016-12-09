@@ -1,7 +1,7 @@
 ﻿CREATE PROCEDURE [dbo].[USP_Games_Create]
 	@GameId INT = NULL OUTPUT,
 	@Name VARCHAR(50),
-	@StartDate DATETIME2(3)
+	@StartDate DATETIME2(3) = SYSDATETIME
 AS
 
 IF NOT EXISTS (

@@ -47,12 +47,11 @@ namespace DungeonsAndDragons_Data.Repositories
 
         public DataResult<DPlayerCharacter> Create(DPlayerCharacter value)
         {
-            using (var command = UnitOfWork.CreateStoredProcedure("dbo.USP_Game_Create"))
+            using (var command = UnitOfWork.CreateStoredProcedure("dbo.USP_PlayerCharacters_Create"))
             {
                 var idParameter = command.AddOutput("@PlayerCharacterId", DbType.Int32);
 
                 command
-                    .AddWithValue("@PlayerCharacterId", value.Id, DbType.Int32)
                     .AddWithValue("@ActorId", value.ActorId, DbType.String)
                     .AddWithValue("@Name", value.Name, DbType.Int32)
                     .AddWithValue("@ClassId", value.ClassId, DbType.Int32)
@@ -77,7 +76,7 @@ namespace DungeonsAndDragons_Data.Repositories
 
         public DataResult<DPlayerCharacter> Update(DPlayerCharacter value)
         {
-            using (var command = UnitOfWork.CreateStoredProcedure("dbo.USP_Game_Update"))
+            using (var command = UnitOfWork.CreateStoredProcedure("dbo.USP_PlayerCharacters_Update"))
             {
                 command
                     .AddWithValue("@PlayerCharacterId", value.Id, DbType.Int32)

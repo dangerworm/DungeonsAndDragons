@@ -20,11 +20,11 @@ namespace DungeonsAndDragons_Data.Services
         public Game[] GetAll()
         {
             _unitOfWork.Begin();
-            var games = _gamesWorkflow.GetAll().MapAll<DGame, Game>();
+            var games = _gamesWorkflow.GetAll();
 
             foreach (var game in games)
             {
-                var players = _playerCharactersWorkflow.GetAllByGameId(game.Id ?? 0).MapAll<DPlayerCharacter, PlayerCharacter>();
+                var players = _playerCharactersWorkflow.GetAllByGameId(game.Id ?? 0);
                 game.Players.AddRange(players);
             }
 
@@ -40,6 +40,15 @@ namespace DungeonsAndDragons_Data.Services
             _unitOfWork.End();
 
             return game;
+        }
+
+        public DataResult<Game> Save(Game value)
+        {
+            _unitOfWork.Begin();
+            var result = _gamesWorkflow.Save(value);
+            _unitOfWork.End();
+
+            return result;
         }
     }
 }

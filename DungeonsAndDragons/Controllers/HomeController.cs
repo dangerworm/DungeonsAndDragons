@@ -15,6 +15,7 @@ namespace DungeonsAndDragons.Controllers
             _playerCharactersService = new PlayerCharactersService(UnitOfWork);
         }
 
+        [HttpGet]
         public ActionResult Index()
         {
             var games = _gamesService.GetAll();

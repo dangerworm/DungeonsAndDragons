@@ -1,5 +1,7 @@
 ﻿using System.Configuration;
+using DungeonsAndDragons_Data.Mapping;
 using DungeonsAndDragons_Data.Models.Domain;
+using DungeonsAndDragons_Data.Models.Object;
 
 namespace DungeonsAndDragons_Data
 {
@@ -13,14 +15,22 @@ namespace DungeonsAndDragons_Data
             _gamesRepository = new SqlGamesRepository(unitOfWork);
         }
 
-        public DGame[] GetAll()
+        public Game[] GetAll()
         {
-            return _gamesRepository.GetAll();
+            return _gamesRepository.GetAll().MapAll<DGame, Game>();
         }
 
-        public DGame GetById(int gameId)
+        public Game GetById(int gameId)
         {
-            return _gamesRepository.Get(gameId);
+            return _gamesRepository.Get(gameId).Map<DGame, Game>();
+        }
+
+        public DataResult<Game> Save(Game game)
+        {
+            var dGame = game.Map<Game, DGame>();
+            var dResult = _gamesRepository.Save(dGame);
+
+            return new DataResult<Game>(dResult.Value.Map<DGame, Game>(), dResult);
         }
     }
 }

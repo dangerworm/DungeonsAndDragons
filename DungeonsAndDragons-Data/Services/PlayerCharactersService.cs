@@ -18,7 +18,7 @@ namespace DungeonsAndDragons_Data.Services
         public PlayerCharacter[] GetAll()
         {
             _unitOfWork.Begin();
-            var players = _playerCharactersWorkflow.GetAll().MapAll<DPlayerCharacter, PlayerCharacter>();
+            var players = _playerCharactersWorkflow.GetAll();
             _unitOfWork.End();
 
             return players;
@@ -27,7 +27,7 @@ namespace DungeonsAndDragons_Data.Services
         public PlayerCharacter GetById(int playerCharacterId)
         {
             _unitOfWork.Begin();
-            var player = _playerCharactersWorkflow.GetById(playerCharacterId).Map<DPlayerCharacter, PlayerCharacter>();
+            var player = _playerCharactersWorkflow.GetById(playerCharacterId);
             _unitOfWork.End();
 
             return player;

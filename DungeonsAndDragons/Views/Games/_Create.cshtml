@@ -1,0 +1,10 @@
+﻿@model DungeonsAndDragons_Data.Models.Object.Game
+
+@using (Html.BeginForm("Create", "Games", FormMethod.Post, new { @class="" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(x => Model.Name)
+        @Html.TextBoxFor(x => x.Name, new { @class="form-control" })
+        <small>Enter a name to help you identify this game</small>
+    </div>
+}

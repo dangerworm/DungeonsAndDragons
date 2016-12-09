@@ -35,9 +35,57 @@
             <p>&copy; @DateTime.Now.Year - Drew Morgan</p>
         </footer>
     </div>
+    <div id="popup-container" class="modal fade">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary btn-ok">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+
+    <script>
+        $(document).ready(function () {
+            $.ajaxSetup({
+                headers: { 'X-Requested-With': ' XMLHttpRequest' }
+            });
+
+            $('#popup-container').hide();
+            $('#popup-container').on('show.bs.modal', function (e) {
+                $(this).find('.btn-ok').click(function(e) {
+                    $('form').submit();
+                });
+            });
+            $('.popup').click(function (e) {
+                var modalTitle = $(this).attr('title');
+                e.preventDefault();
+                $.ajax({
+                    url: $(this).attr('data-href'),
+                    cache: false
+                })
+                .done(function (html) {
+                    $('.modal-title').html(modalTitle);
+                    $('.modal-body').html(html);
+                    $('#popup-container').modal('show');
+                });
+            });
+        });
+    </script>
+
     @RenderSection("scripts", required: false)
+
 </body>
 </html>

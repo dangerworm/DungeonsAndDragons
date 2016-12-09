@@ -14,12 +14,18 @@
     <div class="col-md-4">
         <h2>Games</h2>
         @Html.Partial("_Games", Model.Games)
-        <p><a class="btn btn-default" href="@Url.Action("Create", "Games")">Create a new game &raquo;</a></p>
+        <p>
+            <a href="#" class="btn btn-default popup" title="Create Game" data-href="@Url.Action("Create", "Games")"
+                    data-toggle="modal" data-target="#popup-container">Create a new game &raquo;</a>
+        </p>
     </div>
     <div class="col-md-4">
         <h2>Players</h2>
         @Html.Partial("_PlayerCharacters", Model.Players)
-        <p><a class="btn btn-default" href="@Url.Action("Create", "Players")">Learn more &raquo;</a></p>
+        <p>
+            <a href="#" class="btn btn-default popup" title="Create Player" data-href="@Url.Action("Create", "Players")"
+                    data-toggle="modal" data-target="#popup-container">Learn more &raquo;</a>
+        </p>
     </div>
     <div class="col-md-4">
         <h2>Something else</h2>

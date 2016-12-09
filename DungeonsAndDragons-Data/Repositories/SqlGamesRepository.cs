@@ -38,12 +38,11 @@ namespace DungeonsAndDragons_Data
 
         public DataResult<DGame> Create(DGame value)
         {
-            using (var command = UnitOfWork.CreateStoredProcedure("dbo.USP_Game_Create"))
+            using (var command = UnitOfWork.CreateStoredProcedure("dbo.USP_Games_Create"))
             {
                 var idParameter = command.AddOutput("@GameId", DbType.Int32);
 
                 command
-                .AddWithValue("@GameId", value.Id, DbType.Int32)
                 .AddWithValue("@Name", value.Name, DbType.String)
                 .AddWithValue("@StartDate", value.StartDate, DbType.DateTime2);
 
@@ -57,7 +56,7 @@ namespace DungeonsAndDragons_Data
 
         public DataResult<DGame> Update(DGame value)
         {
-            using (var command = UnitOfWork.CreateStoredProcedure("dbo.USP_Game_Update"))
+            using (var command = UnitOfWork.CreateStoredProcedure("dbo.USP_Games_Update"))
             {
                 command
                 .AddWithValue("@GameId", value.Id, DbType.Int32)
