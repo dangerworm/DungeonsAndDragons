@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DungeonsAndDragons", "DungeonsAndDragons\DungeonsAndDragons.csproj", "{E3D6D224-C146-4DB6-B1BA-29401BF47F32}"
+	ProjectSection(ProjectDependencies) = postProject
+		{891EBE99-89FE-408B-B7CC-98D637B98BAB} = {891EBE99-89FE-408B-B7CC-98D637B98BAB}
+	EndProjectSection
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DungeonsAndDragons-DB", "DungeonsAndDragons-DB\DungeonsAndDragons-DB.sqlproj", "{C33B303E-999B-4C51-B4EA-11929ABEC52C}"
 EndProject

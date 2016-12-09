@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[USP_Games_Get]
+﻿CREATE PROCEDURE [dbo].[USP_Games_GetById]
 @GameId INT
 AS
 

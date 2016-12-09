@@ -36,6 +36,7 @@
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity.Design" />
     <Reference Include="System.Web" />
@@ -55,13 +56,20 @@
     <Compile Include="Base Classes\DataResultTyped.cs" />
     <Compile Include="Extensions\DbCommandExtensions.cs" />
     <Compile Include="Helpers\EnumNameTypeConverter.cs" />
-    <Compile Include="Models\Game.cs" />
+    <Compile Include="Helpers\PlayerCharacterHelper.cs" />
+    <Compile Include="Mapping\Mapper.cs" />
+    <Compile Include="Models\Domain\DGame.cs" />
     <Compile Include="Helpers\GameHelper.cs" />
     <Compile Include="Extensions\IDataRecordExtensions.cs" />
     <Compile Include="Attributes\InvokerParameterNameAttribute.cs" />
     <Compile Include="Attributes\NotNullAttribute.cs" />
+    <Compile Include="Models\Domain\DPlayerCharacter.cs" />
+    <Compile Include="Models\Domain\Entity.cs" />
+    <Compile Include="Models\Object\PlayerCharacter.cs" />
+    <Compile Include="Models\Object\Game.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Base Classes\Repository.cs" />
+    <Compile Include="Repositories\SqlPlayerCharactersRepository.cs" />
     <Compile Include="Repositories\SqlGamesRepository.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Helpers\StringHelper.cs" />
@@ -69,10 +77,15 @@
     <Compile Include="Base Classes\UnitOfWork.cs" />
     <Compile Include="Base Classes\ValidationCollection.cs" />
     <Compile Include="Helpers\Verify.cs" />
+    <Compile Include="Services\PlayerCharactersService.cs" />
+    <Compile Include="Services\GamesService.cs" />
+    <Compile Include="Workflows\PlayerCharactersWorkflow.cs" />
+    <Compile Include="Workflows\GamesWorkflow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -7,5 +7,6 @@
     ActorId INT NOT NULL 
 		CONSTRAINT GameActorsBridge_ActorId_FK FOREIGN KEY REFERENCES dbo.Actors(ActorId),
 	JoinDate DATETIME2(3) NOT NULL
-		CONSTRAINT GameActorsBridge_JoinDate_DF DEFAULT(SYSDATETIME())
+		CONSTRAINT GameActorsBridge_JoinDate_DF DEFAULT(SYSDATETIME()),
+	CONSTRAINT GameActorsBridge_UQ UNIQUE(GameId, ActorId)
 );

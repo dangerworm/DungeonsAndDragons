@@ -1,36 +1,42 @@
 ﻿using System.Data;
+using System.Linq;
+using DungeonsAndDragons_Data.Models.Domain;
 
 namespace DungeonsAndDragons_Data
 {
-    public class SqlGameRepository : Repository<Game>
+    public class SqlGamesRepository : Repository<DGame>
     {
-        public SqlGameRepository(UnitOfWork unitOfWork)
-        : base(unitOfWork, true)
+        public SqlGamesRepository(UnitOfWork unitOfWork)
+            :base (unitOfWork)
         {
         }
 
-        protected override Game Map(IDataReader reader)
+        protected override DGame Map(IDataReader reader)
         {
             return GameHelper.ParseReader(reader);
         }
 
-        public Game Get(int gameId)
+        public DGame[] GetAll()
         {
-            using (var command = UnitOfWork.CreateStoredProcedure("dbo.USP_Games_Get"))
-            {
-                command
-                .AddWithValue("@GameId", gameId, DbType.Int32);
+            var command = UnitOfWork.CreateStoredProcedure("dbo.USP_Games_GetAll");
 
-                return Get(command);
-            }
+            return GetList(command).ToArray();
         }
 
-        public DataResult<Game> Save(Game value)
+        public DGame Get(int gameId)
+        {
+            var command = UnitOfWork.CreateStoredProcedure("dbo.USP_Games_GetById");
+            command.AddWithValue("@GameId", gameId, DbType.Int32);
+
+            return Get(command);
+        }
+
+        public DataResult<DGame> Save(DGame value)
         {
             return !value.Id.HasValue ? Create(value) : Update(value);
         }
 
-        public DataResult<Game> Create(Game value)
+        public DataResult<DGame> Create(DGame value)
         {
             using (var command = UnitOfWork.CreateStoredProcedure("dbo.USP_Game_Create"))
             {
@@ -45,11 +51,11 @@ namespace DungeonsAndDragons_Data
 
                 value.Id = result.ValueId;
 
-                return new DataResult<Game>(value, result);
+                return new DataResult<DGame>(value, result);
             }
         }
 
-        public DataResult<Game> Update(Game value)
+        public DataResult<DGame> Update(DGame value)
         {
             using (var command = UnitOfWork.CreateStoredProcedure("dbo.USP_Game_Update"))
             {
@@ -60,7 +66,7 @@ namespace DungeonsAndDragons_Data
 
                 var result = ExecuteNonQuery(command);
 
-                return new DataResult<Game>(value, result);
+                return new DataResult<DGame>(value, result);
             }
         }
     }

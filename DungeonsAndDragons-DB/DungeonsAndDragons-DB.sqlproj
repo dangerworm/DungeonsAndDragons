@@ -137,7 +137,13 @@
     <None Include="PostDeployment\Tables.sql" />
     <Build Include="StoredProcedures\USP_Games_Create.sql" />
     <Build Include="StoredProcedures\USP_Games_Update.sql" />
-    <Build Include="StoredProcedures\USP_Games_Get.sql" />
+    <Build Include="StoredProcedures\USP_Games_GetById.sql" />
+    <Build Include="StoredProcedures\USP_Games_GetAll.sql" />
+    <Build Include="StoredProcedures\USP_PlayerCharacters_Create.sql" />
+    <Build Include="StoredProcedures\USP_PlayerCharacters_Update.sql" />
+    <Build Include="StoredProcedures\USP_PlayerCharacters_GetById.sql" />
+    <Build Include="StoredProcedures\USP_PlayerCharacters_GetByGameId.sql" />
+    <Build Include="StoredProcedures\USP_PlayerCharacters_GetAll.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="PostDeployment.sql" />

@@ -1,16 +1,20 @@
 ﻿using System;
 
-namespace DungeonsAndDragons_Data
+namespace DungeonsAndDragons_Data.Models.Domain
 {
-    public class Game
+    public class DGame : IEntity
     {
         public int? Id { get; set; }
         public string Name { get; set; }
         public DateTime StartDate { get; set; }
 
-        public Game(int gameId, string name, DateTime startDate)
+        public DGame()
         {
-            Id = gameId;
+        }
+
+        public DGame(int? id, string name, DateTime startDate)
+        {
+            Id = id;
             Name = name;
             StartDate = startDate;
         }

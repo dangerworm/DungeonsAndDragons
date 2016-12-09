@@ -1,39 +1,28 @@
-﻿using System.Configuration;
-using System.Web.Mvc;
-
-using DungeonsAndDragons_Data;
+﻿using System.Web.Mvc;
+using DungeonsAndDragons.Models;
+using DungeonsAndDragons_Data.Services;
 
 namespace DungeonsAndDragons.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
-        private readonly UnitOfWork _unitOfWork;
+        private readonly GamesService _gamesService;
+        private readonly PlayerCharactersService _playerCharactersService;
 
         public HomeController() 
         {
-            _unitOfWork = new UnitOfWork(ConfigurationManager.ConnectionStrings["DungeonsAndDragons"].ConnectionString);
+            _gamesService = new GamesService(UnitOfWork);   
+            _playerCharactersService = new PlayerCharactersService(UnitOfWork);
         }
 
         public ActionResult Index()
         {
-            var gameRepo = new SqlGameRepository(_unitOfWork);
-            gameRepo.Get(1);
+            var games = _gamesService.GetAll();
+            var players = _playerCharactersService.GetAll();
 
-            return View();
-        }
+            var viewModel = new OverviewModel(games, players);
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return View(viewModel);
         }
     }
 }

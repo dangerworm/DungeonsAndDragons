@@ -33,7 +33,7 @@ namespace DungeonsAndDragons_Data
             @lock = new object();
         }
 
-        public UnitOfWork Begin(int? applicationUserId)
+        public UnitOfWork Begin()
         {
             // provide a lock to stop multiple threads accessing this method
             if (HttpRuntime.AppDomainAppId == null)
@@ -43,14 +43,12 @@ namespace DungeonsAndDragons_Data
 
             if (_connection != null && _connection.State != ConnectionState.Closed)
             {
-                throw new InvalidOperationException(
-                    "Unit of Work has already been started. You must call End() before calling Begin() again.");
+                return this;
+                throw new InvalidOperationException("Unit of Work has already been started. You must call End() before calling Begin() again.");
             }
 
             _connection = _connectionFactory.Make(_connectionString);
             _connection.Open();
-
-            SetContextInfo(applicationUserId);
 
             _results = new List<DataResult>();
             return this;
@@ -60,14 +58,12 @@ namespace DungeonsAndDragons_Data
         {
             if (_connection == null)
             {
-                throw new InvalidOperationException(
-                    "Unit of work has not been started. You must call Begin() before calling End().");
+                throw new InvalidOperationException("Unit of work has not been started. You must call Begin() before calling End().");
             }
 
             if (_connection.State != ConnectionState.Open)
             {
-                throw new InvalidOperationException(
-                    "Unit of work has been started, but another process has closed the connection.");
+                throw new InvalidOperationException("Unit of work has been started, but another process has closed the connection.");
             }
 
             if (_transaction != null)
@@ -210,19 +206,6 @@ namespace DungeonsAndDragons_Data
         public bool IsSuccess()
         {
             return !_results.Any(x => x.Type != DataResultType.Success && x.Type != DataResultType.NotRequired);
-        }
-
-        private void SetContextInfo(int? applicationUserId)
-        {
-            using (var command = CreateStoredProcedure("[Audit].USP_ContextInfo_Set"))
-            {
-                command
-                    .AddWithValue("@ApplicationUserId", applicationUserId, DbType.Int32)
-                    .AddWithValue("@Secret", "1()ds5274-785$0", DbType.String);
-
-                //TODO: handle result?
-                command.ExecuteNonQuery();
-            }
         }
 
         public void Dispose()
