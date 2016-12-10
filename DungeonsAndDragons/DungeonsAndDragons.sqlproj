@@ -108,6 +108,10 @@
     <Build Include="Tables\LightSources.sql" />
     <Build Include="Tables\Games.sql" />
     <Build Include="Tables\Bridge Tables\GameActorsBridge.sql" />
+    <Build Include="Tables\NonPlayerCharacters.sql" />
+    <Build Include="Tables\Enums\MapAreaTypes.sql" />
+    <Build Include="Tables\MapAreas.sql" />
+    <Build Include="Tables\Shops.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Actors.sql" />
