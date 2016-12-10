@@ -1,9 +1,8 @@
-﻿using System.Configuration;
-using DungeonsAndDragons_Data.Mapping;
+﻿using DungeonsAndDragons_Data.Mapping;
 using DungeonsAndDragons_Data.Models.Domain;
 using DungeonsAndDragons_Data.Models.Object;
 
-namespace DungeonsAndDragons_Data
+namespace DungeonsAndDragons_Data.Workflows
 {
 
     public class GamesWorkflow

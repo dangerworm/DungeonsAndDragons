@@ -4,23 +4,18 @@ using DungeonsAndDragons_Data.Services;
 
 namespace DungeonsAndDragons.Controllers
 {
-    public class GamesController : BaseController
+    public class PlayersController : BaseController
     {
-        private readonly GamesService _gamesService;
+        private readonly PlayerCharactersService _playersService;
 
-        public GamesController()
+        public PlayersController()
         {
-            _gamesService = new GamesService(UnitOfWork);
+            _playersService = new PlayerCharactersService(UnitOfWork);
         }
 
         public ActionResult Index(int? id)
         {
-            if (id == null)
-            {
-                return RedirectToAction("Index", "Home");
-            }
-
-            var viewModel = _gamesService.GetById(id.Value);
+            var viewModel = _playersService.GetAll();
             return View(viewModel);
         }
 
@@ -32,13 +27,16 @@ namespace DungeonsAndDragons.Controllers
                 return RedirectToAction("Index");
             }
 
+            //var classes = 
+            //ViewBag.Classes = new SelectList();
+
             return PartialView("_Create");
         }
 
         [HttpPost]
-        public ActionResult Create(Game model)
+        public ActionResult Create(PlayerCharacter model)
         {
-            var result = _gamesService.Save(model);
+            var result = _playersService.Save(model);
 
             return Redirect(Request.Headers["Origin"]);
         }

@@ -206,6 +206,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\GamesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PlayersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -265,6 +266,8 @@
     <Content Include="Views\Shared\_Games.cshtml" />
     <Content Include="Views\Shared\_PlayerCharacters.cshtml" />
     <Content Include="Views\Games\_Create.cshtml" />
+    <Content Include="Views\Games\Index.cshtml" />
+    <Content Include="Views\Players\_Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

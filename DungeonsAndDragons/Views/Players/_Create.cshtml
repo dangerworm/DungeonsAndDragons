@@ -1,0 +1,29 @@
+﻿@model DungeonsAndDragons_Data.Models.Object.PlayerCharacter
+
+@using (Html.BeginForm("Create", "Players", FormMethod.Post, new { @class = "" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(x => Model.Name)
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => Model.ClassId)
+        @Html.DropDownListFor(x => x.ClassId, (SelectList)ViewBag.Classes, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => Model.RaceId)
+        @Html.DropDownListFor(x => x.RaceId, (SelectList)ViewBag.Races, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => Model.GenderId)
+        @Html.DropDownListFor(x => x.GenderId, (SelectList)ViewBag.Genders, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => Model.AlignmentId)
+        @Html.DropDownListFor(x => x.AlignmentId, (SelectList)ViewBag.Alignments, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => Model.DeityId)
+        @Html.DropDownListFor(x => x.DeityId, (SelectList)ViewBag.Deities, new { @class = "form-control" })
+    </div>
+}

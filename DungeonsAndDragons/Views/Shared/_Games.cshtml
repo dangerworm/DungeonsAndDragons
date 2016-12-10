@@ -1,4 +1,4 @@
-﻿@model DungeonsAndDragons_Data.Models.Object.Game[]
+﻿@model IReadOnlyCollection<DungeonsAndDragons_Data.Models.Object.Game>
 
 <div class="row">
     <div class="col-md-12">
@@ -13,12 +13,16 @@
             @foreach (var game in Model)
             {
                 <tr>
-                    <td><a href="@Url.Action("Index", "Game", new { id = game.Id })">@game.Name</a></td>
+                    <td><a href="@Url.Action("Index", "Games", new { id = game.Id })">@game.Name</a></td>
                     <td>@game.Players.Count</td>
                 </tr>
             }
             </tbody>
         </table>
     </div>
-
+    
+    <p>
+        <a href="#" class="btn btn-default popup" title="Create Game" data-href="@Url.Action("Create", "Games")"
+           data-toggle="modal" data-target="#popup-container">Create a new game &raquo;</a>
+    </p>
 </div>

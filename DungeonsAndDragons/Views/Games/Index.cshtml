@@ -1,0 +1,30 @@
+﻿@model DungeonsAndDragons_Data.Models.Object.Game
+
+@{
+    ViewBag.Title = $"D&D Game : { Model.Name }";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>@Model.Name</h1>
+        <small>Started @Model.StartDate.ToString("D")</small>
+    </div>
+    <div class="col-md-4">
+        <h2>Players</h2>
+        @Html.Partial("_PlayerCharacters", Model.Players)
+    </div>
+    <div class="col-md-4">
+        <h2>Players</h2>
+        @Html.Partial("_PlayerCharacters", Model.Players)
+        <p>
+            <a href="#" class="btn btn-default popup" title="Create Player" data-href="@Url.Action("Create", "Players")"
+               data-toggle="modal" data-target="#popup-container">Learn more &raquo;</a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Something else</h2>
+        <p>To be continued...</p>
+        <p><a class="btn btn-default" href="#">Another link &raquo;</a>
+        </p>
+    </div>
+</div>

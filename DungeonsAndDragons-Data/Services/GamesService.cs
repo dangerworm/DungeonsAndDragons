@@ -1,6 +1,7 @@
 ﻿using DungeonsAndDragons_Data.Mapping;
 using DungeonsAndDragons_Data.Models.Domain;
 using DungeonsAndDragons_Data.Models.Object;
+using DungeonsAndDragons_Data.Workflows;
 
 namespace DungeonsAndDragons_Data.Services
 {
@@ -20,12 +21,12 @@ namespace DungeonsAndDragons_Data.Services
         public Game[] GetAll()
         {
             _unitOfWork.Begin();
+
             var games = _gamesWorkflow.GetAll();
 
             foreach (var game in games)
             {
-                var players = _playerCharactersWorkflow.GetAllByGameId(game.Id ?? 0);
-                game.Players.AddRange(players);
+                game.Players = _playerCharactersWorkflow.GetAllByGameId(game.Id ?? 0);
             }
 
             _unitOfWork.End();
@@ -36,7 +37,10 @@ namespace DungeonsAndDragons_Data.Services
         public Game GetById(int gameId)
         {
             _unitOfWork.Begin();
+
             var game = _gamesWorkflow.GetById(gameId).Map<DGame, Game>();
+            game.Players = _playerCharactersWorkflow.GetAllByGameId(game.Id ?? 0);
+
             _unitOfWork.End();
 
             return game;
@@ -45,7 +49,9 @@ namespace DungeonsAndDragons_Data.Services
         public DataResult<Game> Save(Game value)
         {
             _unitOfWork.Begin();
+
             var result = _gamesWorkflow.Save(value);
+
             _unitOfWork.End();
 
             return result;

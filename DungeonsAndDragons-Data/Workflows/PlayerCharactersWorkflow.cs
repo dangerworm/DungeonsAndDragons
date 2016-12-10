@@ -1,10 +1,9 @@
-﻿using System.Configuration;
-using DungeonsAndDragons_Data.Mapping;
+﻿using DungeonsAndDragons_Data.Mapping;
 using DungeonsAndDragons_Data.Models.Domain;
 using DungeonsAndDragons_Data.Models.Object;
 using DungeonsAndDragons_Data.Repositories;
 
-namespace DungeonsAndDragons_Data
+namespace DungeonsAndDragons_Data.Workflows
 {
 
     public class PlayerCharactersWorkflow
@@ -29,6 +28,14 @@ namespace DungeonsAndDragons_Data
         public PlayerCharacter GetById(int id)
         {
             return _playerCharactersRepository.GetById(id).Map<DPlayerCharacter, PlayerCharacter>();
+        }
+
+        public DataResult<PlayerCharacter> Save(PlayerCharacter player)
+        {
+            var dPlayer = player.Map<PlayerCharacter, DPlayerCharacter>();
+            var dResult = _playerCharactersRepository.Save(dPlayer);
+
+            return new DataResult<PlayerCharacter>(dResult.Value.Map<DPlayerCharacter, PlayerCharacter>(), dResult);
         }
     }
 }
