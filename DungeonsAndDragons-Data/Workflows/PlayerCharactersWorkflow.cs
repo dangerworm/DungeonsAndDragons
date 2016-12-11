@@ -20,9 +20,9 @@ namespace DungeonsAndDragons_Data.Workflows
             return _playerCharactersRepository.GetAll().MapAll<DPlayerCharacter, PlayerCharacter>();
         }
 
-        public PlayerCharacter[] GetAllByGameId(int gameId)
+        public PlayerCharacter[] GetByGameId(int gameId)
         {
-            return _playerCharactersRepository.GetAllByGameId(gameId).MapAll<DPlayerCharacter, PlayerCharacter>();
+            return _playerCharactersRepository.GetByGameId(gameId).MapAll<DPlayerCharacter, PlayerCharacter>();
         }
 
         public PlayerCharacter GetById(int id)

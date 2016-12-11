@@ -9,12 +9,14 @@ namespace DungeonsAndDragons_Data.Services
     {
         private readonly UnitOfWork _unitOfWork;
         private readonly GamesWorkflow _gamesWorkflow;
+        private readonly MapAreasWorkflow _mapAreasWorkflow;
         private readonly PlayerCharactersWorkflow _playerCharactersWorkflow;
 
         public GamesService(UnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
             _gamesWorkflow = new GamesWorkflow(unitOfWork);
+            _mapAreasWorkflow = new MapAreasWorkflow(unitOfWork);
             _playerCharactersWorkflow = new PlayerCharactersWorkflow(unitOfWork);
         }
 
@@ -26,7 +28,8 @@ namespace DungeonsAndDragons_Data.Services
 
             foreach (var game in games)
             {
-                game.Players = _playerCharactersWorkflow.GetAllByGameId(game.Id ?? 0);
+                game.Players = _playerCharactersWorkflow.GetByGameId(game.Id ?? 0);
+                game.MapAreas = _mapAreasWorkflow.GetByGameId(game.Id ?? 0);
             }
 
             _unitOfWork.End();
@@ -39,7 +42,8 @@ namespace DungeonsAndDragons_Data.Services
             _unitOfWork.Begin();
 
             var game = _gamesWorkflow.GetById(gameId).Map<DGame, Game>();
-            game.Players = _playerCharactersWorkflow.GetAllByGameId(game.Id ?? 0);
+            game.Players = _playerCharactersWorkflow.GetByGameId(gameId);
+            game.MapAreas = _mapAreasWorkflow.GetByGameId(gameId);
 
             _unitOfWork.End();
 

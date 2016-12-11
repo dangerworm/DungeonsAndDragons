@@ -144,6 +144,12 @@
     <Build Include="StoredProcedures\USP_PlayerCharacters_GetById.sql" />
     <Build Include="StoredProcedures\USP_PlayerCharacters_GetByGameId.sql" />
     <Build Include="StoredProcedures\USP_PlayerCharacters_GetAll.sql" />
+    <Build Include="StoredProcedures\USP_MapAreas_Create.sql" />
+    <Build Include="StoredProcedures\USP_MapAreas_GetAll.sql" />
+    <Build Include="StoredProcedures\USP_MapAreas_GetByGameId.sql" />
+    <Build Include="StoredProcedures\USP_MapAreas_GetById.sql" />
+    <Build Include="StoredProcedures\USP_MapAreas_Update.sql" />
+    <Build Include="Tables\Bridge Tables\GameMapAreasBridge.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="PostDeployment.sql" />

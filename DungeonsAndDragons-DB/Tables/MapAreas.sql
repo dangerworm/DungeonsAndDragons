@@ -12,5 +12,5 @@
     ParentMapAreaId INT 
 		CONSTRAINT MapAreas_ParentMapAreaTypeId_FK FOREIGN KEY REFERENCES dbo.MapAreas(MapAreaId),
     ParentMapAreaLocationN DECIMAL,
-    ParentMapAreaLocationW DECIMAL
+    ParentMapAreaLocationE DECIMAL
 );

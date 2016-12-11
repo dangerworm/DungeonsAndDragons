@@ -1,0 +1,36 @@
+﻿@model IReadOnlyCollection<DungeonsAndDragons_Data.Models.Object.MapArea>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Map Areas</h2>
+        <table class="table table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var area in Model)
+                {
+                    <tr>
+                        <td><a href="@Url.Action("Index", "MapAreas", new { id = area.Id })">@area.Name</a></td>
+                        <td>@area.TypeId</td>
+                        <td>
+                            @Html.ActionLink("Add Image", "AddShopLink", "MapAreas", new { @class = "btn btn-sm btn-default" })
+                            @if (area.ShopId == null)
+                            {
+                                @Html.ActionLink("Add Shop", "AddShopLink", "MapAreas", new { @class = "btn btn-sm btn-default" })
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <p>
+            <a href="#" class="btn btn-default popup" title="Create Map Area" data-href="@Url.Action("Create", "MapAreas")"
+               data-toggle="modal" data-target="#popup-container">Create a new map area &raquo;</a>
+        </p>
+    </div>
+</div>

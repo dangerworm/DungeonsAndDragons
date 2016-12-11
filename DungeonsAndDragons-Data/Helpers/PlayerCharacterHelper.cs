@@ -1,38 +1,59 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
 using DungeonsAndDragons_Data.Models.Domain;
 
-namespace DungeonsAndDragons_Data
+namespace DungeonsAndDragons_Data.Helpers
 {
-    public static class GameHelper
+    public static class PlayerCharacterHelper
     {
-        public static DGame ParseReader(IDataReader reader)
+        public static DPlayerCharacter ParseReader(IDataReader reader)
         {
-            return new DGame(
-                reader.Get<int>(GamesCol.Id),
-                reader.Get<string>(GamesCol.Name),
-                reader.Get<DateTime>(GamesCol.StartDate)
+            return new DPlayerCharacter(
+                reader.Get<int>(PlayerCharactersCol.Id),
+                reader.Get<int>(PlayerCharactersCol.ActorId),
+                reader.Get<string>(PlayerCharactersCol.Name),
+                reader.Get<int>(PlayerCharactersCol.ClassId),
+                reader.Get<int>(PlayerCharactersCol.ParagonPathId),
+                reader.Get<int>(PlayerCharactersCol.EpicDestinyId),
+                reader.Get<int>(PlayerCharactersCol.ExperiencePoints),
+                reader.Get<int>(PlayerCharactersCol.RaceId),
+                reader.Get<int>(PlayerCharactersCol.Age),
+                reader.Get<int>(PlayerCharactersCol.GenderId),
+                reader.Get<string>(PlayerCharactersCol.Height),
+                reader.Get<int>(PlayerCharactersCol.WeightPounds),
+                reader.Get<int>(PlayerCharactersCol.AlignmentId),
+                reader.Get<int>(PlayerCharactersCol.DeityId)
             );
         }
 
-        public static IEnumerable<DGame> ParseMultipleReader(IDataReader reader)
+        public static IEnumerable<DPlayerCharacter> ParseMultipleReader(IDataReader reader)
         {
-            var games = new List<DGame>();
+            var values = new List<DPlayerCharacter>();
 
             while (reader.Read())
             {
-                games.Add(ParseReader(reader));
+                values.Add(ParseReader(reader));
             }
 
-            return games;
+            return values;
         }
 
-        private enum GamesCol
+        private enum PlayerCharactersCol
         {
             Id,
+            ActorId,
             Name,
-            StartDate
+            ClassId,
+            ParagonPathId,
+            EpicDestinyId,
+            ExperiencePoints,
+            RaceId,
+            Age,
+            GenderId,
+            Height,
+            WeightPounds,
+            AlignmentId,
+            DeityId
         }
     }
 }

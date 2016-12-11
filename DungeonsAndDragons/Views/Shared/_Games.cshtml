@@ -2,27 +2,27 @@
 
 <div class="row">
     <div class="col-md-12">
+        <h2>Games</h2>
         <table class="table table-hover table-striped">
             <thead>
-            <tr>
-                <th>Name</th>
-                <th>Number of Players</th>
-            </tr>
+                <tr>
+                    <th>Name</th>
+                    <th>Number of Players</th>
+                </tr>
             </thead>
             <tbody>
-            @foreach (var game in Model)
-            {
-                <tr>
-                    <td><a href="@Url.Action("Index", "Games", new { id = game.Id })">@game.Name</a></td>
-                    <td>@game.Players.Count</td>
-                </tr>
-            }
+                @foreach (var game in Model)
+                {
+                    <tr>
+                        <td><a href="@Url.Action("Index", "Games", new { id = game.Id })">@game.Name</a></td>
+                        <td>@game.Players.Count</td>
+                    </tr>
+                }
             </tbody>
         </table>
+        <p>
+            <a href="#" class="btn btn-default popup" title="Create Game" data-href="@Url.Action("Create", "Games")"
+               data-toggle="modal" data-target="#popup-container">Create a new game &raquo;</a>
+        </p>
     </div>
-    
-    <p>
-        <a href="#" class="btn btn-default popup" title="Create Game" data-href="@Url.Action("Create", "Games")"
-           data-toggle="modal" data-target="#popup-container">Create a new game &raquo;</a>
-    </p>
 </div>

@@ -1,8 +1,9 @@
 ﻿using System.Data;
 using System.Linq;
+using DungeonsAndDragons_Data.Helpers;
 using DungeonsAndDragons_Data.Models.Domain;
 
-namespace DungeonsAndDragons_Data
+namespace DungeonsAndDragons_Data.Repositories
 {
     public class SqlGamesRepository : Repository<DGame>
     {
@@ -23,7 +24,7 @@ namespace DungeonsAndDragons_Data
             return GetList(command).ToArray();
         }
 
-        public DGame Get(int gameId)
+        public DGame GetById(int gameId)
         {
             var command = UnitOfWork.CreateStoredProcedure("dbo.USP_Games_GetById");
             command.AddWithValue("@GameId", gameId, DbType.Int32);

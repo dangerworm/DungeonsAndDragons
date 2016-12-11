@@ -7,16 +7,14 @@
 <div class="jumbotron">
     <h1>D&amp;D Manager</h1>
     <p class="lead">Manage all your games and players</p>
-    <p><a href="http://http://dnd.wizards.com/" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <p><a href="http://dnd.wizards.com/" class="btn btn-primary btn-lg" target="_blank">Learn more &raquo;</a></p>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Games</h2>
         @Html.Partial("_Games", Model.Games)
     </div>
     <div class="col-md-4">
-        <h2>Players</h2>
         @Html.Partial("_PlayerCharacters", Model.Players)
     </div>
     <div class="col-md-4">

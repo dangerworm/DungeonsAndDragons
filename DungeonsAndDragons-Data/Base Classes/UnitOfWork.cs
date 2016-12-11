@@ -30,17 +30,10 @@ namespace DungeonsAndDragons_Data
             _connectionString = connectionString;
 
             _id = Guid.NewGuid().ToString();
-            @lock = new object();
         }
 
         public UnitOfWork Begin()
         {
-            // provide a lock to stop multiple threads accessing this method
-            if (HttpRuntime.AppDomainAppId == null)
-            {
-                Monitor.Enter(@lock);
-            }
-
             if (_connection != null && _connection.State != ConnectionState.Closed)
             {
                 return this;

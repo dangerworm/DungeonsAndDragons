@@ -1,6 +1,7 @@
 ﻿using DungeonsAndDragons_Data.Mapping;
 using DungeonsAndDragons_Data.Models.Domain;
 using DungeonsAndDragons_Data.Models.Object;
+using DungeonsAndDragons_Data.Repositories;
 
 namespace DungeonsAndDragons_Data.Workflows
 {
@@ -21,7 +22,7 @@ namespace DungeonsAndDragons_Data.Workflows
 
         public Game GetById(int gameId)
         {
-            return _gamesRepository.Get(gameId).Map<DGame, Game>();
+            return _gamesRepository.GetById(gameId).Map<DGame, Game>();
         }
 
         public DataResult<Game> Save(Game game)

@@ -27,9 +27,6 @@ namespace DungeonsAndDragons.Controllers
                 return RedirectToAction("Index");
             }
 
-            //var classes = 
-            //ViewBag.Classes = new SelectList();
-
             return PartialView("_Create");
         }
 

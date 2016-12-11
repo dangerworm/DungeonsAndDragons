@@ -24,7 +24,7 @@ namespace DungeonsAndDragons_Data.Repositories
             return GetList(command).ToArray();
         }
 
-        public DPlayerCharacter[] GetAllByGameId(int gameId)
+        public DPlayerCharacter[] GetByGameId(int gameId)
         {
             var command = UnitOfWork.CreateStoredProcedure("dbo.USP_PlayerCharacters_GetByGameId");
             command.AddWithValue("@GameId", gameId, DbType.Int32);
