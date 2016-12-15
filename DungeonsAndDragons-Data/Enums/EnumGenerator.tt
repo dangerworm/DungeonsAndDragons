@@ -1,0 +1,157 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ output extension=".generated.cs" #>
+<#@ Assembly Name="System.Data" #>
+<#@ Assembly name="EnvDTE" #>
+<#@ import namespace="EnvDTE" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Runtime.Remoting.Messaging" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#
+	var enumTables = new string[][]
+	{
+		new[] { "Abilities", "AbilityId" },
+		new[] { "ActionTypes", "ActionTypeId" },
+		new[] { "ActorTypes", "ActorTypeId" },
+		new[] { "ArmourWeightClasses", "ArmourWeightClassId" },
+		new[] { "AttackTypes", "AttackTypeId" },
+		new[] { "AuthorityLevels", "AuthorityLevelId" },
+		new[] { "CompassionLevels", "CompassionLevelId" },
+		new[] { "DamageTypes", "DamageTypeId" },
+		new[] { "Defenses", "DefenseId" },
+		new[] { "DurationUnits", "DurationUnitId" },
+		new[] { "EffectTypes", "EffectTypeId" },
+		new[] { "EpicDestinies", "EpicDestinyId" },
+		new[] { "Genders", "GenderId" },
+		new[] { "ImplementTypes", "ImplementTypeId" },
+		new[] { "MapAreaTypes", "MapAreaTypeId" },
+		new[] { "PowerSources", "PowerSourceId" },
+		new[] { "PowerUsages", "PowerUsageId" },
+		new[] { "Roles", "RoleId" },
+		new[] { "Skills", "SkillId" },
+		new[] { "WeaponCategories", "WeaponCategoryId" },
+		new[] { "WeaponGroups", "WeaponGroupId" },
+		new[] { "WeaponProperties", "WeaponPropertyId" }
+	};
+
+	string connectionString = $"Data Source={Environment.MachineName};Initial Catalog=DungeonsAndDragons;Integrated Security=True";
+#>
+// This is a generated file. Do not attempt to modify it as your changes would be overwritten.
+// Connection String Used: <#= connectionString #>
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+
+namespace DungeonsAndDragons_Data.Enums
+{
+	// Enums
+<#	
+	string tableName = "";
+	string columnId = "";
+	string path = "";
+	string columnName = "Name";
+
+	foreach (var dataTable in enumTables)
+	{
+		tableName = dataTable[0];
+		columnId = dataTable[1];
+		path = Path.GetDirectoryName(Host.TemplateFile);
+ 
+		var serviceProvider = Host as IServiceProvider;
+		var dte = serviceProvider.GetService(typeof(DTE)) as DTE;
+#>
+    /// <summary>
+    /// <#= tableName #> auto generated enumeration
+    /// </summary>
+    [GeneratedCode("TextTemplatingFileGenerator", "10")]
+	[TypeConverter(typeof(EnumNameTypeConverter))]
+    public enum <#= tableName #> : int
+    {
+<#
+    SqlConnection conn = new SqlConnection(connectionString);
+    string command = string.Format("select {0}, {1} from {2} order by {0}", columnId, columnName, tableName);
+    SqlCommand comm = new SqlCommand(command, conn);
+ 
+    conn.Open();
+ 
+    SqlDataReader reader = comm.ExecuteReader();
+    bool loop = reader.Read();
+ 
+    while(loop)
+    {
+#>        /// <summary>
+        /// <#= reader[columnName] #> (<#= reader[columnId] #>)
+        /// </summary>
+		[Description("<#= reader[columnName] #>")]
+        <#= Pascalize(reader[columnName]) #> = <#= reader[columnId] #><# loop = reader.Read(); #><#= loop ? ",\r\n" : string.Empty #>
+<#
+    }
+#>	}
+
+<#
+}
+#>
+
+	// Tables
+<#
+	var dataTables = new string[][]
+	{
+		new[] { "ArmourClasses", "ArmourClassId" },
+		new[] { "ArmourTypes", "ArmourTypeId" },
+		new[] { "Classes", "ClassId" },
+		new[] { "Deities", "DeityId" },
+		new[] { "Features", "FeatureId" },
+		new[] { "Languages", "LanguageId" },
+		new[] { "Powers", "PowerId" },
+		new[] { "Races", "RaceId" },
+		new[] { "Scripts", "ScriptId" }
+	};
+
+	foreach (var enumTable in dataTables)
+	{
+		tableName = enumTable[0];
+		columnId = enumTable[1];
+		path = Path.GetDirectoryName(Host.TemplateFile);
+ 
+		var serviceProvider = Host as IServiceProvider;
+		var dte = serviceProvider.GetService(typeof(DTE)) as DTE;
+#>
+    /// <summary>
+    /// <#= tableName #> auto generated enumeration
+    /// </summary>
+    [GeneratedCode("TextTemplatingFileGenerator", "10")]
+	[TypeConverter(typeof(EnumNameTypeConverter))]
+    public enum <#= tableName #> : int
+    {
+<#
+    SqlConnection conn = new SqlConnection(connectionString);
+    string command = string.Format("select {0}, {1} from {2} order by {0}", columnId, columnName, tableName);
+    SqlCommand comm = new SqlCommand(command, conn);
+ 
+    conn.Open();
+ 
+    SqlDataReader reader = comm.ExecuteReader();
+    bool loop = reader.Read();
+ 
+    while(loop)
+    {
+#>        /// <summary>
+        /// <#= reader[columnName] #> (<#= reader[columnId] #>)
+        /// </summary>
+		[Description("<#= reader[columnName] #>")]
+        <#= Pascalize(reader[columnName]) #> = <#= reader[columnId] #><# loop = reader.Read(); #><#= loop ? ",\r\n" : string.Empty #>
+<#
+    }
+#>	}
+
+<#
+}
+#>
+}
+<#+
+    private string Pascalize(object value)
+    {
+        Regex rx = new Regex(@"(?:[^a-zA-Z0-9]*)(?<first>[a-zA-Z0-9])(?<reminder>[a-zA-Z0-9]*)(?:[^a-zA-Z0-9]*)");
+        return rx.Replace(value.ToString(), m => m.Groups["first"].ToString().ToUpper() + m.Groups["reminder"].ToString().ToLower());
+    }
+#>

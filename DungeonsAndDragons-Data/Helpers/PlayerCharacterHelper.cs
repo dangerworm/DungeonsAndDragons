@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data;
+using DungeonsAndDragons_Data.Enums;
 using DungeonsAndDragons_Data.Models.Domain;
 
 namespace DungeonsAndDragons_Data.Helpers
@@ -12,17 +13,17 @@ namespace DungeonsAndDragons_Data.Helpers
                 reader.Get<int>(PlayerCharactersCol.Id),
                 reader.Get<int>(PlayerCharactersCol.ActorId),
                 reader.Get<string>(PlayerCharactersCol.Name),
-                reader.Get<int>(PlayerCharactersCol.ClassId),
+                reader.Get<Classes>(PlayerCharactersCol.ClassId),
                 reader.Get<int>(PlayerCharactersCol.ParagonPathId),
                 reader.Get<int>(PlayerCharactersCol.EpicDestinyId),
                 reader.Get<int>(PlayerCharactersCol.ExperiencePoints),
-                reader.Get<int>(PlayerCharactersCol.RaceId),
+                reader.Get<Races>(PlayerCharactersCol.RaceId),
                 reader.Get<int>(PlayerCharactersCol.Age),
-                reader.Get<int>(PlayerCharactersCol.GenderId),
+                reader.Get<Genders>(PlayerCharactersCol.GenderId),
                 reader.Get<string>(PlayerCharactersCol.Height),
                 reader.Get<int>(PlayerCharactersCol.WeightPounds),
                 reader.Get<int>(PlayerCharactersCol.AlignmentId),
-                reader.Get<int>(PlayerCharactersCol.DeityId)
+                reader.Get<Deities>(PlayerCharactersCol.DeityId)
             );
         }
 

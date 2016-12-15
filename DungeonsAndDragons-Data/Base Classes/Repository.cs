@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.Common;
+using DungeonsAndDragons_Data.Enums;
 
 namespace DungeonsAndDragons_Data
 {

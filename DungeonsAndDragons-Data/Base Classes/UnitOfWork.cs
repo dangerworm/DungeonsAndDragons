@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Threading;
 using System.Web;
+using DungeonsAndDragons_Data.Enums;
 
 namespace DungeonsAndDragons_Data
 {
@@ -14,7 +15,6 @@ namespace DungeonsAndDragons_Data
         private readonly DbConnectionFactory _connectionFactory;
         private readonly string _connectionString;
         private readonly string _id;
-        private readonly object @lock;
         private IDbConnection _connection;
         private List<DataResult> _results;
 
@@ -67,12 +67,6 @@ namespace DungeonsAndDragons_Data
             _connection.Close();
             _connection.Dispose();
             _connection = null;
-
-            // release the lock so the unit of work can be accessed again
-            if (HttpRuntime.AppDomainAppId == null)
-            {
-                Monitor.Exit(@lock);
-            }
         }
 
         public IDbConnection GetConnection()

@@ -2,6 +2,8 @@
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
+using System.Web.Mvc;
+using DungeonsAndDragons_Data.Enums;
 
 namespace DungeonsAndDragons_Data
 {
@@ -78,12 +80,10 @@ namespace DungeonsAndDragons_Data
         {
             if (value.IsNumeric())
             {
-                string enumName = Enum.GetName(destinationType, Convert.ToInt32(value));
-                if (enumName == null)
-                {
-                    return Activator.CreateInstance(destinationType);
-                }
-                return Enum.Parse(destinationType, enumName);
+                var enumName = Enum.GetName(destinationType, Convert.ToInt32(value));
+                return enumName == null 
+                    ? Activator.CreateInstance(destinationType)
+                    : Enum.Parse(destinationType, enumName);
             }
 
             var name = value.ToString();

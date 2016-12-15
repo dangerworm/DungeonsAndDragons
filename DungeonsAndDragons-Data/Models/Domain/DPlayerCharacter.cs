@@ -1,27 +1,31 @@
-﻿namespace DungeonsAndDragons_Data.Models.Domain
+﻿using DungeonsAndDragons_Data.Enums;
+
+namespace DungeonsAndDragons_Data.Models.Domain
 {
     public class DPlayerCharacter : IEntity
     {
         public int? Id { get; set; }
         public int ActorId { get; set; }
         public string Name { get; set; }
-        public int ClassId { get; set; }
+        public Classes ClassId { get; set; }
         public int ParagonPathId { get; set; }
         public int EpicDestinyId { get; set; }
         public int ExperiencePoints { get; set; }
-        public int RaceId { get; set; }
+        public Races RaceId { get; set; }
         public int Age { get; set; }
-        public int GenderId { get; set; }
+        public Genders GenderId { get; set; }
         public string Height { get; set; }
         public int WeightPounds { get; set; }
         public int AlignmentId { get; set; }
-        public int DeityId { get; set; }
+        public Deities DeityId { get; set; }
 
         public DPlayerCharacter()
         {
         }
 
-        public DPlayerCharacter(int id, int actorId, string name, int classId, int paragonPathId, int epicDestinyId, int experiencePoints, int raceId, int age, int genderId, string height, int weightPounds, int alignmentId, int deityId)
+        public DPlayerCharacter(int? id, int actorId, string name, Classes classId, int paragonPathId,
+            int epicDestinyId, int experiencePoints, Races raceId, int age, Genders genderId,
+            string height, int weightPounds, int alignmentId, Deities deityId)
         {
             Id = id;
             ActorId = actorId;

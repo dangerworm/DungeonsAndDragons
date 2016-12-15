@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using DungeonsAndDragons_Data.Enums;
 
 namespace DungeonsAndDragons_Data
 {

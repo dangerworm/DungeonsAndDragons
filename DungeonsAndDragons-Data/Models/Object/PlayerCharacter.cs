@@ -1,4 +1,5 @@
-﻿using DungeonsAndDragons_Data.Models.Domain;
+﻿using DungeonsAndDragons_Data.Enums;
+using DungeonsAndDragons_Data.Models.Domain;
 
 namespace DungeonsAndDragons_Data.Models.Object
 {
@@ -8,9 +9,9 @@ namespace DungeonsAndDragons_Data.Models.Object
         {
         }
 
-        public PlayerCharacter(int id, int actorId, string name, int classId, int paragonPathId,
-            int epicDestinyId, int experiencePoints, int raceId, int age, int genderId, string height,
-            int weightPounds, int alignmentId, int deityId) 
+        public PlayerCharacter(int id, int actorId, string name, Classes classId, int paragonPathId,
+            int epicDestinyId, int experiencePoints, Races raceId, int age, Genders genderId, string height,
+            int weightPounds, int alignmentId, Deities deityId) 
             : base(id, actorId, name, classId, paragonPathId, epicDestinyId, experiencePoints,
                   raceId, age, genderId, height, weightPounds, alignmentId, deityId)
         {

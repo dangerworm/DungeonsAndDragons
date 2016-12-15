@@ -1,4 +1,5 @@
 ﻿using System;
+using DungeonsAndDragons_Data.Enums;
 
 namespace DungeonsAndDragons_Data
 {
