@@ -16,7 +16,7 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(x => Model.Age)
-        @Html.TextBoxFor(x => Model.Age, new { @class = "form-control" })
+        @Html.TextBoxFor(x => Model.Age, new { @class = "form-control", type = "number" })
     </div>
     <div class="form-group">
         @Html.LabelFor(x => Model.GenderId)
@@ -28,7 +28,7 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(x => Model.WeightPounds)
-        @Html.TextBoxFor(x => Model.WeightPounds, new { @class = "form-control" })
+        @Html.TextBoxFor(x => Model.WeightPounds, new { @class = "form-control", type = "number" })
     </div>
     <div class="form-group">
         @Html.LabelFor(x => Model.AlignmentId)
