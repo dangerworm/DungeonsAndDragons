@@ -150,6 +150,7 @@
     <Build Include="StoredProcedures\USP_MapAreas_GetById.sql" />
     <Build Include="StoredProcedures\USP_MapAreas_Update.sql" />
     <Build Include="Tables\Bridge Tables\GameMapAreasBridge.sql" />
+    <Build Include="StoredProcedures\USP_Actors_Create.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="PostDeployment.sql" />

@@ -127,6 +127,68 @@ namespace DungeonsAndDragons_Data.Enums
 	}
 
     /// <summary>
+    /// Alignments auto generated enumeration
+    /// </summary>
+    [GeneratedCode("TextTemplatingFileGenerator", "10")]
+	[TypeConverter(typeof(EnumNameTypeConverter))]
+    public enum Alignments : int
+    {
+        /// <summary>
+        /// Lawful Good (1)
+        /// </summary>
+		[Description("Lawful Good")]
+        LawfulGood = 1,
+
+        /// <summary>
+        /// Good (2)
+        /// </summary>
+		[Description("Good")]
+        Good = 2,
+
+        /// <summary>
+        /// Chaotic Good (3)
+        /// </summary>
+		[Description("Chaotic Good")]
+        ChaoticGood = 3,
+
+        /// <summary>
+        /// Unaligned (Lawful) (4)
+        /// </summary>
+		[Description("Unaligned (Lawful)")]
+        UnalignedLawful = 4,
+
+        /// <summary>
+        /// Unaligned (5)
+        /// </summary>
+		[Description("Unaligned")]
+        Unaligned = 5,
+
+        /// <summary>
+        /// Unaligned (Chaotic) (6)
+        /// </summary>
+		[Description("Unaligned (Chaotic)")]
+        UnalignedChaotic = 6,
+
+        /// <summary>
+        /// Lawful Evil (7)
+        /// </summary>
+		[Description("Lawful Evil")]
+        LawfulEvil = 7,
+
+        /// <summary>
+        /// Evil (8)
+        /// </summary>
+		[Description("Evil")]
+        Evil = 8,
+
+        /// <summary>
+        /// Chaotic Evil (9)
+        /// </summary>
+		[Description("Chaotic Evil")]
+        ChaoticEvil = 9
+	}
+
+    /// <summary>
     /// ArmourWeightClasses auto generated enumeration
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]

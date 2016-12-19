@@ -1,15 +1,15 @@
 ﻿INSERT INTO 
-	dbo.Alignments(AuthorityLevelId, CompassionLevelId)
+	dbo.Alignments(Name, AuthorityLevelId, CompassionLevelId)
 VALUES
-	(1,1),
-	(2,1),
-	(3,1),
-	(1,2),
-	(2,2),
-	(3,2),
-	(1,3),
-	(2,3),
-	(3,3)
+	('Lawful Good',1,1),
+	('Good',2,1),
+	('Chaotic Good',3,1),
+	('Unaligned (Lawful)',1,2),
+	('Unaligned',2,2),
+	('Unaligned (Chaotic)',3,2),
+	('Lawful Evil',1,3),
+	('Evil',2,3),
+	('Chaotic Evil',3,3)
 GO
 
 INSERT INTO 

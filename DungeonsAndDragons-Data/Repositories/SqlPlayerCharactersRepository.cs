@@ -52,7 +52,7 @@ namespace DungeonsAndDragons_Data.Repositories
                 var idParameter = command.AddOutput("@PlayerCharacterId", DbType.Int32);
 
                 command
-                    .AddWithValue("@ActorId", value.ActorId, DbType.String)
+                    .AddWithValue("@ActorId", value.ActorId, DbType.Int32)
                     .AddWithValue("@Name", value.Name, DbType.Int32)
                     .AddWithValue("@ClassId", value.ClassId, DbType.Int32)
                     .AddWithValue("@ParagonPathId", value.ParagonPathId, DbType.Int32)

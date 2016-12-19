@@ -82,6 +82,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EnumGenerator.tt</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ActorHelper.cs" />
     <Compile Include="Helpers\BuildTableValuedParameters.cs" />
     <Compile Include="Attributes\ContractAnnotationAttribute.cs" />
     <Compile Include="Base Classes\DataResult.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Helpers\MapAreaHelper.cs" />
     <Compile Include="Helpers\PlayerCharacterHelper.cs" />
     <Compile Include="Mapping\Mapper.cs" />
+    <Compile Include="Models\Domain\DActor.cs" />
     <Compile Include="Models\Domain\DMapArea.cs" />
     <Compile Include="Models\Domain\DGame.cs" />
     <Compile Include="Helpers\GameHelper.cs" />
@@ -105,6 +107,7 @@
     <Compile Include="Models\Object\Game.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Base Classes\Repository.cs" />
+    <Compile Include="Repositories\SqlActorsRepository.cs" />
     <Compile Include="Repositories\SqlMapAreasRepository.cs" />
     <Compile Include="Repositories\SqlPlayerCharactersRepository.cs" />
     <Compile Include="Repositories\SqlGamesRepository.cs" />

@@ -11,7 +11,7 @@ namespace DungeonsAndDragons_Data.Models.Object
 
         public PlayerCharacter(int id, int actorId, string name, Classes classId, int paragonPathId,
             int epicDestinyId, int experiencePoints, Races raceId, int age, Genders genderId, string height,
-            int weightPounds, int alignmentId, Deities deityId) 
+            int weightPounds, Alignments alignmentId, Deities deityId) 
             : base(id, actorId, name, classId, paragonPathId, epicDestinyId, experiencePoints,
                   raceId, age, genderId, height, weightPounds, alignmentId, deityId)
         {

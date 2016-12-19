@@ -16,7 +16,7 @@ namespace DungeonsAndDragons_Data.Models.Domain
         public Genders GenderId { get; set; }
         public string Height { get; set; }
         public int WeightPounds { get; set; }
-        public int AlignmentId { get; set; }
+        public Alignments AlignmentId { get; set; }
         public Deities DeityId { get; set; }
 
         public DPlayerCharacter()
@@ -25,7 +25,7 @@ namespace DungeonsAndDragons_Data.Models.Domain
 
         public DPlayerCharacter(int? id, int actorId, string name, Classes classId, int paragonPathId,
             int epicDestinyId, int experiencePoints, Races raceId, int age, Genders genderId,
-            string height, int weightPounds, int alignmentId, Deities deityId)
+            string height, int weightPounds, Alignments alignmentId, Deities deityId)
         {
             Id = id;
             ActorId = actorId;

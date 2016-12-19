@@ -22,7 +22,7 @@ namespace DungeonsAndDragons_Data.Helpers
                 reader.Get<Genders>(PlayerCharactersCol.GenderId),
                 reader.Get<string>(PlayerCharactersCol.Height),
                 reader.Get<int>(PlayerCharactersCol.WeightPounds),
-                reader.Get<int>(PlayerCharactersCol.AlignmentId),
+                reader.Get<Alignments>(PlayerCharactersCol.AlignmentId),
                 reader.Get<Deities>(PlayerCharactersCol.DeityId)
             );
         }
