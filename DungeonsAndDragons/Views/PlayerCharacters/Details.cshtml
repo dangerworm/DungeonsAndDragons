@@ -1,0 +1,131 @@
+﻿@model DungeonsAndDragons.PlayerCharacter
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PlayerCharacter</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExperiencePoints)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExperiencePoints)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Height)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Height)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeightPounds)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeightPounds)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Picture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Picture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Actor.ActorId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actor.ActorId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Alignment.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alignment.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Class.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Class.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Deity.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Deity.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EpicDestiny.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EpicDestiny.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParagonPath.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParagonPath.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Race.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Race.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PlayerCharacterId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
