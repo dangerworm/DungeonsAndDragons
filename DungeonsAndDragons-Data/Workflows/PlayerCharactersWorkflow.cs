@@ -36,16 +36,25 @@ namespace DungeonsAndDragons_Data.Workflows
 
         public DataResult<PlayerCharacter> Save(PlayerCharacter player)
         {
-            var dActor = new DActor(null, 1, null);
-            dActor = _actorsRepository.Create(dActor);
-
-            if (!dActor.Id.HasValue)
+            var dActor = new DActor();
+            if (player.Id.HasValue)
             {
-                return new DataResult<PlayerCharacter>(DataResultType.InvalidState, "Could not read ID of new Actor");
+                dActor = _actorsRepository.Get(player.ActorId);
+            }
+            else
+            {
+                dActor = new DActor(null, 1, null);
+                dActor = _actorsRepository.Create(dActor);
+
+                if (!dActor.Id.HasValue)
+                {
+                    return new DataResult<PlayerCharacter>(DataResultType.InvalidState, "Could not read ID of new Actor");
+                }
+
+                player.ActorId = dActor.Id.Value;
             }
 
             var dPlayer = player.Map<PlayerCharacter, DPlayerCharacter>();
-            dPlayer.ActorId = dActor.Id.Value;
             var dResult = _playerCharactersRepository.Save(dPlayer);
 
             return new DataResult<PlayerCharacter>(dResult.Value.Map<DPlayerCharacter, PlayerCharacter>(), dResult);

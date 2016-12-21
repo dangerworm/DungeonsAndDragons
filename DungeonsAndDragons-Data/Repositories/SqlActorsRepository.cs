@@ -16,11 +16,11 @@ namespace DungeonsAndDragons_Data.Repositories
             return ActorHelper.ParseReader(reader);
         }
 
-        public DActor Get(int actorsId)
+        public DActor Get(int actorId)
         {
             using (var command = UnitOfWork.CreateStoredProcedure("dbo.USP_DActors_Get"))
             {
-                command.AddWithValue("@ActorId", actorsId, DbType.Int32);
+                command.AddWithValue("@ActorId", actorId, DbType.Int32);
 
                 return Get(command);
             }

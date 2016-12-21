@@ -1,7 +1,4 @@
-﻿using System.Xml.Serialization;
-using DungeonsAndDragons_Data.Enums;
-using DungeonsAndDragons_Data.Mapping;
-using DungeonsAndDragons_Data.Models.Domain;
+﻿using DungeonsAndDragons_Data.Enums;
 using DungeonsAndDragons_Data.Models.Object;
 using DungeonsAndDragons_Data.Workflows;
 
@@ -43,6 +40,7 @@ namespace DungeonsAndDragons_Data.Services
         public DataResult<PlayerCharacter> Save(PlayerCharacter value)
         {
             _unitOfWork.Begin();
+            _unitOfWork.BeginTransaction();
 
             var result = _playerCharactersWorkflow.Save(value);
 

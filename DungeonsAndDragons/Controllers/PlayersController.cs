@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using DungeonsAndDragons.Models;
+using DungeonsAndDragons_Data.Enums;
 using DungeonsAndDragons_Data.Mapping;
 using DungeonsAndDragons_Data.Models.Object;
 using DungeonsAndDragons_Data.Services;
@@ -35,13 +36,19 @@ namespace DungeonsAndDragons.Controllers
         [HttpPost]
         public ActionResult Create(PlayerCharacterModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                var value = model.Map<PlayerCharacterModel, PlayerCharacter>();
-                var result = _playersService.Save(value);
-                return Json(new {success = true});
+                return PartialView("_Create", model);
             }
 
+            var value = model.Map<PlayerCharacterModel, PlayerCharacter>();
+            var result = _playersService.Save(value);
+            if (result.Type == DataResultType.Success)
+            {
+                return Json(new { success = true });
+            }
+
+            ModelState.AddModelError("", "The data could not be saved. Please try again.");
             return PartialView("_Create", model);
         }
     }
