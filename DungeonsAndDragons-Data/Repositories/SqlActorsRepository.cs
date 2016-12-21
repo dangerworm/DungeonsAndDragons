@@ -38,7 +38,6 @@ namespace DungeonsAndDragons_Data.Repositories
                 var idParameter = command.AddOutput("ActorId", DbType.Int32);
 
                 command
-                .AddWithValue("@ActorId", value.Id, DbType.Int32)
                 .AddWithValue("@ActorTypeId", value.ActorTypeId, DbType.Int32)
                 .AddWithValue("@MapAreaId", value.MapAreaId, DbType.Int32);
 

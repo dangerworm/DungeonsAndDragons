@@ -1,7 +1,9 @@
-﻿@model DungeonsAndDragons_Data.Models.Object.PlayerCharacter
+﻿@model DungeonsAndDragons.Models.PlayerCharacterModel
 
 @using (Html.BeginForm("Create", "Players", FormMethod.Post, new { @class = "" }))
 {
+    @Html.ValidationSummary()
+
     <div class="form-group">
         @Html.LabelFor(x => Model.Name)
         @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })

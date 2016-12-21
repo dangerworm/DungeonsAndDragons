@@ -1,4 +1,6 @@
-﻿using DungeonsAndDragons_Data.Mapping;
+﻿using System.Xml.Serialization;
+using DungeonsAndDragons_Data.Enums;
+using DungeonsAndDragons_Data.Mapping;
 using DungeonsAndDragons_Data.Models.Domain;
 using DungeonsAndDragons_Data.Models.Object;
 using DungeonsAndDragons_Data.Workflows;
@@ -44,7 +46,14 @@ namespace DungeonsAndDragons_Data.Services
 
             var result = _playerCharactersWorkflow.Save(value);
 
-            _unitOfWork.End();
+            if (result.Type != DataResultType.Success)
+            {
+                _unitOfWork.Rollback();
+            }
+            else
+            {
+                _unitOfWork.End();
+            }
 
             return result;
         }

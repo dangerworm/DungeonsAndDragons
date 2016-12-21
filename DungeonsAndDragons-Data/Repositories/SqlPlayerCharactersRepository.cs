@@ -53,7 +53,7 @@ namespace DungeonsAndDragons_Data.Repositories
 
                 command
                     .AddWithValue("@ActorId", value.ActorId, DbType.Int32)
-                    .AddWithValue("@Name", value.Name, DbType.Int32)
+                    .AddWithValue("@Name", value.Name, DbType.String)
                     .AddWithValue("@ClassId", value.ClassId, DbType.Int32)
                     .AddWithValue("@ParagonPathId", value.ParagonPathId, DbType.Int32)
                     .AddWithValue("@EpicDestinyId", value.EpicDestinyId, DbType.Int32)
@@ -80,8 +80,8 @@ namespace DungeonsAndDragons_Data.Repositories
             {
                 command
                     .AddWithValue("@PlayerCharacterId", value.Id, DbType.Int32)
-                    .AddWithValue("@ActorId", value.ActorId, DbType.String)
-                    .AddWithValue("@Name", value.Name, DbType.Int32)
+                    .AddWithValue("@ActorId", value.ActorId, DbType.Int32)
+                    .AddWithValue("@Name", value.Name, DbType.String)
                     .AddWithValue("@ClassId", value.ClassId, DbType.Int32)
                     .AddWithValue("@ParagonPathId", value.ParagonPathId, DbType.Int32)
                     .AddWithValue("@EpicDestinyId", value.EpicDestinyId, DbType.Int32)

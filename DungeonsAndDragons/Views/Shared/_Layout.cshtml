@@ -59,19 +59,31 @@
 
     <script>
         $(document).ready(function () {
-            //$.ajaxSetup({
-            //    headers: { 'X-Requested-With': ' XMLHttpRequest' }
-            //});
-
             $('#popup-container').hide();
             $('#popup-container').on('show.bs.modal', function (e) {
-                $(this).find('.btn-ok').click(function(e) {
-                    $('form').submit();
+                $(this).find('.btn-ok').click(function (e) {
+                    e.preventDefault();
+                    var form = $('.modal-body').children('form');
+                    $.ajax({
+                        url: form[0].action,
+                        type: 'POST',
+                        data: form.serialize(),
+                        success: function (data) {
+                            if (data.success) {
+                                $('#popup-container').modal('hide');
+                                location.reload(false);
+                            } else {
+                                $('.modal-body').html(data);
+                                //$('#popup-container').modal('show');
+                            }
+                        }
+                    });
                 });
             });
+
             $('.popup').click(function (e) {
-                var modalTitle = $(this).attr('title');
                 e.preventDefault();
+                var modalTitle = $(this).attr('title');
                 $.ajax({
                     url: $(this).attr('data-href'),
                     cache: false

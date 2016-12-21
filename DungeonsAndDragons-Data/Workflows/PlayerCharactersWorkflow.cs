@@ -1,4 +1,5 @@
 ﻿using System.Security.Cryptography;
+using DungeonsAndDragons_Data.Enums;
 using DungeonsAndDragons_Data.Mapping;
 using DungeonsAndDragons_Data.Models.Domain;
 using DungeonsAndDragons_Data.Models.Object;
@@ -38,8 +39,13 @@ namespace DungeonsAndDragons_Data.Workflows
             var dActor = new DActor(null, 1, null);
             dActor = _actorsRepository.Create(dActor);
 
+            if (!dActor.Id.HasValue)
+            {
+                return new DataResult<PlayerCharacter>(DataResultType.InvalidState, "Could not read ID of new Actor");
+            }
+
             var dPlayer = player.Map<PlayerCharacter, DPlayerCharacter>();
-            dPlayer.Id = dActor.Id;
+            dPlayer.ActorId = dActor.Id.Value;
             var dResult = _playerCharactersRepository.Save(dPlayer);
 
             return new DataResult<PlayerCharacter>(dResult.Value.Map<DPlayerCharacter, PlayerCharacter>(), dResult);
