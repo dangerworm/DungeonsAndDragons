@@ -22,7 +22,6 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Games", "Index", "Games")</li>
-                    <li>@Html.ActionLink("Players", "Index", "Players")</li>
                     <li>@Html.ActionLink("Map Areas", "Index", "MapAreas")</li>
                 </ul>
             </div>
@@ -60,9 +59,8 @@
     <script>
         $(document).ready(function () {
             $('#popup-container').hide();
-            $('#popup-container').on('show.bs.modal', function (e) {
+            $('#popup-container').on('shown.bs.modal', function (e) {
                 $(this).find('.btn-ok').click(function (e) {
-                    e.preventDefault();
                     var form = $('.modal-body').children('form');
                     $.ajax({
                         url: form[0].action,
@@ -78,6 +76,8 @@
                             }
                         }
                     });
+
+                    return false;
                 });
             });
 

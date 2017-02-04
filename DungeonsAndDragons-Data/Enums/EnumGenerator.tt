@@ -21,7 +21,7 @@
 		new[] { "CompassionLevels", "CompassionLevelId" },
 		new[] { "DamageTypes", "DamageTypeId" },
 		new[] { "Defenses", "DefenseId" },
-		new[] { "DurationUnits", "DurationUnitId" },
+		new[] { "DurationUnits", "DurationUnitId" }, 
 		new[] { "EffectTypes", "EffectTypeId" },
 		new[] { "EpicDestinies", "EpicDestinyId" },
 		new[] { "Genders", "GenderId" },
@@ -42,6 +42,7 @@
 // Connection String Used: <#= connectionString #>
 using System.CodeDom.Compiler;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace DungeonsAndDragons_Data.Enums
 {
@@ -83,7 +84,7 @@ namespace DungeonsAndDragons_Data.Enums
 #>        /// <summary>
         /// <#= reader[columnName] #> (<#= reader[columnId] #>)
         /// </summary>
-		[Description("<#= reader[columnName] #>")]
+		[Display(Name = "<#= reader[columnName] #>")]
         <#= Pascalize(reader[columnName]) #> = <#= reader[columnId] #><# loop = reader.Read(); #><#= loop ? ",\r\n" : string.Empty #>
 <#
     }
@@ -139,7 +140,7 @@ namespace DungeonsAndDragons_Data.Enums
 #>        /// <summary>
         /// <#= reader[columnName] #> (<#= reader[columnId] #>)
         /// </summary>
-		[Description("<#= reader[columnName] #>")]
+		[Display(Name = "<#= reader[columnName] #>")]
         <#= Pascalize(reader[columnName]) #> = <#= reader[columnId] #><# loop = reader.Read(); #><#= loop ? ",\r\n" : string.Empty #>
 <#
     }

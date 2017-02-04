@@ -13,7 +13,7 @@ namespace DungeonsAndDragons.Models
         public string Name { get; set; }
 
         [Display(Name = "Class")]
-        [Required(ErrorMessage = "Please select your character's class")]
+        [Range(1, int.MaxValue, ErrorMessage = "Please select your character's class")]
         public Classes ClassId { get; set; }
 
         [Display(Name = "Paragon Path")]
@@ -26,7 +26,7 @@ namespace DungeonsAndDragons.Models
         public int ExperiencePoints { get; set; }
 
         [Display(Name = "Race")]
-        [Required(ErrorMessage = "Please select your character's race")]
+        [Range(1, int.MaxValue, ErrorMessage = "Please select your character's race")]
         public Races RaceId { get; set; }
 
         [Required(ErrorMessage = "Please enter your character's age")]
@@ -34,7 +34,7 @@ namespace DungeonsAndDragons.Models
         public int Age { get; set; }
 
         [Display(Name = "Gender")]
-        [Required(ErrorMessage = "Please select your character's gender")]
+        [Range(1, int.MaxValue, ErrorMessage = "Please select your character's gender")]
         public Genders GenderId { get; set; }
 
         public string Height { get; set; }
@@ -43,7 +43,7 @@ namespace DungeonsAndDragons.Models
         public int WeightPounds { get; set; }
 
         [Display(Name = "Alignment")]
-        [Required(ErrorMessage = "Please select your character's alignment")]
+        [Range(1, int.MaxValue, ErrorMessage = "Please select your character's alignment")]
         public Alignments AlignmentId { get; set; }
 
         [Display(Name = "Deity")]

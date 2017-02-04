@@ -21,29 +21,24 @@ namespace DungeonsAndDragons_Data.Workflows
 
         public PlayerCharacter[] GetAll()
         {
-            return _playerCharactersRepository.GetAll().MapAll<DPlayerCharacter, PlayerCharacter>();
+            return _playerCharactersRepository.GetAll()?.MapAll<DPlayerCharacter, PlayerCharacter>();
         }
 
         public PlayerCharacter[] GetByGameId(int gameId)
         {
-            return _playerCharactersRepository.GetByGameId(gameId).MapAll<DPlayerCharacter, PlayerCharacter>();
+            return _playerCharactersRepository.GetByGameId(gameId)?.MapAll<DPlayerCharacter, PlayerCharacter>();
         }
 
         public PlayerCharacter GetById(int id)
         {
-            return _playerCharactersRepository.GetById(id).Map<DPlayerCharacter, PlayerCharacter>();
+            return _playerCharactersRepository.GetById(id)?.Map<DPlayerCharacter, PlayerCharacter>();
         }
 
         public DataResult<PlayerCharacter> Save(PlayerCharacter player)
         {
-            var dActor = new DActor();
-            if (player.Id.HasValue)
+            if (!player.Id.HasValue)
             {
-                dActor = _actorsRepository.Get(player.ActorId);
-            }
-            else
-            {
-                dActor = new DActor(null, 1, null);
+                var dActor = new DActor(null, 1, null);
                 dActor = _actorsRepository.Create(dActor);
 
                 if (!dActor.Id.HasValue)
@@ -57,7 +52,7 @@ namespace DungeonsAndDragons_Data.Workflows
             var dPlayer = player.Map<PlayerCharacter, DPlayerCharacter>();
             var dResult = _playerCharactersRepository.Save(dPlayer);
 
-            return new DataResult<PlayerCharacter>(dResult.Value.Map<DPlayerCharacter, PlayerCharacter>(), dResult);
+            return new DataResult<PlayerCharacter>(dResult.Value?.Map<DPlayerCharacter, PlayerCharacter>(), dResult);
         }
     }
 }

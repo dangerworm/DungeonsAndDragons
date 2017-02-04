@@ -54,17 +54,17 @@ namespace DungeonsAndDragons_Data.Repositories
                 command
                     .AddWithValue("@ActorId", value.ActorId, DbType.Int32)
                     .AddWithValue("@Name", value.Name, DbType.String)
-                    .AddWithValue("@ClassId", value.ClassId, DbType.Int32)
+                    .AddWithValue("@ClassId", (int)value.ClassId, DbType.Int32)
                     .AddWithValue("@ParagonPathId", value.ParagonPathId, DbType.Int32)
                     .AddWithValue("@EpicDestinyId", value.EpicDestinyId, DbType.Int32)
                     .AddWithValue("@ExperiencePoints", value.ExperiencePoints, DbType.Int32)
-                    .AddWithValue("@RaceId", value.RaceId, DbType.Int32)
+                    .AddWithValue("@RaceId", (int)value.RaceId, DbType.Int32)
                     .AddWithValue("@Age", value.Age, DbType.Int32)
                     .AddWithValue("@GenderId", value.GenderId, DbType.Int32)
                     .AddWithValue("@Height", value.Height, DbType.String)
                     .AddWithValue("@WeightPounds", value.WeightPounds, DbType.Int32)
-                    .AddWithValue("@AlignmentId", value.AlignmentId, DbType.Int32)
-                    .AddWithValue("@DeityId", value.DeityId, DbType.Int32);
+                    .AddWithValue("@AlignmentId", (int)value.AlignmentId, DbType.Int32)
+                    .AddWithValue("@DeityId", (int?)value.DeityId, DbType.Int32);
 
                 var result = ExecuteNonQueryWithId(command, idParameter);
 
@@ -82,17 +82,17 @@ namespace DungeonsAndDragons_Data.Repositories
                     .AddWithValue("@PlayerCharacterId", value.Id, DbType.Int32)
                     .AddWithValue("@ActorId", value.ActorId, DbType.Int32)
                     .AddWithValue("@Name", value.Name, DbType.String)
-                    .AddWithValue("@ClassId", value.ClassId, DbType.Int32)
+                    .AddWithValue("@ClassId", (int)value.ClassId, DbType.Int32)
                     .AddWithValue("@ParagonPathId", value.ParagonPathId, DbType.Int32)
                     .AddWithValue("@EpicDestinyId", value.EpicDestinyId, DbType.Int32)
                     .AddWithValue("@ExperiencePoints", value.ExperiencePoints, DbType.Int32)
-                    .AddWithValue("@RaceId", value.RaceId, DbType.Int32)
+                    .AddWithValue("@RaceId", (int)value.RaceId, DbType.Int32)
                     .AddWithValue("@Age", value.Age, DbType.Int32)
-                    .AddWithValue("@GenderId", value.GenderId, DbType.Int32)
+                    .AddWithValue("@GenderId", (int)value.GenderId, DbType.Int32)
                     .AddWithValue("@Height", value.Height, DbType.String)
                     .AddWithValue("@WeightPounds", value.WeightPounds, DbType.Int32)
-                    .AddWithValue("@AlignmentId", value.AlignmentId, DbType.Int32)
-                    .AddWithValue("@DeityId", value.DeityId, DbType.Int32);
+                    .AddWithValue("@AlignmentId", (int)value.AlignmentId, DbType.Int32)
+                    .AddWithValue("@DeityId", (int?)value.DeityId, DbType.Int32);
 
                 var result = ExecuteNonQuery(command);
 

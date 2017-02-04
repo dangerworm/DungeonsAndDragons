@@ -2,6 +2,7 @@
 // Connection String Used: Data Source=FERMI;Initial Catalog=DungeonsAndDragons;Integrated Security=True
 using System.CodeDom.Compiler;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace DungeonsAndDragons_Data.Enums
 {
@@ -16,37 +17,37 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Charisma (1)
         /// </summary>
-		[Description("Charisma")]
+		[Display(Name = "Charisma")]
         Charisma = 1,
 
         /// <summary>
         /// Constitution (2)
         /// </summary>
-		[Description("Constitution")]
+		[Display(Name = "Constitution")]
         Constitution = 2,
 
         /// <summary>
         /// Dexterity (3)
         /// </summary>
-		[Description("Dexterity")]
+		[Display(Name = "Dexterity")]
         Dexterity = 3,
 
         /// <summary>
         /// Intelligence (4)
         /// </summary>
-		[Description("Intelligence")]
+		[Display(Name = "Intelligence")]
         Intelligence = 4,
 
         /// <summary>
         /// Strength (5)
         /// </summary>
-		[Description("Strength")]
+		[Display(Name = "Strength")]
         Strength = 5,
 
         /// <summary>
         /// Wisdom (6)
         /// </summary>
-		[Description("Wisdom")]
+		[Display(Name = "Wisdom")]
         Wisdom = 6
 	}
 
@@ -60,43 +61,43 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Standard Action (1)
         /// </summary>
-		[Description("Standard Action")]
+		[Display(Name = "Standard Action")]
         StandardAction = 1,
 
         /// <summary>
         /// Free Action (2)
         /// </summary>
-		[Description("Free Action")]
+		[Display(Name = "Free Action")]
         FreeAction = 2,
 
         /// <summary>
         /// Immediate Interrupt (3)
         /// </summary>
-		[Description("Immediate Interrupt")]
+		[Display(Name = "Immediate Interrupt")]
         ImmediateInterrupt = 3,
 
         /// <summary>
         /// Immediate Reaction (4)
         /// </summary>
-		[Description("Immediate Reaction")]
+		[Display(Name = "Immediate Reaction")]
         ImmediateReaction = 4,
 
         /// <summary>
         /// Minor Action (5)
         /// </summary>
-		[Description("Minor Action")]
+		[Display(Name = "Minor Action")]
         MinorAction = 5,
 
         /// <summary>
         /// Move Action (6)
         /// </summary>
-		[Description("Move Action")]
+		[Display(Name = "Move Action")]
         MoveAction = 6,
 
         /// <summary>
         /// No Action (7)
         /// </summary>
-		[Description("No Action")]
+		[Display(Name = "No Action")]
         NoAction = 7
 	}
 
@@ -110,19 +111,19 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Player Character (1)
         /// </summary>
-		[Description("Player Character")]
+		[Display(Name = "Player Character")]
         PlayerCharacter = 1,
 
         /// <summary>
         /// Non-Player Character (2)
         /// </summary>
-		[Description("Non-Player Character")]
+		[Display(Name = "Non-Player Character")]
         NonPlayerCharacter = 2,
 
         /// <summary>
         /// Trap (3)
         /// </summary>
-		[Description("Trap")]
+		[Display(Name = "Trap")]
         Trap = 3
 	}
 
@@ -136,55 +137,55 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Lawful Good (1)
         /// </summary>
-		[Description("Lawful Good")]
+		[Display(Name = "Lawful Good")]
         LawfulGood = 1,
 
         /// <summary>
         /// Good (2)
         /// </summary>
-		[Description("Good")]
+		[Display(Name = "Good")]
         Good = 2,
 
         /// <summary>
         /// Chaotic Good (3)
         /// </summary>
-		[Description("Chaotic Good")]
+		[Display(Name = "Chaotic Good")]
         ChaoticGood = 3,
 
         /// <summary>
         /// Unaligned (Lawful) (4)
         /// </summary>
-		[Description("Unaligned (Lawful)")]
+		[Display(Name = "Unaligned (Lawful)")]
         UnalignedLawful = 4,
 
         /// <summary>
         /// Unaligned (5)
         /// </summary>
-		[Description("Unaligned")]
+		[Display(Name = "Unaligned")]
         Unaligned = 5,
 
         /// <summary>
         /// Unaligned (Chaotic) (6)
         /// </summary>
-		[Description("Unaligned (Chaotic)")]
+		[Display(Name = "Unaligned (Chaotic)")]
         UnalignedChaotic = 6,
 
         /// <summary>
         /// Lawful Evil (7)
         /// </summary>
-		[Description("Lawful Evil")]
+		[Display(Name = "Lawful Evil")]
         LawfulEvil = 7,
 
         /// <summary>
         /// Evil (8)
         /// </summary>
-		[Description("Evil")]
+		[Display(Name = "Evil")]
         Evil = 8,
 
         /// <summary>
         /// Chaotic Evil (9)
         /// </summary>
-		[Description("Chaotic Evil")]
+		[Display(Name = "Chaotic Evil")]
         ChaoticEvil = 9
 	}
 
@@ -198,13 +199,13 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Light (1)
         /// </summary>
-		[Description("Light")]
+		[Display(Name = "Light")]
         Light = 1,
 
         /// <summary>
         /// Heavy (2)
         /// </summary>
-		[Description("Heavy")]
+		[Display(Name = "Heavy")]
         Heavy = 2
 	}
 
@@ -218,25 +219,25 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Area (1)
         /// </summary>
-		[Description("Area")]
+		[Display(Name = "Area")]
         Area = 1,
 
         /// <summary>
         /// Close (2)
         /// </summary>
-		[Description("Close")]
+		[Display(Name = "Close")]
         Close = 2,
 
         /// <summary>
         /// Melee (3)
         /// </summary>
-		[Description("Melee")]
+		[Display(Name = "Melee")]
         Melee = 3,
 
         /// <summary>
         /// Ranged (4)
         /// </summary>
-		[Description("Ranged")]
+		[Display(Name = "Ranged")]
         Ranged = 4
 	}
 
@@ -250,19 +251,19 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Lawful (1)
         /// </summary>
-		[Description("Lawful")]
+		[Display(Name = "Lawful")]
         Lawful = 1,
 
         /// <summary>
         /// Neutral (2)
         /// </summary>
-		[Description("Neutral")]
+		[Display(Name = "Neutral")]
         Neutral = 2,
 
         /// <summary>
         /// Chaotic (3)
         /// </summary>
-		[Description("Chaotic")]
+		[Display(Name = "Chaotic")]
         Chaotic = 3
 	}
 
@@ -276,19 +277,19 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Good (1)
         /// </summary>
-		[Description("Good")]
+		[Display(Name = "Good")]
         Good = 1,
 
         /// <summary>
         /// Neutral (2)
         /// </summary>
-		[Description("Neutral")]
+		[Display(Name = "Neutral")]
         Neutral = 2,
 
         /// <summary>
         /// Evil (3)
         /// </summary>
-		[Description("Evil")]
+		[Display(Name = "Evil")]
         Evil = 3
 	}
 
@@ -302,61 +303,61 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Acid (1)
         /// </summary>
-		[Description("Acid")]
+		[Display(Name = "Acid")]
         Acid = 1,
 
         /// <summary>
         /// Cold (2)
         /// </summary>
-		[Description("Cold")]
+		[Display(Name = "Cold")]
         Cold = 2,
 
         /// <summary>
         /// Fire (3)
         /// </summary>
-		[Description("Fire")]
+		[Display(Name = "Fire")]
         Fire = 3,
 
         /// <summary>
         /// Force (4)
         /// </summary>
-		[Description("Force")]
+		[Display(Name = "Force")]
         Force = 4,
 
         /// <summary>
         /// Lightning (5)
         /// </summary>
-		[Description("Lightning")]
+		[Display(Name = "Lightning")]
         Lightning = 5,
 
         /// <summary>
         /// Necrotic (6)
         /// </summary>
-		[Description("Necrotic")]
+		[Display(Name = "Necrotic")]
         Necrotic = 6,
 
         /// <summary>
         /// Poison (7)
         /// </summary>
-		[Description("Poison")]
+		[Display(Name = "Poison")]
         Poison = 7,
 
         /// <summary>
         /// Psychic (8)
         /// </summary>
-		[Description("Psychic")]
+		[Display(Name = "Psychic")]
         Psychic = 8,
 
         /// <summary>
         /// Radiant (9)
         /// </summary>
-		[Description("Radiant")]
+		[Display(Name = "Radiant")]
         Radiant = 9,
 
         /// <summary>
         /// Thunder (10)
         /// </summary>
-		[Description("Thunder")]
+		[Display(Name = "Thunder")]
         Thunder = 10
 	}
 
@@ -370,25 +371,25 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Armour Class (1)
         /// </summary>
-		[Description("Armour Class")]
+		[Display(Name = "Armour Class")]
         ArmourClass = 1,
 
         /// <summary>
         /// Fortitude (2)
         /// </summary>
-		[Description("Fortitude")]
+		[Display(Name = "Fortitude")]
         Fortitude = 2,
 
         /// <summary>
         /// Reflex (3)
         /// </summary>
-		[Description("Reflex")]
+		[Display(Name = "Reflex")]
         Reflex = 3,
 
         /// <summary>
         /// Will (4)
         /// </summary>
-		[Description("Will")]
+		[Display(Name = "Will")]
         Will = 4
 	}
 
@@ -402,67 +403,67 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Action (1)
         /// </summary>
-		[Description("Action")]
+		[Display(Name = "Action")]
         Action = 1,
 
         /// <summary>
         /// Day (2)
         /// </summary>
-		[Description("Day")]
+		[Display(Name = "Day")]
         Day = 2,
 
         /// <summary>
         /// Encounter (3)
         /// </summary>
-		[Description("Encounter")]
+		[Display(Name = "Encounter")]
         Encounter = 3,
 
         /// <summary>
         /// Fortnight (4)
         /// </summary>
-		[Description("Fortnight")]
+		[Display(Name = "Fortnight")]
         Fortnight = 4,
 
         /// <summary>
         /// Hour (5)
         /// </summary>
-		[Description("Hour")]
+		[Display(Name = "Hour")]
         Hour = 5,
 
         /// <summary>
         /// Minute (6)
         /// </summary>
-		[Description("Minute")]
+		[Display(Name = "Minute")]
         Minute = 6,
 
         /// <summary>
         /// Month (7)
         /// </summary>
-		[Description("Month")]
+		[Display(Name = "Month")]
         Month = 7,
 
         /// <summary>
         /// Round (8)
         /// </summary>
-		[Description("Round")]
+		[Display(Name = "Round")]
         Round = 8,
 
         /// <summary>
         /// Second (9)
         /// </summary>
-		[Description("Second")]
+		[Display(Name = "Second")]
         Second = 9,
 
         /// <summary>
         /// Turn (10)
         /// </summary>
-		[Description("Turn")]
+		[Display(Name = "Turn")]
         Turn = 10,
 
         /// <summary>
         /// Week (11)
         /// </summary>
-		[Description("Week")]
+		[Display(Name = "Week")]
         Week = 11
 	}
 
@@ -476,73 +477,73 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Charm (1)
         /// </summary>
-		[Description("Charm")]
+		[Display(Name = "Charm")]
         Charm = 1,
 
         /// <summary>
         /// Conjuration (2)
         /// </summary>
-		[Description("Conjuration")]
+		[Display(Name = "Conjuration")]
         Conjuration = 2,
 
         /// <summary>
         /// Fear (3)
         /// </summary>
-		[Description("Fear")]
+		[Display(Name = "Fear")]
         Fear = 3,
 
         /// <summary>
         /// Healing (4)
         /// </summary>
-		[Description("Healing")]
+		[Display(Name = "Healing")]
         Healing = 4,
 
         /// <summary>
         /// Illusion (5)
         /// </summary>
-		[Description("Illusion")]
+		[Display(Name = "Illusion")]
         Illusion = 5,
 
         /// <summary>
         /// Poison (6)
         /// </summary>
-		[Description("Poison")]
+		[Display(Name = "Poison")]
         Poison = 6,
 
         /// <summary>
         /// Polymorph (7)
         /// </summary>
-		[Description("Polymorph")]
+		[Display(Name = "Polymorph")]
         Polymorph = 7,
 
         /// <summary>
         /// Reliable (8)
         /// </summary>
-		[Description("Reliable")]
+		[Display(Name = "Reliable")]
         Reliable = 8,
 
         /// <summary>
         /// Sleep (9)
         /// </summary>
-		[Description("Sleep")]
+		[Display(Name = "Sleep")]
         Sleep = 9,
 
         /// <summary>
         /// Stance (10)
         /// </summary>
-		[Description("Stance")]
+		[Display(Name = "Stance")]
         Stance = 10,
 
         /// <summary>
         /// Teleportation (11)
         /// </summary>
-		[Description("Teleportation")]
+		[Display(Name = "Teleportation")]
         Teleportation = 11,
 
         /// <summary>
         /// Zone (12)
         /// </summary>
-		[Description("Zone")]
+		[Display(Name = "Zone")]
         Zone = 12
 	}
 
@@ -556,25 +557,25 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Archmage (1)
         /// </summary>
-		[Description("Archmage")]
+		[Display(Name = "Archmage")]
         Archmage = 1,
 
         /// <summary>
         /// Deadly Trickster (2)
         /// </summary>
-		[Description("Deadly Trickster")]
+		[Display(Name = "Deadly Trickster")]
         DeadlyTrickster = 2,
 
         /// <summary>
         /// Demigod (3)
         /// </summary>
-		[Description("Demigod")]
+		[Display(Name = "Demigod")]
         Demigod = 3,
 
         /// <summary>
         /// Eternal Seeker (4)
         /// </summary>
-		[Description("Eternal Seeker")]
+		[Display(Name = "Eternal Seeker")]
         EternalSeeker = 4
 	}
 
@@ -588,19 +589,19 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Male (1)
         /// </summary>
-		[Description("Male")]
+		[Display(Name = "Male")]
         Male = 1,
 
         /// <summary>
         /// Female (2)
         /// </summary>
-		[Description("Female")]
+		[Display(Name = "Female")]
         Female = 2,
 
         /// <summary>
         /// Other (3)
         /// </summary>
-		[Description("Other")]
+		[Display(Name = "Other")]
         Other = 3
 	}
 
@@ -614,25 +615,25 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Orb (1)
         /// </summary>
-		[Description("Orb")]
+		[Display(Name = "Orb")]
         Orb = 1,
 
         /// <summary>
         /// Rod (2)
         /// </summary>
-		[Description("Rod")]
+		[Display(Name = "Rod")]
         Rod = 2,
 
         /// <summary>
         /// Staff (3)
         /// </summary>
-		[Description("Staff")]
+		[Display(Name = "Staff")]
         Staff = 3,
 
         /// <summary>
         /// Wand (4)
         /// </summary>
-		[Description("Wand")]
+		[Display(Name = "Wand")]
         Wand = 4
 	}
 
@@ -655,25 +656,25 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Arcane (1)
         /// </summary>
-		[Description("Arcane")]
+		[Display(Name = "Arcane")]
         Arcane = 1,
 
         /// <summary>
         /// Divine (2)
         /// </summary>
-		[Description("Divine")]
+		[Display(Name = "Divine")]
         Divine = 2,
 
         /// <summary>
         /// Martial (3)
         /// </summary>
-		[Description("Martial")]
+		[Display(Name = "Martial")]
         Martial = 3,
 
         /// <summary>
         /// Primal (4)
         /// </summary>
-		[Description("Primal")]
+		[Display(Name = "Primal")]
         Primal = 4
 	}
 
@@ -687,25 +688,25 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// At-Will (1)
         /// </summary>
-		[Description("At-Will")]
+		[Display(Name = "At-Will")]
         AtWill = 1,
 
         /// <summary>
         /// Daily (2)
         /// </summary>
-		[Description("Daily")]
+		[Display(Name = "Daily")]
         Daily = 2,
 
         /// <summary>
         /// Encounter (3)
         /// </summary>
-		[Description("Encounter")]
+		[Display(Name = "Encounter")]
         Encounter = 3,
 
         /// <summary>
         /// Utility (4)
         /// </summary>
-		[Description("Utility")]
+		[Display(Name = "Utility")]
         Utility = 4
 	}
 
@@ -719,25 +720,25 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Controller (1)
         /// </summary>
-		[Description("Controller")]
+		[Display(Name = "Controller")]
         Controller = 1,
 
         /// <summary>
         /// Defender (2)
         /// </summary>
-		[Description("Defender")]
+		[Display(Name = "Defender")]
         Defender = 2,
 
         /// <summary>
         /// Leader (3)
         /// </summary>
-		[Description("Leader")]
+		[Display(Name = "Leader")]
         Leader = 3,
 
         /// <summary>
         /// Striker (4)
         /// </summary>
-		[Description("Striker")]
+		[Display(Name = "Striker")]
         Striker = 4
 	}
 
@@ -751,103 +752,103 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Acrobatics (1)
         /// </summary>
-		[Description("Acrobatics")]
+		[Display(Name = "Acrobatics")]
         Acrobatics = 1,
 
         /// <summary>
         /// Arcana (2)
         /// </summary>
-		[Description("Arcana")]
+		[Display(Name = "Arcana")]
         Arcana = 2,
 
         /// <summary>
         /// Athletics (3)
         /// </summary>
-		[Description("Athletics")]
+		[Display(Name = "Athletics")]
         Athletics = 3,
 
         /// <summary>
         /// Bluff (4)
         /// </summary>
-		[Description("Bluff")]
+		[Display(Name = "Bluff")]
         Bluff = 4,
 
         /// <summary>
         /// Diplomacy (5)
         /// </summary>
-		[Description("Diplomacy")]
+		[Display(Name = "Diplomacy")]
         Diplomacy = 5,
 
         /// <summary>
         /// Dungeoneering (6)
         /// </summary>
-		[Description("Dungeoneering")]
+		[Display(Name = "Dungeoneering")]
         Dungeoneering = 6,
 
         /// <summary>
         /// Endurance (7)
         /// </summary>
-		[Description("Endurance")]
+		[Display(Name = "Endurance")]
         Endurance = 7,
 
         /// <summary>
         /// Heal (8)
         /// </summary>
-		[Description("Heal")]
+		[Display(Name = "Heal")]
         Heal = 8,
 
         /// <summary>
         /// History (9)
         /// </summary>
-		[Description("History")]
+		[Display(Name = "History")]
         History = 9,
 
         /// <summary>
         /// Insight (10)
         /// </summary>
-		[Description("Insight")]
+		[Display(Name = "Insight")]
         Insight = 10,
 
         /// <summary>
         /// Intimidate (11)
         /// </summary>
-		[Description("Intimidate")]
+		[Display(Name = "Intimidate")]
         Intimidate = 11,
 
         /// <summary>
         /// Nature (12)
         /// </summary>
-		[Description("Nature")]
+		[Display(Name = "Nature")]
         Nature = 12,
 
         /// <summary>
         /// Perception (13)
         /// </summary>
-		[Description("Perception")]
+		[Display(Name = "Perception")]
         Perception = 13,
 
         /// <summary>
         /// Religion (14)
         /// </summary>
-		[Description("Religion")]
+		[Display(Name = "Religion")]
         Religion = 14,
 
         /// <summary>
         /// Stealth (15)
         /// </summary>
-		[Description("Stealth")]
+		[Display(Name = "Stealth")]
         Stealth = 15,
 
         /// <summary>
         /// Streetwise (16)
         /// </summary>
-		[Description("Streetwise")]
+		[Display(Name = "Streetwise")]
         Streetwise = 16,
 
         /// <summary>
         /// Thievery (17)
         /// </summary>
-		[Description("Thievery")]
+		[Display(Name = "Thievery")]
         Thievery = 17
 	}
 
@@ -861,37 +862,37 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Improvised (1)
         /// </summary>
-		[Description("Improvised")]
+		[Display(Name = "Improvised")]
         Improvised = 1,
 
         /// <summary>
         /// Melee (2)
         /// </summary>
-		[Description("Melee")]
+		[Display(Name = "Melee")]
         Melee = 2,
 
         /// <summary>
         /// Military (3)
         /// </summary>
-		[Description("Military")]
+		[Display(Name = "Military")]
         Military = 3,
 
         /// <summary>
         /// Ranged (4)
         /// </summary>
-		[Description("Ranged")]
+		[Display(Name = "Ranged")]
         Ranged = 4,
 
         /// <summary>
         /// Simple (5)
         /// </summary>
-		[Description("Simple")]
+		[Display(Name = "Simple")]
         Simple = 5,
 
         /// <summary>
         /// Superior (6)
         /// </summary>
-		[Description("Superior")]
+		[Display(Name = "Superior")]
         Superior = 6
 	}
 
@@ -905,85 +906,85 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Axe (1)
         /// </summary>
-		[Description("Axe")]
+		[Display(Name = "Axe")]
         Axe = 1,
 
         /// <summary>
         /// Bow (2)
         /// </summary>
-		[Description("Bow")]
+		[Display(Name = "Bow")]
         Bow = 2,
 
         /// <summary>
         /// Crossbow (3)
         /// </summary>
-		[Description("Crossbow")]
+		[Display(Name = "Crossbow")]
         Crossbow = 3,
 
         /// <summary>
         /// Flail (4)
         /// </summary>
-		[Description("Flail")]
+		[Display(Name = "Flail")]
         Flail = 4,
 
         /// <summary>
         /// Hammer (5)
         /// </summary>
-		[Description("Hammer")]
+		[Display(Name = "Hammer")]
         Hammer = 5,
 
         /// <summary>
         /// Heavy Blade (6)
         /// </summary>
-		[Description("Heavy Blade")]
+		[Display(Name = "Heavy Blade")]
         HeavyBlade = 6,
 
         /// <summary>
         /// Light Blade (7)
         /// </summary>
-		[Description("Light Blade")]
+		[Display(Name = "Light Blade")]
         LightBlade = 7,
 
         /// <summary>
         /// Mace (8)
         /// </summary>
-		[Description("Mace")]
+		[Display(Name = "Mace")]
         Mace = 8,
 
         /// <summary>
         /// Pick (9)
         /// </summary>
-		[Description("Pick")]
+		[Display(Name = "Pick")]
         Pick = 9,
 
         /// <summary>
         /// Polearm (10)
         /// </summary>
-		[Description("Polearm")]
+		[Display(Name = "Polearm")]
         Polearm = 10,
 
         /// <summary>
         /// Sling (11)
         /// </summary>
-		[Description("Sling")]
+		[Display(Name = "Sling")]
         Sling = 11,
 
         /// <summary>
         /// Spear (12)
         /// </summary>
-		[Description("Spear")]
+		[Display(Name = "Spear")]
         Spear = 12,
 
         /// <summary>
         /// Staff (13)
         /// </summary>
-		[Description("Staff")]
+		[Display(Name = "Staff")]
         Staff = 13,
 
         /// <summary>
         /// Unarmed (14)
         /// </summary>
-		[Description("Unarmed")]
+		[Display(Name = "Unarmed")]
         Unarmed = 14
 	}
 
@@ -997,49 +998,49 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Heavy Thrown (1)
         /// </summary>
-		[Description("Heavy Thrown")]
+		[Display(Name = "Heavy Thrown")]
         HeavyThrown = 1,
 
         /// <summary>
         /// High Crit (2)
         /// </summary>
-		[Description("High Crit")]
+		[Display(Name = "High Crit")]
         HighCrit = 2,
 
         /// <summary>
         /// Light Thrown (3)
         /// </summary>
-		[Description("Light Thrown")]
+		[Display(Name = "Light Thrown")]
         LightThrown = 3,
 
         /// <summary>
         /// Load (4)
         /// </summary>
-		[Description("Load")]
+		[Display(Name = "Load")]
         Load = 4,
 
         /// <summary>
         /// Off-Hand (5)
         /// </summary>
-		[Description("Off-Hand")]
+		[Display(Name = "Off-Hand")]
         OffHand = 5,
 
         /// <summary>
         /// Reach (6)
         /// </summary>
-		[Description("Reach")]
+		[Display(Name = "Reach")]
         Reach = 6,
 
         /// <summary>
         /// Small (7)
         /// </summary>
-		[Description("Small")]
+		[Display(Name = "Small")]
         Small = 7,
 
         /// <summary>
         /// Versatile (8)
         /// </summary>
-		[Description("Versatile")]
+		[Display(Name = "Versatile")]
         Versatile = 8
 	}
 
@@ -1055,43 +1056,43 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Cloth Armour (1)
         /// </summary>
-		[Description("Cloth Armour")]
+		[Display(Name = "Cloth Armour")]
         ClothArmour = 1,
 
         /// <summary>
         /// Leather Armour (2)
         /// </summary>
-		[Description("Leather Armour")]
+		[Display(Name = "Leather Armour")]
         LeatherArmour = 2,
 
         /// <summary>
         /// Hide Armour (3)
         /// </summary>
-		[Description("Hide Armour")]
+		[Display(Name = "Hide Armour")]
         HideArmour = 3,
 
         /// <summary>
         /// Chainmail (4)
         /// </summary>
-		[Description("Chainmail")]
+		[Display(Name = "Chainmail")]
         Chainmail = 4,
 
         /// <summary>
         /// Scale Armour (5)
         /// </summary>
-		[Description("Scale Armour")]
+		[Display(Name = "Scale Armour")]
         ScaleArmour = 5,
 
         /// <summary>
         /// Plate Armour (6)
         /// </summary>
-		[Description("Plate Armour")]
+		[Display(Name = "Plate Armour")]
         PlateArmour = 6,
 
         /// <summary>
         /// Shield (7)
         /// </summary>
-		[Description("Shield")]
+		[Display(Name = "Shield")]
         Shield = 7
 	}
 
@@ -1105,121 +1106,121 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Cloth armour (basic clothing) (1)
         /// </summary>
-		[Description("Cloth armour (basic clothing)")]
+		[Display(Name = "Cloth armour (basic clothing)")]
         ClothArmourBasicClothing = 1,
 
         /// <summary>
         /// Feyweave armour (2)
         /// </summary>
-		[Description("Feyweave armour")]
+		[Display(Name = "Feyweave armour")]
         FeyweaveArmour = 2,
 
         /// <summary>
         /// Starweave armour (3)
         /// </summary>
-		[Description("Starweave armour")]
+		[Display(Name = "Starweave armour")]
         StarweaveArmour = 3,
 
         /// <summary>
         /// Leather armour (4)
         /// </summary>
-		[Description("Leather armour")]
+		[Display(Name = "Leather armour")]
         LeatherArmour = 4,
 
         /// <summary>
         /// Feyleather armour (5)
         /// </summary>
-		[Description("Feyleather armour")]
+		[Display(Name = "Feyleather armour")]
         FeyleatherArmour = 5,
 
         /// <summary>
         /// Starleather armour (6)
         /// </summary>
-		[Description("Starleather armour")]
+		[Display(Name = "Starleather armour")]
         StarleatherArmour = 6,
 
         /// <summary>
         /// Hide armour (7)
         /// </summary>
-		[Description("Hide armour")]
+		[Display(Name = "Hide armour")]
         HideArmour = 7,
 
         /// <summary>
         /// Darkhide armour (8)
         /// </summary>
-		[Description("Darkhide armour")]
+		[Display(Name = "Darkhide armour")]
         DarkhideArmour = 8,
 
         /// <summary>
         /// Elderhide armour (9)
         /// </summary>
-		[Description("Elderhide armour")]
+		[Display(Name = "Elderhide armour")]
         ElderhideArmour = 9,
 
         /// <summary>
         /// Chainmail (10)
         /// </summary>
-		[Description("Chainmail")]
+		[Display(Name = "Chainmail")]
         Chainmail = 10,
 
         /// <summary>
         /// Forgemail (11)
         /// </summary>
-		[Description("Forgemail")]
+		[Display(Name = "Forgemail")]
         Forgemail = 11,
 
         /// <summary>
         /// Spiritmail (12)
         /// </summary>
-		[Description("Spiritmail")]
+		[Display(Name = "Spiritmail")]
         Spiritmail = 12,
 
         /// <summary>
         /// Scale armour (13)
         /// </summary>
-		[Description("Scale armour")]
+		[Display(Name = "Scale armour")]
         ScaleArmour = 13,
 
         /// <summary>
         /// Wyrmscale armour (14)
         /// </summary>
-		[Description("Wyrmscale armour")]
+		[Display(Name = "Wyrmscale armour")]
         WyrmscaleArmour = 14,
 
         /// <summary>
         /// Elderscale armour (15)
         /// </summary>
-		[Description("Elderscale armour")]
+		[Display(Name = "Elderscale armour")]
         ElderscaleArmour = 15,
 
         /// <summary>
         /// Plate armour (16)
         /// </summary>
-		[Description("Plate armour")]
+		[Display(Name = "Plate armour")]
         PlateArmour = 16,
 
         /// <summary>
         /// Warplate armour (17)
         /// </summary>
-		[Description("Warplate armour")]
+		[Display(Name = "Warplate armour")]
         WarplateArmour = 17,
 
         /// <summary>
         /// Godplate armour (18)
         /// </summary>
-		[Description("Godplate armour")]
+		[Display(Name = "Godplate armour")]
         GodplateArmour = 18,
 
         /// <summary>
         /// Light shield (19)
         /// </summary>
-		[Description("Light shield")]
+		[Display(Name = "Light shield")]
         LightShield = 19,
 
         /// <summary>
         /// Heavy shield (20)
         /// </summary>
-		[Description("Heavy shield")]
+		[Display(Name = "Heavy shield")]
         HeavyShield = 20
 	}
 
@@ -1233,97 +1234,97 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Cleric (1)
         /// </summary>
-		[Description("Cleric")]
+		[Display(Name = "Cleric")]
         Cleric = 1,
 
         /// <summary>
         /// Fighter (2)
         /// </summary>
-		[Description("Fighter")]
+		[Display(Name = "Fighter")]
         Fighter = 2,
 
         /// <summary>
         /// Paladin (3)
         /// </summary>
-		[Description("Paladin")]
+		[Display(Name = "Paladin")]
         Paladin = 3,
 
         /// <summary>
         /// Ranger (4)
         /// </summary>
-		[Description("Ranger")]
+		[Display(Name = "Ranger")]
         Ranger = 4,
 
         /// <summary>
         /// Rogue (5)
         /// </summary>
-		[Description("Rogue")]
+		[Display(Name = "Rogue")]
         Rogue = 5,
 
         /// <summary>
         /// Warlock (6)
         /// </summary>
-		[Description("Warlock")]
+		[Display(Name = "Warlock")]
         Warlock = 6,
 
         /// <summary>
         /// Warlord (7)
         /// </summary>
-		[Description("Warlord")]
+		[Display(Name = "Warlord")]
         Warlord = 7,
 
         /// <summary>
         /// Wizard (8)
         /// </summary>
-		[Description("Wizard")]
+		[Display(Name = "Wizard")]
         Wizard = 8,
 
         /// <summary>
         /// Avenger (9)
         /// </summary>
-		[Description("Avenger")]
+		[Display(Name = "Avenger")]
         Avenger = 9,
 
         /// <summary>
         /// Barbarian (10)
         /// </summary>
-		[Description("Barbarian")]
+		[Display(Name = "Barbarian")]
         Barbarian = 10,
 
         /// <summary>
         /// Bard (11)
         /// </summary>
-		[Description("Bard")]
+		[Display(Name = "Bard")]
         Bard = 11,
 
         /// <summary>
         /// Druid (12)
         /// </summary>
-		[Description("Druid")]
+		[Display(Name = "Druid")]
         Druid = 12,
 
         /// <summary>
         /// Invoker (13)
         /// </summary>
-		[Description("Invoker")]
+		[Display(Name = "Invoker")]
         Invoker = 13,
 
         /// <summary>
         /// Shaman (14)
         /// </summary>
-		[Description("Shaman")]
+		[Display(Name = "Shaman")]
         Shaman = 14,
 
         /// <summary>
         /// Sorcerer (15)
         /// </summary>
-		[Description("Sorcerer")]
+		[Display(Name = "Sorcerer")]
         Sorcerer = 15,
 
         /// <summary>
         /// Warden (16)
         /// </summary>
-		[Description("Warden")]
+		[Display(Name = "Warden")]
         Warden = 16
 	}
 
@@ -1335,75 +1336,81 @@ namespace DungeonsAndDragons_Data.Enums
     public enum Deities : int
     {
         /// <summary>
+        /// None (0)
+        /// </summary>
+		[Display(Name = "None")]
+        None = 0,
+
+        /// <summary>
         /// Avandra (1)
         /// </summary>
-		[Description("Avandra")]
+		[Display(Name = "Avandra")]
         Avandra = 1,
 
         /// <summary>
         /// Bahamut (2)
         /// </summary>
-		[Description("Bahamut")]
+		[Display(Name = "Bahamut")]
         Bahamut = 2,
 
         /// <summary>
         /// Corellon (3)
         /// </summary>
-		[Description("Corellon")]
+		[Display(Name = "Corellon")]
         Corellon = 3,
 
         /// <summary>
         /// Erathis (4)
         /// </summary>
-		[Description("Erathis")]
+		[Display(Name = "Erathis")]
         Erathis = 4,
 
         /// <summary>
         /// Ioun (5)
         /// </summary>
-		[Description("Ioun")]
+		[Display(Name = "Ioun")]
         Ioun = 5,
 
         /// <summary>
         /// Kord (6)
         /// </summary>
-		[Description("Kord")]
+		[Display(Name = "Kord")]
         Kord = 6,
 
         /// <summary>
         /// Melora (7)
         /// </summary>
-		[Description("Melora")]
+		[Display(Name = "Melora")]
         Melora = 7,
 
         /// <summary>
         /// Moradin (8)
         /// </summary>
-		[Description("Moradin")]
+		[Display(Name = "Moradin")]
         Moradin = 8,
 
         /// <summary>
         /// Pelor (9)
         /// </summary>
-		[Description("Pelor")]
+		[Display(Name = "Pelor")]
         Pelor = 9,
 
         /// <summary>
         /// The Raven Queen (10)
         /// </summary>
-		[Description("The Raven Queen")]
+		[Display(Name = "The Raven Queen")]
         TheRavenQueen = 10,
 
         /// <summary>
         /// Sehanine (11)
         /// </summary>
-		[Description("Sehanine")]
+		[Display(Name = "Sehanine")]
         Sehanine = 11,
 
         /// <summary>
         /// Primal Spirits (12)
         /// </summary>
-		[Description("Primal Spirits")]
+		[Display(Name = "Primal Spirits")]
         PrimalSpirits = 12
 	}
 
@@ -1426,61 +1433,61 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Common (1)
         /// </summary>
-		[Description("Common")]
+		[Display(Name = "Common")]
         Common = 1,
 
         /// <summary>
         /// Deep Speech (2)
         /// </summary>
-		[Description("Deep Speech")]
+		[Display(Name = "Deep Speech")]
         DeepSpeech = 2,
 
         /// <summary>
         /// Draconic (3)
         /// </summary>
-		[Description("Draconic")]
+		[Display(Name = "Draconic")]
         Draconic = 3,
 
         /// <summary>
         /// Dwarven (4)
         /// </summary>
-		[Description("Dwarven")]
+		[Display(Name = "Dwarven")]
         Dwarven = 4,
 
         /// <summary>
         /// Elven (5)
         /// </summary>
-		[Description("Elven")]
+		[Display(Name = "Elven")]
         Elven = 5,
 
         /// <summary>
         /// Giant (6)
         /// </summary>
-		[Description("Giant")]
+		[Display(Name = "Giant")]
         Giant = 6,
 
         /// <summary>
         /// Goblin (7)
         /// </summary>
-		[Description("Goblin")]
+		[Display(Name = "Goblin")]
         Goblin = 7,
 
         /// <summary>
         /// Primordial (8)
         /// </summary>
-		[Description("Primordial")]
+		[Display(Name = "Primordial")]
         Primordial = 8,
 
         /// <summary>
         /// Supernal (9)
         /// </summary>
-		[Description("Supernal")]
+		[Display(Name = "Supernal")]
         Supernal = 9,
 
         /// <summary>
         /// Abyssal (10)
         /// </summary>
-		[Description("Abyssal")]
+		[Display(Name = "Abyssal")]
         Abyssal = 10
 	}
 
@@ -1503,85 +1510,85 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Dragonborn (1)
         /// </summary>
-		[Description("Dragonborn")]
+		[Display(Name = "Dragonborn")]
         Dragonborn = 1,
 
         /// <summary>
         /// Dwarf (2)
         /// </summary>
-		[Description("Dwarf")]
+		[Display(Name = "Dwarf")]
         Dwarf = 2,
 
         /// <summary>
         /// Eladrin (3)
         /// </summary>
-		[Description("Eladrin")]
+		[Display(Name = "Eladrin")]
         Eladrin = 3,
 
         /// <summary>
         /// Elf (4)
         /// </summary>
-		[Description("Elf")]
+		[Display(Name = "Elf")]
         Elf = 4,
 
         /// <summary>
         /// Half-Elf (5)
         /// </summary>
-		[Description("Half-Elf")]
+		[Display(Name = "Half-Elf")]
         HalfElf = 5,
 
         /// <summary>
         /// Halfling (6)
         /// </summary>
-		[Description("Halfling")]
+		[Display(Name = "Halfling")]
         Halfling = 6,
 
         /// <summary>
         /// Human (7)
         /// </summary>
-		[Description("Human")]
+		[Display(Name = "Human")]
         Human = 7,
 
         /// <summary>
         /// Tiefling (8)
         /// </summary>
-		[Description("Tiefling")]
+		[Display(Name = "Tiefling")]
         Tiefling = 8,
 
         /// <summary>
         /// Deva (9)
         /// </summary>
-		[Description("Deva")]
+		[Display(Name = "Deva")]
         Deva = 9,
 
         /// <summary>
         /// Gnome (10)
         /// </summary>
-		[Description("Gnome")]
+		[Display(Name = "Gnome")]
         Gnome = 10,
 
         /// <summary>
         /// Goliath (11)
         /// </summary>
-		[Description("Goliath")]
+		[Display(Name = "Goliath")]
         Goliath = 11,
 
         /// <summary>
         /// Half-Orc (12)
         /// </summary>
-		[Description("Half-Orc")]
+		[Display(Name = "Half-Orc")]
         HalfOrc = 12,
 
         /// <summary>
         /// Longtooth Shifter (13)
         /// </summary>
-		[Description("Longtooth Shifter")]
+		[Display(Name = "Longtooth Shifter")]
         LongtoothShifter = 13,
 
         /// <summary>
         /// Razorclaw Shifter (14)
         /// </summary>
-		[Description("Razorclaw Shifter")]
+		[Display(Name = "Razorclaw Shifter")]
         RazorclawShifter = 14
 	}
 
@@ -1595,37 +1602,37 @@ namespace DungeonsAndDragons_Data.Enums
         /// <summary>
         /// Barazhad (1)
         /// </summary>
-		[Description("Barazhad")]
+		[Display(Name = "Barazhad")]
         Barazhad = 1,
 
         /// <summary>
         /// Common (2)
         /// </summary>
-		[Description("Common")]
+		[Display(Name = "Common")]
         Common = 2,
 
         /// <summary>
         /// Davek (3)
         /// </summary>
-		[Description("Davek")]
+		[Display(Name = "Davek")]
         Davek = 3,
 
         /// <summary>
         /// Iokharic (4)
         /// </summary>
-		[Description("Iokharic")]
+		[Display(Name = "Iokharic")]
         Iokharic = 4,
 
         /// <summary>
         /// Rellanic (5)
         /// </summary>
-		[Description("Rellanic")]
+		[Display(Name = "Rellanic")]
         Rellanic = 5,
 
         /// <summary>
         /// Supernal (6)
         /// </summary>
-		[Description("Supernal")]
+		[Display(Name = "Supernal")]
         Supernal = 6
 	}
 

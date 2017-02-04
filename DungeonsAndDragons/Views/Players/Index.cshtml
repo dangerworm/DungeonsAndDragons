@@ -1,0 +1,56 @@
+﻿@using DungeonsAndDragons_Data.Enums
+@model DungeonsAndDragons.Models.PlayerCharacterModel
+
+@{
+    ViewBag.Title = Model.Name;
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>@Model.Name</h1>
+        <h4>@(EnumUtils<Races>.GetDisplayValue(Model.RaceId)) @(EnumUtils<Classes>.GetDisplayValue(Model.ClassId))</h4>
+    </div>
+</div>
+<hr/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-horizontal">
+            <div class="form-group">
+                @Html.LabelFor(x => Model.Name, new { @class = "col-md-2" })
+                @Model.Name
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => Model.ClassId, new { @class = "col-md-2" })
+                @(EnumUtils<Classes>.GetDisplayValue(Model.ClassId))
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => Model.RaceId, new { @class = "col-md-2" })
+                @(EnumUtils<Races>.GetDisplayValue(Model.RaceId))
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => Model.Age, new { @class = "col-md-2" })
+                @Model.Age
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => Model.GenderId, new { @class = "col-md-2" })
+                @Model.GenderId
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => Model.Height, new { @class = "col-md-2" })
+                @Model.Height
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => Model.WeightPounds, new { @class = "col-md-2" })
+                @Model.WeightPounds
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => Model.AlignmentId, new { @class = "col-md-2" })
+                @(EnumUtils<Alignments>.GetDisplayValue(Model.AlignmentId))
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => Model.DeityId, new { @class = "col-md-2" })
+                @Model.DeityId
+            </div>
+        </div>
+    </div>
+</div>

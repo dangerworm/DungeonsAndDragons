@@ -1,55 +1,56 @@
-﻿@model DungeonsAndDragons.Models.PlayerCharacterModel
+﻿@using System.Security.Cryptography.X509Certificates
+@model DungeonsAndDragons.Models.PlayerCharacterModel
 
 @using (Html.BeginForm("Create", "Players", FormMethod.Post, new { @class = "" }))
 {
-    if (!Html.ViewData.ModelState.IsValid)
+    @*if (!Html.ViewData.ModelState.IsValid)
     {
         @Html.ValidationSummary("", new {@class = "alert alert-warning"})
-    }
+    }*@
 
     <div class="form-group">
-        @Html.LabelFor(x => Model.Name)
+        @Html.LabelFor(x => x.Name)
         @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
         @Html.ValidationMessageFor(x => x.Name, null, new { @class = "text-danger" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(x => Model.ClassId)
-        @Html.EnumDropDownListFor(x => Model.ClassId, new { @class="form-control" })
+        @Html.LabelFor(x => x.ClassId)
+        @Html.EnumDropDownListFor(x => x.ClassId, new { @class="form-control" })
         @Html.ValidationMessageFor(x => x.ClassId, null, new { @class = "text-danger" })
     </div>
     <div class="form-group">
         @Html.LabelFor(x => Model.RaceId)
-        @Html.EnumDropDownListFor(x => Model.RaceId, new { @class = "form-control" })
+        @Html.EnumDropDownListFor(x => x.RaceId, new { @class = "form-control" })
         @Html.ValidationMessageFor(x => x.RaceId, null, new { @class = "text-danger" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(x => Model.Age)
-        @Html.TextBoxFor(x => Model.Age, new { @class = "form-control", type = "number" })
+        @Html.LabelFor(x => x.Age)
+        @Html.TextBoxFor(x => x.Age, new { @class = "form-control", type = "number" })
         @Html.ValidationMessageFor(x => x.Age, null, new { @class = "text-danger" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(x => Model.GenderId)
-        @Html.EnumDropDownListFor(x => Model.GenderId, new { @class = "form-control" })
+        @Html.LabelFor(x => x.GenderId)
+        @Html.EnumDropDownListFor(x => x.GenderId, new { @class = "form-control" })
         @Html.ValidationMessageFor(x => x.GenderId, null, new { @class = "text-danger" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(x => Model.Height)
-        @Html.TextBoxFor(x => Model.Height, new { @class = "form-control" })
+        @Html.LabelFor(x => x.Height)
+        @Html.TextBoxFor(x => x.Height, new { @class = "form-control" })
         @Html.ValidationMessageFor(x => x.Height, null, new { @class = "text-danger" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(x => Model.WeightPounds)
-        @Html.TextBoxFor(x => Model.WeightPounds, new { @class = "form-control", type = "number" })
+        @Html.LabelFor(x => x.WeightPounds)
+        @Html.TextBoxFor(x => x.WeightPounds, new { @class = "form-control", type = "number" })
         @Html.ValidationMessageFor(x => x.WeightPounds, null, new { @class = "text-danger" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(x => Model.AlignmentId)
-        @Html.EnumDropDownListFor(x => Model.AlignmentId, new { @class = "form-control" })
+        @Html.LabelFor(x => x.AlignmentId)
+        @Html.EnumDropDownListFor(x => x.AlignmentId, new { @class = "form-control" })
         @Html.ValidationMessageFor(x => x.AlignmentId, null, new { @class = "text-danger" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(x => Model.DeityId)
-        @Html.EnumDropDownListFor(x => Model.DeityId, new { @class = "form-control" })
+        @Html.LabelFor(x => x.DeityId)
+        @Html.EnumDropDownListFor(x => x.DeityId, new { @class = "form-control" })
         @Html.ValidationMessageFor(x => x.DeityId, null, new { @class = "text-danger" })
     </div>
 }

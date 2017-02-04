@@ -270,6 +270,7 @@
     <Content Include="Views\Games\Index.cshtml" />
     <Content Include="Views\Players\_Create.cshtml" />
     <Content Include="Views\Shared\_MapAreas.cshtml" />
+    <Content Include="Views\Players\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

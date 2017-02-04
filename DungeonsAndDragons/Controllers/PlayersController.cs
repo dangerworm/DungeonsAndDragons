@@ -16,9 +16,17 @@ namespace DungeonsAndDragons.Controllers
             _playersService = new PlayerCharactersService(UnitOfWork);
         }
 
-        public ActionResult Index(int? id)
+        public ActionResult Index(int id)
         {
-            var viewModel = _playersService.GetAll();
+            var character = _playersService.GetById(id);
+
+            if (character == null)
+            {
+                return RedirectToAction("Index", "Games");
+            }
+
+            var viewModel = character.Map<PlayerCharacter, PlayerCharacterModel>();
+
             return View(viewModel);
         }
 

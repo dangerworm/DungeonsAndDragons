@@ -9,11 +9,11 @@
 @RaceId INT,
 @Age INT,
 @GenderId INT,
-@Height INT,
+@Height VARCHAR(20),
 @WeightPounds INT,
 @AlignmentId INT,
 @DeityId INT,
-@Picture BINARY
+@Picture BINARY = NULL
 AS
 
 IF NOT EXISTS (

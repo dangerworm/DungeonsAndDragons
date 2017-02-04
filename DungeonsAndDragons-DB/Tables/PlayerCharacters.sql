@@ -20,9 +20,11 @@
 		CONSTRAINT PlayerCharacters_GenderId_FK FOREIGN KEY REFERENCES dbo.Genders(GenderId),
     Height VARCHAR(50),
     WeightPounds INT,
-    AlignmentId INT
+    AlignmentId INT NOT NULL
+		CONSTRAINT PlayerCharacters_AlignmentId_DF DEFAULT(5)
 		CONSTRAINT PlayerCharacters_AlignmentId_FK FOREIGN KEY REFERENCES dbo.Alignments(AlignmentId),
     DeityId INT 
+		CONSTRAINT PlayerCharacters_DeityId_DF DEFAULT(0)
 		CONSTRAINT PlayerCharacters_DeityId_FK FOREIGN KEY REFERENCES dbo.Deities(DeityId),
 	Picture BINARY
 );
