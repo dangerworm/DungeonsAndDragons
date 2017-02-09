@@ -96,7 +96,7 @@
     <Build Include="Tables\TargetTypes.sql" />
     <Build Include="Tables\TransportItems.sql" />
     <Build Include="Tables\VisionLevels.sql" />
-    <Build Include="Tables\Weapons.sql" />
+    <Build Include="Tables\WeaponTypes.sql" />
     <Build Include="Tables\Enums\Abilities.sql" />
     <Build Include="Tables\Enums\ActionTypes.sql" />
     <Build Include="Tables\Enums\ActorTypes.sql" />
@@ -151,6 +151,7 @@
     <Build Include="StoredProcedures\USP_MapAreas_Update.sql" />
     <Build Include="Tables\Bridge Tables\GameMapAreasBridge.sql" />
     <Build Include="StoredProcedures\USP_Actors_Create.sql" />
+    <Build Include="Tables\Weapons.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="PostDeployment.sql" />

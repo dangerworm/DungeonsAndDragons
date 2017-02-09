@@ -14,5 +14,6 @@
     HealingSurges INT NOT NULL,
     HealingSurgesAbilityId INT
 		CONSTRAINT Classes_HealingSurgesAbilityId_FK FOREIGN KEY REFERENCES dbo.Abilities(AbilityId),
-	FlavourText VARCHAR(MAX)
+	FlavourText VARCHAR(MAX),
+	InfoUrl VARCHAR(MAX)
 );

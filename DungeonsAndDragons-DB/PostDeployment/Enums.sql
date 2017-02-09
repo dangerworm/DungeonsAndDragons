@@ -190,29 +190,28 @@ GO
 INSERT INTO dbo.WeaponCategories(Name)
 VALUES
 	('Improvised'),
-	('Melee'),
 	('Military'),
-	('Ranged'),
 	('Simple'),
 	('Superior')
 GO
 
 INSERT INTO dbo.WeaponGroups(Name)
 VALUES
-	('Axe'),
-	('Bow'),
-	('Crossbow'),
-	('Flail'),
-	('Hammer'),
-	('Heavy Blade'),
-	('Light Blade'),
-	('Mace'),
-	('Pick'),
-	('Polearm'),
-	('Sling'),
-	('Spear'),
-	('Staff'),
-	('Unarmed')
+	('None'),		-- 0
+	('Axe'),		-- 1
+	('Bow'),		-- 2
+	('Crossbow'),	-- 3
+	('Flail'),		-- 4
+	('Hammer'),		-- 5
+	('Heavy Blade'),-- 6
+	('Light Blade'),-- 7
+	('Mace'),		-- 8
+	('Pick'),		-- 9
+	('Polearm'),	-- 10
+	('Sling'),		-- 11
+	('Spear'),		-- 12
+	('Staff'),		-- 13
+	('Unarmed')		-- 14
 GO
 
 INSERT INTO dbo.WeaponProperties(Name)

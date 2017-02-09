@@ -18,7 +18,7 @@ VALUES
 	('Cloth Armour',1),
 	('Leather Armour',1),
 	('Hide Armour',1),
-	('Chainmail',2),
+	('Chainmail Armour',2),
 	('Scale Armour',2),
 	('Plate Armour',2),
 	('Shield', NULL)
@@ -28,51 +28,51 @@ INSERT INTO
 	dbo.ArmourTypes(ArmourClassId, Name, Bonus, MinEnchantmentBonus,
 		CheckPenalty, SpeedPenalty, Cost, WeightPounds)
 VALUES
-	(1,	'Cloth armour (basic clothing)', 0, 0, 0, 0, 1.00, 4),
-	(1,	'Feyweave armour', 1, 4, 0, 0, NULL, 5),
-	(1,	'Starweave armour', 2, 6, 0, 0, NULL, 3),
-	(2,	'Leather armour', 2, 0, 0, 0, 25.00, 15),
-	(2,	'Feyleather armour', 3, 4, 0, 0, NULL, 15),
-	(2,	'Starleather armour', 4, 6, 0, 0, NULL, 15),
-	(3,	'Hide armour', 3, 0, -1, 0, 30.00, 25),
-	(3,	'Darkhide armour', 4, 4, -1, 0, NULL, 25),
-	(3,	'Elderhide armour', 5, 6, -1, 0, NULL, 25),
+	(1,	'Basic Clothing', 0, 0, 0, 0, 1.00, 4),
+	(1,	'Feyweave', 1, 4, 0, 0, NULL, 5),
+	(1,	'Starweave', 2, 6, 0, 0, NULL, 3),
+	(2,	'Leather', 2, 0, 0, 0, 25.00, 15),
+	(2,	'Feyleather', 3, 4, 0, 0, NULL, 15),
+	(2,	'Starleather', 4, 6, 0, 0, NULL, 15),
+	(3,	'Hide', 3, 0, -1, 0, 30.00, 25),
+	(3,	'Darkhide', 4, 4, -1, 0, NULL, 25),
+	(3,	'Elderhide', 5, 6, -1, 0, NULL, 25),
 	(4,	'Chainmail', 6, 0, -1, -1, 40.00, 40),
 	(4,	'Forgemail', 9, 4, -1, -1, NULL, 40),
 	(4,	'Spiritmail', 12, 6, -1, -1, NULL, 40),
-	(5,	'Scale armour', 7, 0, 0, -1, 45.00, 45),
-	(5,	'Wyrmscale armour', 10, 4, 0, -1, NULL, 45),
-	(5,	'Elderscale armour', 13, 6, 0, -1, NULL, 45),
-	(6,	'Plate armour', 8, 0, -2, -1, 50.00, 50),
-	(6,	'Warplate armour', 11, 4, -2, -1, NULL, 50),
-	(6,	'Godplate armour', 14, 6, -2, -1, NULL, 50),
-	(7,	'Light shield', 1, 0, 0, 0, 5.00, 6),
-	(7,	'Heavy shield', 2, 0, -2, 0, 10.00, 15)
+	(5,	'Scale', 7, 0, 0, -1, 45.00, 45),
+	(5,	'Wyrmscale', 10, 4, 0, -1, NULL, 45),
+	(5,	'Elderscale', 13, 6, 0, -1, NULL, 45),
+	(6,	'Plate', 8, 0, -2, -1, 50.00, 50),
+	(6,	'Warplate', 11, 4, -2, -1, NULL, 50),
+	(6,	'Godplate', 14, 6, -2, -1, NULL, 50),
+	(7,	'Light', 1, 0, 0, 0, 5.00, 6),
+	(7,	'Heavy', 2, 0, -2, 0, 10.00, 15)
 GO
 
 INSERT INTO 
-	dbo.Classes(Name, RoleId, PowerSourceId, 
+	dbo.Classes(Name, RoleId, PowerSourceId,
 		BaseHitPoints, BaseHitPointsAbilityId, HitPointsPerLevel,
-		HealingSurges, HealingSurgesAbilityId)
+		HealingSurges, HealingSurgesAbilityId, InfoUrl)
 VALUES
 	-- Book 1
-	('Cleric',3,2,12,2,5,7,2),     -- 01
-	('Fighter',2,3,15,2,6,9,2),	   -- 02
-	('Paladin',2,2,15,2,6,10,2),   -- 03
-	('Ranger',4,3,12,2,5,6,2),	   -- 04
-	('Rogue',4,3,12,2,5,6,2),	   -- 05
-	('Warlock',4,1,12,2,5,6,2),	   -- 06
-	('Warlord',3,3,12,2,5,7,2),	   -- 07
-	('Wizard',1,1,10,2,4,6,2),	   -- 08
+	('Cleric',	 3,2,12,2,5, 7,2,'http://dnd4.wikia.com/wiki/Cleric'),		-- 01
+	('Fighter',	 2,3,15,2,6, 9,2,'http://dnd4.wikia.com/wiki/Fighter'),		-- 02
+	('Paladin',	 2,2,15,2,6,10,2,'http://dnd4.wikia.com/wiki/Paladin'),		-- 03
+	('Ranger',	 4,3,12,2,5, 6,2,'http://dnd4.wikia.com/wiki/Ranger'),		-- 04
+	('Rogue',	 4,3,12,2,5, 6,2,'http://dnd4.wikia.com/wiki/Rogue'),		-- 05
+	('Warlock',	 4,1,12,2,5, 6,2,'http://dnd4.wikia.com/wiki/Warlock'),		-- 06
+	('Warlord',	 3,3,12,2,5, 7,2,'http://dnd4.wikia.com/wiki/Warlord'),		-- 07
+	('Wizard',	 1,1,10,2,4, 6,2,'http://dnd4.wikia.com/wiki/Wizard'),		-- 08
 	-- Book 2					   
-	('Avenger',4,2,14,2,6,7,2),	   -- 09
-	('Barbarian',4,4,15,2,6,8,2),  -- 10
-	('Bard',3,1,12,2,5,7,2),	   -- 11
-	('Druid',1,4,12,2,5,7,2),	   -- 12
-	('Invoker',1,2,10,2,4,6,2),	   -- 13
-	('Shaman',3,4,12,2,5,7,2),	   -- 14
-	('Sorcerer',4,1,12,2,5,6,2),   -- 15
-	('Warden',2,4,17,2,7,9,2)	   -- 16
+	('Avenger',	 4,2,14,2,6, 7,2,'http://dnd4.wikia.com/wiki/Avenger'),		-- 09
+	('Barbarian',4,4,15,2,6, 8,2,'http://dnd4.wikia.com/wiki/Barbarian'),   -- 10
+	('Bard',	 3,1,12,2,5, 7,2,'http://dnd4.wikia.com/wiki/Bard'),		-- 11
+	('Druid',	 1,4,12,2,5, 7,2,'http://dnd4.wikia.com/wiki/Druid'),		-- 12
+	('Invoker',	 1,2,10,2,4, 6,2,'http://dnd4.wikia.com/wiki/Invoker'),		-- 13
+	('Shaman',	 3,4,12,2,5, 7,2,'http://dnd4.wikia.com/wiki/Shaman'),		-- 14
+	('Sorcerer', 4,1,12,2,5, 6,2,'http://dnd4.wikia.com/wiki/Sorcerer'),	-- 15
+	('Warden',	 2,4,17,2,7, 9,2,'http://dnd4.wikia.com/wiki/Warden')		-- 16
 GO
 
 INSERT INTO
@@ -140,25 +140,41 @@ VALUES
 	('Tremorsense',0,0,0,1)
 GO
 
+INSERT INTO
+	dbo.WeaponTypes(Name, WeaponCategoryId, WeaponGroupId,
+		Handedness, ProficiencyBonus, DamageNumDice, DamageDieSides,
+		IsMelee, NormalRange, LongRange, Cost, WeightPounds)
+VALUES
+	('Club',		3, 8,1,2,1, 6,1,NULL,NULL, 100, 3),
+	('Dagger',		3, 7,1,2,1, 4,1,   5,  10, 100, 1),
+	('Javelin',		3,12,1,2,1, 6,1,  10,  20, 500, 2),
+	('Mace',		3, 8,1,2,1, 8,1,NULL,NULL, 500, 6),
+	('Sickle',		3, 7,1,2,1, 6,1,NULL,NULL, 200, 2),
+	('Spear',		3,12,1,2,1, 8,1,NULL,NULL, 500, 6),
+	('Greatclub',	3, 8,2,2,2, 4,1,NULL,NULL, 100,10),
+	('Morningstar',	3, 8,2,2,1,10,1,NULL,NULL,1000, 8),
+	('Quarterstaff',3,13,2,2,1, 8,1,NULL,NULL, 500, 4),
+	('Scythe',		3, 6,2,2,2, 4,1,NULL,NULL, 500,10)
+GO
+
 INSERT INTO 
 	dbo.Races(Name, SizeId, Speed, VisionLevelId, IsPlayable)
 VALUES
 	-- Book 1
-	('Dragonborn',3,6,1,1),         -- 01
-	('Dwarf',3,5,2,1),			    -- 02
-	('Eladrin',3,6,2,1),		    -- 03
-	('Elf',3,7,2,1),			    -- 04
-	('Half-Elf',3,6,2,1),		    -- 05
-	('Halfling',2,6,1,1),		    -- 06
-	('Human',3,6,1,1),			    -- 07
-	('Tiefling',3,6,2,1),		    -- 08
+	('Dragonborn',3,6,1,1), -- 01
+	('Dwarf',3,5,2,1),		-- 02
+	('Eladrin',3,6,2,1),	-- 03
+	('Elf',3,7,2,1),		-- 04
+	('Half-Elf',3,6,2,1),	-- 05
+	('Halfling',2,6,1,1),	-- 06
+	('Human',3,6,1,1),		-- 07
+	('Tiefling',3,6,2,1),	-- 08
 	-- Book 2					    
-	('Deva',3,6,1,1),			    -- 09
-	('Gnome',2,5,2,1),			    -- 10
-	('Goliath',3,6,1,1),		    -- 11
-	('Half-Orc',3,6,2,1),		    -- 12
-	('Longtooth Shifter',3,6,2,1),  -- 13
-	('Razorclaw Shifter',3,6,2,1)   -- 14
+	('Deva',3,6,1,1),		-- 09
+	('Gnome',2,5,2,1),		-- 10
+	('Goliath',3,6,1,1),	-- 11
+	('Half-Orc',3,6,2,1),	-- 12
+	('Shifter',3,6,2,1)		-- 13
 GO									
 
 INSERT INTO
@@ -251,6 +267,7 @@ GO
 INSERT INTO
 	dbo.Actors(ActorTypeId)
 VALUES
+	(2), -- 0: Nobody
 	(1), 
 	(1),
 	(1),

@@ -8,5 +8,6 @@
     Speed INT,
     VisionLevelId INT 
 		CONSTRAINT Races_VisionLevelId_FK FOREIGN KEY REFERENCES dbo.VisionLevels(VisionLevelId),
+	InfoUrl VARCHAR(MAX),
     IsPlayable BIT NOT NULL
 );

@@ -10,8 +10,8 @@
 		CONSTRAINT Purses_SilverPieces_DF DEFAULT(0),
     GoldPieces INT NOT NULL 
 		CONSTRAINT Purses_GoldPieces_DF DEFAULT(0),
-    Platinum INT NOT NULL 
-		CONSTRAINT Purses_Platinum_DF DEFAULT(0),
+    PlatinumPieces INT NOT NULL 
+		CONSTRAINT Purses_PlatinumPieces_DF DEFAULT(0),
     AstralDiamonds INT NOT NULL 
 		CONSTRAINT Purses_AstralDiamonds_DF DEFAULT(0)
 );
