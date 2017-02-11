@@ -25,7 +25,7 @@ VALUES
 GO
 
 INSERT INTO 
-	dbo.ArmourTypes(ArmourClassId, Name, Bonus, MinEnchantmentBonus,
+	dbo.ArmourTypes(ArmourClassId, Name, Bonus, MinEnhancementBonus,
 		CheckPenalty, SpeedPenalty, Cost, WeightPounds)
 VALUES
 	(1,	'Basic Clothing', 0, 0, 0, 0, 1.00, 4),

@@ -15,7 +15,7 @@
 		new[] { "ActionTypes", "ActionTypeId" },
 		new[] { "ActorTypes", "ActorTypeId" },
 		new[] { "Alignments", "AlignmentId" },
-		new[] { "ArmourWeightClasses", "ArmourWeightClassId" },
+		new[] { "ArmourWeightClasses", "ArmourWeightClassId" }, 
 		new[] { "AttackTypes", "AttackTypeId" },
 		new[] { "AuthorityLevels", "AuthorityLevelId" },
 		new[] { "CompassionLevels", "CompassionLevelId" },
