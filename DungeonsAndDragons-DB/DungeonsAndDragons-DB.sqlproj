@@ -152,6 +152,7 @@
     <Build Include="Tables\Bridge Tables\GameMapAreasBridge.sql" />
     <Build Include="StoredProcedures\USP_Actors_Create.sql" />
     <Build Include="Tables\Weapons.sql" />
+    <Build Include="StoredProcedures\USP_GameActorsBridge_Create.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="PostDeployment.sql" />

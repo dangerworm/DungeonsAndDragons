@@ -1,12 +1,12 @@
 ﻿@using System.Security.Cryptography.X509Certificates
 @model DungeonsAndDragons.Models.PlayerCharacterModel
 
-@using (Html.BeginForm("Create", "Players", FormMethod.Post, new { @class = "" }))
+@using (Html.BeginForm("Create", "Players", new { gameId = (int?)ViewBag.GameId }, FormMethod.Post, new { @class = "" }))
 {
-    @*if (!Html.ViewData.ModelState.IsValid)
+    if (!Html.ViewData.ModelState.IsValid)
     {
-        @Html.ValidationSummary("", new {@class = "alert alert-warning"})
-    }*@
+        @Html.ValidationSummary("", new {@class = "alert alert-danger"})
+    }
 
     <div class="form-group">
         @Html.LabelFor(x => x.Name)

@@ -2,7 +2,7 @@
 @PlayerCharacterId INT,
 @ActorId INT,
 @Name VARCHAR(50),
-@ClassId INT,
+@ClassId TINYINT,
 @ParagonPathId INT,
 @EpicDestinyId INT,
 @ExperiencePoints INT,
@@ -13,7 +13,8 @@
 @WeightPounds INT,
 @AlignmentId INT,
 @DeityId INT,
-@Picture BINARY
+@Picture BINARY,
+@GameId INT
 AS
 BEGIN
 

@@ -18,8 +18,6 @@ SELECT
     [AlignmentId],
     [DeityId],
     [Picture]
-
-
 FROM
     dbo.PlayerCharacters
 WHERE

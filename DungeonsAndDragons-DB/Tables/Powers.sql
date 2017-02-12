@@ -1,35 +1,35 @@
 ﻿CREATE TABLE [dbo].[Powers]
 (
-    PowerId INT IDENTITY(1,1) 
+    PowerId TINYINT IDENTITY(1,1) 
 		CONSTRAINT Powers_PowerId_PK PRIMARY KEY,
     Name VARCHAR(50) NOT NULL,
     TextDescription VARCHAR(255) NOT NULL,
-    PowerUsageId INT NOT NULL 
+    PowerUsageId TINYINT NOT NULL 
 		CONSTRAINT Powers_PowerUsageId_FK FOREIGN KEY REFERENCES dbo.PowerUsages(PowerUsageId),
-	EffectTypeId INT NOT NULL 
+	EffectTypeId TINYINT NOT NULL 
 		CONSTRAINT Powers_EffectTypeId_FK FOREIGN KEY REFERENCES dbo.EffectTypes(EffectTypeId),
-    ActionTypeId INT NOT NULL 
+    ActionTypeId TINYINT NOT NULL 
 		CONSTRAINT Powers_ActionTypeId_FK FOREIGN KEY REFERENCES dbo.ActionTypes(ActionTypeId),
-    AttackTypeId INT NOT NULL 
+    AttackTypeId TINYINT NOT NULL 
 		CONSTRAINT Powers_AttackTypeId_FK FOREIGN KEY REFERENCES dbo.AttackTypes(AttackTypeId),
     PrerequisiteId INT 
 		CONSTRAINT Powers_PrerequisiteId_FK FOREIGN KEY REFERENCES dbo.Prerequisites(PrerequisiteId),
     TargetType TINYINT,
     MinNumTargets INT,
     MaxNumTargets INT,
-    AttackAbilityId INT 
+    AttackAbilityId TINYINT 
 		CONSTRAINT Powers_AttackAbilityId_FK FOREIGN KEY REFERENCES dbo.Abilities(AbilityId),
-    AttackAbilityComplement INT,
-    AttackDefenseId INT 
+    AttackAbilityComplement TINYINT,
+    AttackDefenseId TINYINT 
 		CONSTRAINT Powers_AttackDefenseId_FK FOREIGN KEY REFERENCES dbo.Defenses(DefenseId),
     AttackDefenseComplement INT,
-    HitAbilityId INT 
+    HitAbilityId TINYINT 
 		CONSTRAINT Powers_HitAbilityId_FK FOREIGN KEY REFERENCES dbo.Abilities(AbilityId),
     HitAbilityComplement INT,
-    DamageTypeId INT 
+    DamageTypeId TINYINT 
 		CONSTRAINT Powers_DamageTypeId_FK FOREIGN KEY REFERENCES dbo.DamageTypes(DamageTypeId),
     Duration INT,
-    DurationUnitId INT 
+    DurationUnitId TINYINT 
 		CONSTRAINT Powers_DurationUnitId_FK FOREIGN KEY REFERENCES dbo.DurationUnits(DurationUnitId),
     HasSecondaryAttack BIT,
     IsConjuration BIT NOT NULL 

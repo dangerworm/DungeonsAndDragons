@@ -28,6 +28,7 @@ namespace DungeonsAndDragons.Controllers
             }
 
             var viewModel = _gamesService.GetById(id.Value);
+            ViewBag.GameId = viewModel.Id;
             return View(viewModel);
         }
 
@@ -46,7 +47,12 @@ namespace DungeonsAndDragons.Controllers
         public ActionResult Create(Game model)
         {
             var result = _gamesService.Save(model);
+            if (result.Type == DataResultType.Success)
+            {
+                return Json(new { success = true });
+            }
 
+            ModelState.AddModelError("", $"The game could not be created: {result.FriendlyMessage}");
             return Redirect(Request.Headers["Origin"]);
         }
     }

@@ -2,7 +2,7 @@
 (
     AttackClassId INT IDENTITY(1,1) 
 		CONSTRAINT AttackClasses_AttackClassId_PK PRIMARY KEY,
-    AttackTypeId INT NOT NULL 
+    AttackTypeId TINYINT NOT NULL 
 		CONSTRAINT AttackClasses_AttackTypeId_FK FOREIGN KEY REFERENCES dbo.AttackTypes(AttackTypeId),
     DamageNumDice INT,
     DamageDieSides INT,

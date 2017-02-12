@@ -2,9 +2,9 @@
 (
     WeaponTypeId INT IDENTITY(1,1) 
 		CONSTRAINT WeaponTypes_WeaponTypeId_PK PRIMARY KEY,
-	WeaponCategoryId INT NOT NULL 
+	WeaponCategoryId TINYINT NOT NULL 
 		CONSTRAINT WeaponTypes_WeaponCategoryId_FK FOREIGN KEY REFERENCES dbo.WeaponCategories(WeaponCategoryId),
-    WeaponGroupId INT NOT NULL
+    WeaponGroupId TINYINT NOT NULL
 		CONSTRAINT WeaponTypes_WeaponGroupId_FK FOREIGN KEY REFERENCES dbo.WeaponGroups(WeaponGroupId),
 	Name VARCHAR(50) NOT NULL,
     Handedness INT NOT NULL,

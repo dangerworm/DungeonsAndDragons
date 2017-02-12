@@ -1,8 +1,8 @@
 ﻿CREATE TABLE [dbo].[ArmourTypes]
 (
-    ArmourTypeId INT IDENTITY(1,1)
+    ArmourTypeId TINYINT IDENTITY(1,1)
 		CONSTRAINT ArmourTypes_ArmourTypeId_PK PRIMARY KEY,
-	ArmourClassId INT
+	ArmourClassId TINYINT
 		CONSTRAINT ArmourTypes_ArmourClassId_FK FOREIGN KEY REFERENCES dbo.ArmourClasses(ArmourClassId),
     Name VARCHAR(50) NOT NULL,
     Bonus INT NOT NULL,
