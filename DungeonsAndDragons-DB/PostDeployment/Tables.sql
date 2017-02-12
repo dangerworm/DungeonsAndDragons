@@ -178,7 +178,7 @@ VALUES
 GO									
 
 INSERT INTO
-	dbo.AbilityValues(RaceId, AbilityId, Modifier)
+	dbo.AbilityScores(RaceId, AbilityId, Score)
 VALUES
 	(1,1,2),
 	(1,5,2),
@@ -287,6 +287,17 @@ VALUES
 	(4,'Saskia Minyathr',	 4,750, 4,52,2,'5''2"',145, 5,  7),
 	(5,'Squanto',			12,750,13,44,1,'5''9"',210, 5,  1),
 	(6,'Yuo',				 9,750, 7,61,1,'6''1"',122, 5,  6)
+GO
+
+INSERT INTO
+	dbo.AbilityScores(ActorId, AbilityId, Score)
+VALUES
+	(3,1,14),
+	(3,2,12),
+	(3,3,12),
+	(3,4,16),
+	(3,5,10),
+	(3,6,12)
 GO
 
 INSERT INTO	

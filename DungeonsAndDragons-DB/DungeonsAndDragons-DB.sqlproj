@@ -64,7 +64,7 @@
     <Folder Include="StoredProcedures" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Tables\AbilityValues.sql" />
+    <Build Include="Tables\AbilityScores.sql" />
     <Build Include="Tables\Actors.sql" />
     <Build Include="Tables\Alignments.sql" />
     <Build Include="Tables\ArmourClasses.sql" />

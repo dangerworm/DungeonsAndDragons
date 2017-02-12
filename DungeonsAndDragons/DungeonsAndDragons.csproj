@@ -210,6 +210,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AbilityScoreModel.cs" />
     <Compile Include="Models\OverviewModel.cs" />
     <Compile Include="Models\PlayerCharacterModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

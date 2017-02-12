@@ -10,6 +10,7 @@ namespace DungeonsAndDragons.Controllers
     public class PlayersController : BaseController
     {
         private readonly PlayerCharactersService _playersService;
+        //private readonly AbilitiesService _abilitiesService;
 
         public PlayersController()
         {
@@ -19,13 +20,14 @@ namespace DungeonsAndDragons.Controllers
         public ActionResult Index(int id)
         {
             var character = _playersService.GetById(id);
-
             if (character == null)
             {
                 return RedirectToAction("Index", "Games");
             }
 
-            var viewModel = character.Map<PlayerCharacter, PlayerCharacterModel>();
+            //var abilities = abilitiesService.GetByActorId(character.ActorId);
+
+            var viewModel = new PlayerCharacterModel(character); //, abilities); 
 
             return View(viewModel);
         }

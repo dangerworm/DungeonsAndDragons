@@ -17,8 +17,8 @@
 		CONSTRAINT Prerequisites_DeityId_FK FOREIGN KEY REFERENCES dbo.Deities(DeityId),
     PrerequisiteFeatureId TINYINT 
 		CONSTRAINT Prerequisites_PrerequisiteFeatureId_FK FOREIGN KEY REFERENCES dbo.Features(FeatureId),
-    AbilityValueId INT 
-		CONSTRAINT Prerequisites_AbilityId_FK FOREIGN KEY REFERENCES dbo.AbilityValues(AbilityValueId),
+    AbilityScoreId INT 
+		CONSTRAINT Prerequisites_AbilityId_FK FOREIGN KEY REFERENCES dbo.AbilityScores(AbilityScoreId),
     MinAbilityScore INT,
     TrainedSkillId TINYINT 
 		CONSTRAINT Prerequisites_TrainedSkillId_FK FOREIGN KEY REFERENCES dbo.Skills(SkillId),

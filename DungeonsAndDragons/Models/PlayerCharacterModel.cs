@@ -1,10 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using DungeonsAndDragons_Data.Enums;
+using DungeonsAndDragons_Data.Models.Object;
 
 namespace DungeonsAndDragons.Models
 {
     public class PlayerCharacterModel
     {
+        public IEnumerable<AbilityScoreModel> AbilityScores { get; set; }
+
         public int? Id { get; set; }
 
         public int ActorId { get; set; }
@@ -53,24 +57,28 @@ namespace DungeonsAndDragons.Models
         {
         }
 
-        public PlayerCharacterModel(int? id, int actorId, string name, Classes classId, int? paragonPathId,
-            int? epicDestinyId, int experiencePoints, Races raceId, int age, Genders genderId,
-            string height, int weightPounds, Alignments alignmentId, Deities? deityId)
+        public PlayerCharacterModel(PlayerCharacter player)
         {
-            Id = id;
-            ActorId = actorId;
-            Name = name;
-            ClassId = classId;
-            ParagonPathId = paragonPathId;
-            EpicDestinyId = epicDestinyId;
-            ExperiencePoints = experiencePoints;
-            RaceId = raceId;
-            Age = age;
-            GenderId = genderId;
-            Height = height;
-            WeightPounds = weightPounds;
-            AlignmentId = alignmentId;
-            DeityId = deityId;
+            Id = player.Id;
+            ActorId = player.ActorId;
+            Name = player.Name;
+            ClassId = player.ClassId;
+            ParagonPathId = player.ParagonPathId;
+            EpicDestinyId = player.EpicDestinyId;
+            ExperiencePoints = player.ExperiencePoints;
+            RaceId = player.RaceId;
+            Age = player.Age;
+            GenderId = player.GenderId;
+            Height = player.Height;
+            WeightPounds = player.WeightPounds;
+            AlignmentId = player.AlignmentId;
+            DeityId = player.DeityId;
+        }
+
+        public PlayerCharacterModel(PlayerCharacter player, IEnumerable<AbilityScoreModel> abilityScores)
+            :this (player)
+        {
+            AbilityScores = abilityScores;
         }
     }
 }

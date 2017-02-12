@@ -1,12 +1,12 @@
 ﻿INSERT INTO 
 	dbo.Abilities(Name)
 VALUES 
-	('Charisma'),
-	('Constitution'),
-	('Dexterity'),
-	('Intelligence'),
-	('Strength'),
-	('Wisdom')
+	('Charisma'),		-- 1
+	('Constitution'),	-- 2
+	('Dexterity'),		-- 3
+	('Intelligence'),	-- 4
+	('Strength'),		-- 5
+	('Wisdom')			-- 6
 GO
 
 INSERT INTO dbo.ActionTypes(Name)
@@ -168,23 +168,23 @@ GO
 
 INSERT INTO dbo.Skills(Name)
 VALUES
-	('Acrobatics'),
-	('Arcana'),
-	('Athletics'),
-	('Bluff'),
-	('Diplomacy'),
-	('Dungeoneering'),
-	('Endurance'),
-	('Heal'),
-	('History'),
-	('Insight'),
-	('Intimidate'),
-	('Nature'),
-	('Perception'),
-	('Religion'),
-	('Stealth'),
-	('Streetwise'),
-	('Thievery')
+	('Acrobatics'),		-- 01
+	('Arcana'),			-- 02
+	('Athletics'),		-- 03
+	('Bluff'),			-- 04
+	('Diplomacy'),		-- 05
+	('Dungeoneering'),	-- 06
+	('Endurance'),		-- 07
+	('Heal'),			-- 08
+	('History'),		-- 09
+	('Insight'),		-- 10
+	('Intimidate'),		-- 11
+	('Nature'),			-- 12
+	('Perception'),		-- 13
+	('Religion'),		-- 14
+	('Stealth'),		-- 15
+	('Streetwise'),		-- 16
+	('Thievery')		-- 17
 GO
 
 INSERT INTO dbo.WeaponCategories(Name)
