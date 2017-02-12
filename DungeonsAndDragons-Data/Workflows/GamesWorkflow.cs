@@ -32,5 +32,10 @@ namespace DungeonsAndDragons_Data.Workflows
 
             return new DataResult<Game>(dResult.Value.Map<DGame, Game>(), dResult);
         }
+
+        public DataResult CreateGameActorBridge(int gameId, int actorId)
+        {
+            return _gamesRepository.CreateGameActorBridge(gameId, actorId);
+        }
     }
 }

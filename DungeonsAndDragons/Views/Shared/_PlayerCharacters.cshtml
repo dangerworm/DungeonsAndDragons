@@ -24,7 +24,8 @@
             </tbody>
         </table>
         <p>
-            <a href="#" class="btn btn-default popup" title="Create Player" data-href="@Url.Action("Create", "Players")"
+            <a href="#" class="btn btn-default popup" title="Create Player" 
+               data-href="@Url.Action("Create", "Players", new { gameId = ViewBag.GameId })"
                data-toggle="modal" data-target="#popup-container">Create a new player &raquo;</a>
         </p>
     </div>

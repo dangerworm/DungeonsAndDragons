@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Races]
 (
-    RaceId INT IDENTITY(1,1) 
+    RaceId TINYINT IDENTITY(1,1) 
 		CONSTRAINT Races_RaceId_PK PRIMARY KEY,
     Name VARCHAR(50) NOT NULL,
     SizeId INT 

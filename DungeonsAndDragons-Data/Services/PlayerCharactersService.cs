@@ -7,11 +7,13 @@ namespace DungeonsAndDragons_Data.Services
     public class PlayerCharactersService
     {
         private readonly UnitOfWork _unitOfWork;
+        private readonly GamesWorkflow _gamesWorkflow;
         private readonly PlayerCharactersWorkflow _playerCharactersWorkflow;
 
         public PlayerCharactersService(UnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
+            _gamesWorkflow = new GamesWorkflow(unitOfWork);
             _playerCharactersWorkflow = new PlayerCharactersWorkflow(unitOfWork);
         }
 
@@ -37,23 +39,34 @@ namespace DungeonsAndDragons_Data.Services
             return player;
         }
 
-        public DataResult<PlayerCharacter> Save(PlayerCharacter value)
+        public DataResult<PlayerCharacter> Save(PlayerCharacter value, int? gameId)
         {
             _unitOfWork.Begin();
             _unitOfWork.BeginTransaction();
 
-            var result = _playerCharactersWorkflow.Save(value);
+            var pcResult = _playerCharactersWorkflow.Save(value);
 
-            if (result.Type != DataResultType.Success)
+            if (pcResult.Type != DataResultType.Success)
             {
                 _unitOfWork.Rollback();
-            }
-            else
-            {
-                _unitOfWork.End();
+                return pcResult;
             }
 
-            return result;
+            if (gameId.HasValue)
+            {
+                var gameResult = _gamesWorkflow.CreateGameActorBridge(gameId.Value, value.ActorId);
+
+                if (gameResult.Type != DataResultType.Success)
+                {
+                    _unitOfWork.Rollback();
+                    return new DataResult<PlayerCharacter>(pcResult.Value, DataResultType.UnableToCreateRecord, 
+                        $"The player was created but could not be linked to the game: " + gameResult.FriendlyMessage);
+                }
+            }
+
+            _unitOfWork.End();
+
+            return pcResult;
         }
     }
 }

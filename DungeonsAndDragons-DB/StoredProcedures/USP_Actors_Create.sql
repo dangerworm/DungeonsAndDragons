@@ -8,7 +8,7 @@ IF NOT EXISTS (
 SELECT 1
 FROM dbo.Actors
 WHERE
-[ActorId] = ISNULL(@ActorId, 0)
+[ActorId] = ISNULL(@ActorId, -1)
 )
 BEGIN
 INSERT INTO dbo.Actors (

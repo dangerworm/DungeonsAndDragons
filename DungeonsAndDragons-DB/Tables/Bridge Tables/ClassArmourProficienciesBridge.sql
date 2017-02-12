@@ -2,9 +2,9 @@
 (
 	ClassArmourProficiencyId INT IDENTITY(1,1) 
 		CONSTRAINT ClassArmourProficienciesBridge_ClassArmourProficiencyId_PK PRIMARY KEY,
-    ClassId INT NOT NULL 
+    ClassId TINYINT NOT NULL 
 		CONSTRAINT ClassArmourProficienciesBridge_ClassId_FK FOREIGN KEY REFERENCES dbo.Classes(ClassId),
-    ArmourClassId INT NOT NULL 
+    ArmourClassId TINYINT NOT NULL 
 		CONSTRAINT ClassArmourProficienciesBridge_ArmourClassId_FK FOREIGN KEY REFERENCES dbo.ArmourClasses(ArmourClassId)
 
 )

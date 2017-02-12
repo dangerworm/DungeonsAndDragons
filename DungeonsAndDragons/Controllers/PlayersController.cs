@@ -31,18 +31,19 @@ namespace DungeonsAndDragons.Controllers
         }
 
         [HttpGet]
-        public ActionResult Create()
+        public ActionResult Create(int? gameId)
         {
             if (!Request.IsAjaxRequest())
             {
                 return RedirectToAction("Index");
             }
 
+            ViewBag.GameId = gameId;
             return PartialView("_Create");
         }
 
         [HttpPost]
-        public ActionResult Create(PlayerCharacterModel model)
+        public ActionResult Create(PlayerCharacterModel model, int? gameId)
         {
             if (!ModelState.IsValid)
             {
@@ -50,13 +51,13 @@ namespace DungeonsAndDragons.Controllers
             }
 
             var value = model.Map<PlayerCharacterModel, PlayerCharacter>();
-            var result = _playersService.Save(value);
+            var result = _playersService.Save(value, gameId);
             if (result.Type == DataResultType.Success)
             {
                 return Json(new { success = true });
             }
 
-            ModelState.AddModelError("", "The data could not be saved. Please try again.");
+            ModelState.AddModelError("", $"The data could not be saved: {result.FriendlyMessage}");
             return PartialView("_Create", model);
         }
     }

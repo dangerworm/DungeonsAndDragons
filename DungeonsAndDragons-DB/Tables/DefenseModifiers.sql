@@ -4,13 +4,13 @@
 		CONSTRAINT DefenseModifiers_DefenseModifierId_PK PRIMARY KEY,
     ActorId INT 
 		CONSTRAINT DefenseModifiers_ActorId_FK FOREIGN KEY REFERENCES dbo.Actors(ActorId),
-	ClassId INT 
+	ClassId TINYINT 
 		CONSTRAINT DefenseModifiers_ClassId_FK FOREIGN KEY REFERENCES dbo.Classes(ClassId),
-    FeatureId INT 
+    FeatureId TINYINT 
 		CONSTRAINT DefenseModifiers_FeatureId_FK FOREIGN KEY REFERENCES dbo.Features(FeatureId),
-    RaceId INT 
+    RaceId TINYINT 
 		CONSTRAINT DefenseModifiers_RaceId_FK FOREIGN KEY REFERENCES dbo.Races(RaceId),
-    DefenseId INT NOT NULL 
+    DefenseId TINYINT NOT NULL 
 		CONSTRAINT DefenseModifiers_DefenseId_FK FOREIGN KEY REFERENCES dbo.Defenses(DefenseId),
     Modifier INT NOT NULL
 );

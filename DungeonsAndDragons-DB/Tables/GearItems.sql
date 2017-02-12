@@ -5,7 +5,7 @@
     Name VARCHAR(50) NOT NULL,
     Cost DECIMAL(18,2) NOT NULL,
     WeightPounds INT NOT NULL,
-	ImplementTypeId INT 
+	ImplementTypeId TINYINT 
 		CONSTRAINT GearItems_ImplementTypeId_FK FOREIGN KEY REFERENCES dbo.ImplementTypes(ImplementTypeId),
 	OwnerActorId INT
 		CONSTRAINT GearItems_OwnerActorId_FK FOREIGN KEY REFERENCES dbo.Actors(ActorId)

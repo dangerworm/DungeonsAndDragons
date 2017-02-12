@@ -6,13 +6,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DungeonsAndDragons_Data.Enums
 {
-	// Enums
     /// <summary>
     /// Abilities auto generated enumeration
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum Abilities : int
+    public enum Abilities : byte
     {
         /// <summary>
         /// Charisma (1)
@@ -56,7 +55,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum ActionTypes : int
+    public enum ActionTypes : byte
     {
         /// <summary>
         /// Standard Action (1)
@@ -106,7 +105,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum ActorTypes : int
+    public enum ActorTypes : byte
     {
         /// <summary>
         /// Player Character (1)
@@ -132,7 +131,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum Alignments : int
+    public enum Alignments : byte
     {
         /// <summary>
         /// Lawful Good (1)
@@ -194,7 +193,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum ArmourWeightClasses : int
+    public enum ArmourWeightClasses : byte
     {
         /// <summary>
         /// Light (1)
@@ -214,7 +213,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum AttackTypes : int
+    public enum AttackTypes : byte
     {
         /// <summary>
         /// Area (1)
@@ -246,7 +245,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum AuthorityLevels : int
+    public enum AuthorityLevels : byte
     {
         /// <summary>
         /// Lawful (1)
@@ -272,7 +271,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum CompassionLevels : int
+    public enum CompassionLevels : byte
     {
         /// <summary>
         /// Good (1)
@@ -298,7 +297,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum DamageTypes : int
+    public enum DamageTypes : byte
     {
         /// <summary>
         /// Acid (1)
@@ -366,7 +365,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum Defenses : int
+    public enum Defenses : byte
     {
         /// <summary>
         /// Armour Class (1)
@@ -398,7 +397,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum DurationUnits : int
+    public enum DurationUnits : byte
     {
         /// <summary>
         /// Action (1)
@@ -472,7 +471,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum EffectTypes : int
+    public enum EffectTypes : byte
     {
         /// <summary>
         /// Charm (1)
@@ -552,7 +551,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum EpicDestinies : int
+    public enum EpicDestinies : byte
     {
         /// <summary>
         /// Archmage (1)
@@ -584,7 +583,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum Genders : int
+    public enum Genders : byte
     {
         /// <summary>
         /// Male (1)
@@ -610,7 +609,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum ImplementTypes : int
+    public enum ImplementTypes : byte
     {
         /// <summary>
         /// Orb (1)
@@ -642,7 +641,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum MapAreaTypes : int
+    public enum MapAreaTypes : byte
     {
 	}
 
@@ -651,7 +650,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum PowerSources : int
+    public enum PowerSources : byte
     {
         /// <summary>
         /// Arcane (1)
@@ -683,7 +682,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum PowerUsages : int
+    public enum PowerUsages : byte
     {
         /// <summary>
         /// At-Will (1)
@@ -715,7 +714,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum Roles : int
+    public enum Roles : byte
     {
         /// <summary>
         /// Controller (1)
@@ -747,7 +746,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum Skills : int
+    public enum Skills : byte
     {
         /// <summary>
         /// Acrobatics (1)
@@ -857,7 +856,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum WeaponCategories : int
+    public enum WeaponCategories : byte
     {
         /// <summary>
         /// Improvised (1)
@@ -889,7 +888,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum WeaponGroups : int
+    public enum WeaponGroups : byte
     {
         /// <summary>
         /// None (0)
@@ -987,7 +986,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum WeaponProperties : int
+    public enum WeaponProperties : byte
     {
         /// <summary>
         /// Heavy Thrown (1)
@@ -1038,14 +1037,12 @@ namespace DungeonsAndDragons_Data.Enums
         Versatile = 8
 	}
 
-
-	// Tables
     /// <summary>
     /// ArmourClasses auto generated enumeration
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum ArmourClasses : int
+    public enum ArmourClasses : byte
     {
         /// <summary>
         /// Cloth Armour (1)
@@ -1095,7 +1092,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum ArmourTypes : int
+    public enum ArmourTypes : byte
     {
         /// <summary>
         /// Basic Clothing (1)
@@ -1223,7 +1220,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum Classes : int
+    public enum Classes : byte
     {
         /// <summary>
         /// Cleric (1)
@@ -1327,7 +1324,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum Deities : int
+    public enum Deities : byte
     {
         /// <summary>
         /// None (0)
@@ -1413,7 +1410,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum Features : int
+    public enum Features : byte
     {
 	}
 
@@ -1422,7 +1419,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum Languages : int
+    public enum Languages : byte
     {
         /// <summary>
         /// Common (1)
@@ -1490,7 +1487,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum Powers : int
+    public enum Powers : byte
     {
 	}
 
@@ -1499,7 +1496,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum Races : int
+    public enum Races : byte
     {
         /// <summary>
         /// Dragonborn (1)
@@ -1585,7 +1582,7 @@ namespace DungeonsAndDragons_Data.Enums
     /// </summary>
     [GeneratedCode("TextTemplatingFileGenerator", "10")]
 	[TypeConverter(typeof(EnumNameTypeConverter))]
-    public enum Scripts : int
+    public enum Scripts : byte
     {
         /// <summary>
         /// Barazhad (1)
