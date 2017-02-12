@@ -69,5 +69,17 @@ namespace DungeonsAndDragons_Data.Repositories
                 return new DataResult<DGame>(value, result);
             }
         }
+
+        public DataResult CreateGameActorBridge(int gameId, int actorId)
+        {
+            using (var command = UnitOfWork.CreateStoredProcedure("dbo.USP_GameActorsBridge_Create"))
+            {
+                command
+                    .AddWithValue("@GameId", gameId, DbType.Int32)
+                    .AddWithValue("@ActorId", actorId, DbType.String);
+
+                return ExecuteNonQuery(command);
+            }
+        }
     }
 }
