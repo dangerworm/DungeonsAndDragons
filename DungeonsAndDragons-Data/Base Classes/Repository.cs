@@ -50,7 +50,7 @@ namespace DungeonsAndDragons_Data
                     UnitOfWork.AddDataResult(dataResult);
                 }
 
-                exception.Data.Add("Paystream.ExceptionData.StringValue", command.GetDetails());
+                exception.Data.Add("ExceptionData.StringValue", command.GetDetails());
                 throw;
             }
         }
@@ -84,7 +84,7 @@ namespace DungeonsAndDragons_Data
                     UnitOfWork.AddDataResult(dataResult);
                 }
 
-                exception.Data.Add("Paystream.ExceptionData.StringValue", command.GetDetails());
+                exception.Data.Add("ExceptionData.StringValue", command.GetDetails());
                 throw;
             }
         }
@@ -108,7 +108,7 @@ namespace DungeonsAndDragons_Data
                     UnitOfWork.AddDataResult(dataResult);
                 }
 
-                exception.Data.Add("Paystream.ExceptionData.StringValue", command.GetDetails());
+                exception.Data.Add("ExceptionData.StringValue", command.GetDetails());
                 throw;
             }
         }
@@ -132,7 +132,7 @@ namespace DungeonsAndDragons_Data
                     UnitOfWork.AddDataResult(dataResult);
                 }
 
-                exception.Data.Add("Paystream.ExceptionData.StringValue", command.GetDetails());
+                exception.Data.Add("ExceptionData.StringValue", command.GetDetails());
                 throw;
             }
         }
