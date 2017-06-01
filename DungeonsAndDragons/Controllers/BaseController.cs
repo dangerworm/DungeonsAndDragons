@@ -12,7 +12,14 @@ namespace DungeonsAndDragons.Controllers
         public BaseController()
         {
             //var connectionString = ConfigurationManager.ConnectionStrings["DungeonsAndDragons"].ConnectionString;
-            var connectionString = $"Data Source={Environment.MachineName};Initial Catalog=DungeonsAndDragons;Integrated Security=True";
+
+            var server = Environment.MachineName;
+            if (server == "PS-LT-085")
+            {
+                server = "SQLTEST\\DEV";
+            }
+
+            var connectionString = $"Data Source={server};Initial Catalog=DungeonsAndDragons;Integrated Security=True";
 
             UnitOfWork = new UnitOfWork(connectionString);
         }
